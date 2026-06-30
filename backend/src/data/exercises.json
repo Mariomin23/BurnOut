@@ -187,5 +187,284 @@
     "youtube_video_url": "https://www.youtube.com/embed/rq7L77_qSsc",
     "difficulty": "advanced",
     "description": "De rodillas con la rueda, deslízate hacia adelante controladamente y regresa contrayendo el core sin arquear la espalda baja."
+  },
+  {
+    "id": "ex-111",
+    "name": "Fondos en Paralelas (énfasis Pecho)",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/l9pobBtb_vA",
+    "difficulty": "intermediate",
+    "description": "En paralelas, inclina el torso hacia adelante para activar el pecho. Baja hasta que los hombros queden al nivel de los codos."
+  },
+  {
+    "id": "ex-112",
+    "name": "Press Declinado con Mancuernas",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/LfyQTBBBhGY",
+    "difficulty": "intermediate",
+    "description": "Tumbado en banco declinado, empuja las mancuernas verticalmente desde el pecho hacia arriba. Activa la porción inferior del pectoral."
+  },
+  {
+    "id": "ex-113",
+    "name": "Aperturas con Mancuernas en Banco Plano",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/eozdVDA78K0",
+    "difficulty": "beginner",
+    "description": "Tumbado con mancuernas, abre los brazos en semicírculo hasta sentir el estiramiento en el pecho. Cierra controlando el peso."
+  },
+  {
+    "id": "ex-114",
+    "name": "Press en Máquina de Pecho",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/xUm0BiZCWlQ",
+    "difficulty": "beginner",
+    "description": "Sentado en la máquina de press, empuja las agarraderas hacia adelante extendiendo los codos por completo. Ideal para principiantes."
+  },
+  {
+    "id": "ex-115",
+    "name": "Remo con Mancuerna a Una Mano",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/roCP7Ry_5os",
+    "difficulty": "beginner",
+    "description": "Apoya una rodilla y mano en el banco. Tira de la mancuerna hacia tu cadera retrayendo la escápula al final del movimiento."
+  },
+  {
+    "id": "ex-116",
+    "name": "Remo en Máquina Sentado",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/GZbfZ033f74",
+    "difficulty": "beginner",
+    "description": "Sentado en la máquina de remo, tira de las agarraderas hacia tu abdomen juntando los omóplatos. Mantén la espalda erguida."
+  },
+  {
+    "id": "ex-117",
+    "name": "Face Pull con Polea",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/HSoHeSt2dPE",
+    "difficulty": "beginner",
+    "description": "Con polea alta y cuerda, tira hacia tu cara separando las manos al final. Activa trapecios medios y manguito rotador."
+  },
+  {
+    "id": "ex-118",
+    "name": "Pullover con Mancuerna",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/FK4rHfGRk6c",
+    "difficulty": "intermediate",
+    "description": "Tumbado transversalmente en un banco, sostén la mancuerna sobre el pecho y baja los brazos por encima de la cabeza estirando el dorsal."
+  },
+  {
+    "id": "ex-119",
+    "name": "Press Arnold con Mancuernas",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/6Z15_WdXmVw",
+    "difficulty": "intermediate",
+    "description": "Empieza con mancuernas frente a ti (como el top de un curl). Al subir, rota las palmas hacia fuera y empuja verticalmente sobre la cabeza."
+  },
+  {
+    "id": "ex-120",
+    "name": "Elevaciones Frontales con Disco",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/0J3r4bOGMi4",
+    "difficulty": "beginner",
+    "description": "De pie con un disco sujetado a dos manos, eleva los brazos rectos hasta la horizontal activando el haz anterior del deltoides."
+  },
+  {
+    "id": "ex-121",
+    "name": "Pájaros en Banco Inclinado",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/G1XtE0pG8e4",
+    "difficulty": "intermediate",
+    "description": "Apoyado boca abajo en banco inclinado, eleva las mancuernas lateralmente hasta la horizontal trabajando el haz posterior del deltoides."
+  },
+  {
+    "id": "ex-122",
+    "name": "Curl Martillo con Mancuernas",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/zC3nLlEvin4",
+    "difficulty": "beginner",
+    "description": "Con agarre neutro (pulgar arriba), flexiona los codos llevando las mancuernas hacia el hombro. Activa el braquial y braquiorradial."
+  },
+  {
+    "id": "ex-123",
+    "name": "Curl en Banco Scott",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/4sHMVMBg1R0",
+    "difficulty": "intermediate",
+    "description": "Apoya los tríceps en el banco Scott para aislar los bíceps. Baja lentamente hasta casi la extensión completa y sube contrayendo."
+  },
+  {
+    "id": "ex-124",
+    "name": "Curl con Polea Baja",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/NFzTWp2qpiE",
+    "difficulty": "beginner",
+    "description": "De pie frente a la polea baja con barra recta, flexiona los codos sin mover los hombros. Tensión constante durante todo el recorrido."
+  },
+  {
+    "id": "ex-125",
+    "name": "Fondos en Paralelas (énfasis Tríceps)",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/wjUmnZH528Y",
+    "difficulty": "intermediate",
+    "description": "En paralelas, mantén el torso vertical para aislar los tríceps. Baja controlado y extiende los codos completamente en la subida."
+  },
+  {
+    "id": "ex-126",
+    "name": "Press Francés con Barra EZ",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/d_KZxkY_0cM",
+    "difficulty": "intermediate",
+    "description": "Tumbado con barra EZ, baja la barra hacia la frente doblando solo los codos. Extiende para activar la cabeza larga del tríceps."
+  },
+  {
+    "id": "ex-127",
+    "name": "Extensión de Tríceps sobre la Cabeza con Mancuerna",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/YybX7Wd8jQ-Q",
+    "difficulty": "beginner",
+    "description": "Sostén una mancuerna sobre la cabeza con ambas manos. Dobla los codos bajando el peso detrás de la cabeza y extiende."
+  },
+  {
+    "id": "ex-208",
+    "name": "Extensión de Piernas en Máquina",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/YyvSfVjQeL0",
+    "difficulty": "beginner",
+    "description": "Sentado en la máquina, extiende las rodillas completamente. Mantén el pie en posición neutra. Ideal para aislar el cuádriceps."
+  },
+  {
+    "id": "ex-209",
+    "name": "Sentadilla Goblet con Kettlebell",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/MxsFDhcyFyE",
+    "difficulty": "beginner",
+    "description": "Sostén una kettlebell frente al pecho y desciende en sentadilla profunda. Los codos empujan las rodillas hacia afuera al bajar."
+  },
+  {
+    "id": "ex-210",
+    "name": "Hack Squat en Máquina",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/sEM_zo6PYMA",
+    "difficulty": "intermediate",
+    "description": "En la máquina de hack squat, coloca los pies a lo ancho de los hombros. Baja hasta 90° de rodilla sin despegar los talones."
+  },
+  {
+    "id": "ex-211",
+    "name": "Curl Femoral de Pie en Máquina",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/4CdFPoC-oBM",
+    "difficulty": "beginner",
+    "description": "De pie en la máquina, flexiona una pierna llevando el talón hacia el glúteo. Mantén la cadera estable durante todo el movimiento."
+  },
+  {
+    "id": "ex-212",
+    "name": "Buenos Días con Barra",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/YA-h3n9L4YU",
+    "difficulty": "intermediate",
+    "description": "Barra en trapecios, rodillas levemente dobladas. Inclina el torso hacia adelante desde la cadera hasta sentir el estiramiento femoral."
+  },
+  {
+    "id": "ex-213",
+    "name": "Peso Muerto Sumo",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/bkAKAFOp8M8",
+    "difficulty": "advanced",
+    "description": "Stance ancho con pies girados 45°. Agarre de barra entre las piernas. Empuja el suelo hacia afuera al subir activando femorales y aductores."
+  },
+  {
+    "id": "ex-214",
+    "name": "Patada de Glúteo en Máquina",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/EEiOFNNAzMg",
+    "difficulty": "beginner",
+    "description": "De pie en la máquina de cable, extiende la pierna hacia atrás apretando el glúteo al final. Mantén el core estable durante el movimiento."
+  },
+  {
+    "id": "ex-215",
+    "name": "Abductor en Máquina",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/keDQFGd-3rE",
+    "difficulty": "beginner",
+    "description": "Sentado en la máquina de abductor, separa las piernas contra la resistencia activando el glúteo medio y tensor de la fascia lata."
+  },
+  {
+    "id": "ex-216",
+    "name": "Bulgarian Split Squat",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/2C-uNgKwPLE",
+    "difficulty": "intermediate",
+    "description": "Pie trasero elevado en banco, desciende la rodilla delantera hacia el suelo. Activa glúteo, cuádriceps y estabilizadores de cadera."
+  },
+  {
+    "id": "ex-217",
+    "name": "Elevación de Gemelos Sentado en Máquina",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/wP9IiKqMsQw",
+    "difficulty": "beginner",
+    "description": "Sentado con las rodillas bajo el soporte de la máquina, eleva los talones sobre las puntas de los pies contrayendo el sóleo."
+  },
+  {
+    "id": "ex-218",
+    "name": "Elevación de Gemelos en Prensa 45°",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/JbyjNymZOt0",
+    "difficulty": "beginner",
+    "description": "En la prensa 45° sin peso ni bloqueo de rodillas, coloca las puntas de los pies en el borde de la plataforma y haz elevaciones de gemelos."
+  },
+  {
+    "id": "ex-305",
+    "name": "Crunch Abdominal",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/5dn5ynKKKKA",
+    "difficulty": "beginner",
+    "description": "Tumbado boca arriba, eleva el torso contrayendo el recto abdominal. No tires del cuello — la fuerza viene del abdomen."
+  },
+  {
+    "id": "ex-306",
+    "name": "Russian Twist con Disco",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/wkD8rjkodUI",
+    "difficulty": "intermediate",
+    "description": "Sentado con pies elevados y torso inclinado 45°, rota de lado a lado llevando el disco a tocar el suelo en cada repetición."
+  },
+  {
+    "id": "ex-307",
+    "name": "Elevación de Piernas Colgando",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/l4kQd9eWclI",
+    "difficulty": "intermediate",
+    "description": "Cuelga de una barra con agarre pronador. Eleva las piernas rectas (o dobladas) hasta la horizontal sin balancearte."
   }
 ]
