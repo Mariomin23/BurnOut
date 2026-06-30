@@ -1,7 +1,7 @@
 export type SplitCategory = 'tren_superior' | 'tren_inferior' | 'ambos';
 export type GoalCategory = 'perder_peso' | 'volumen' | 'mantenerse_activo';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
-export type Sex = 'masculino' | 'femenino' | 'otro';
+export type Sex = 'masculino' | 'femenino';
 
 export interface UserProfile {
   weightKg: number;

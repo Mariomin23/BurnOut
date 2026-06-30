@@ -49,12 +49,6 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
           >
             Femenino
           </div>
-          <div 
-            className={`pill-option ${sex === 'otro' ? 'active' : ''}`}
-            onClick={() => setSex('otro')}
-          >
-            Otro
-          </div>
         </div>
       </div>
 
