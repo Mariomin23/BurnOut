@@ -49,7 +49,7 @@ function App() {
     <div className="container">
       <header className="app-header fade-in">
         <h1 className="logo" onClick={handleGoHome} style={{ cursor: 'pointer' }}>
-          <span>☄️</span> Fit-PokéAPI
+          <span>☄️</span> BurnOut
         </h1>
         {streak > 0 && (
           <div className="badge-pill badge-streak">

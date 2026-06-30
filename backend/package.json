@@ -1,7 +1,7 @@
 {
-  "name": "fit-pokeapi-backend",
+  "name": "burnout-backend",
   "version": "1.0.0",
-  "description": "Backend API for Fit-PokéAPI Gym Routine Generator",
+  "description": "Backend API for BurnOut Gym Routine Generator",
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
