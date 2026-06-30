@@ -6,31 +6,59 @@ const ROUTINE_KEY = 'fit_poke_active_routine';
 const PROFILE_KEY = 'fit_poke_profile';
 
 function buildOfflineRoutine(userProfile: UserProfile): WorkoutRoutine {
+  const reps = userProfile.goal === 'Perder Peso' ? 15 : 12;
+  const sets = (id: string, name: string, muscle: string, split_category: 'tren_superior' | 'tren_inferior' | 'ambos', description: string) => ({
+    exercise: { id, name, target_muscle: muscle, split_category, youtube_video_url: '', difficulty: userProfile.experience, description },
+    sets: Array.from({ length: 3 }, (_, i) => ({ setIndex: i + 1, suggestedReps: reps, suggestedWeightKg: 0 })),
+    restTimerSeconds: 60,
+  });
+
+  let exercises;
+  let warmup: string[];
+  let cooldown: string[];
+
+  if (userProfile.split === 'Tren Superior') {
+    exercises = [
+      sets('ex-fb-pecho1', 'Flexiones de Pecho', 'Pecho', 'tren_superior', 'Manos a la anchura de hombros, baja el pecho hasta casi tocar el suelo y empuja.'),
+      sets('ex-fb-espalda1', 'Remo Invertido en Mesa', 'Espalda', 'tren_superior', 'Tumbado bajo una mesa, agarra el borde y tira del pecho hacia arriba retrayendo las escápulas.'),
+      sets('ex-fb-pecho2', 'Flexiones Inclinadas (pies elevados)', 'Pecho', 'tren_superior', 'Pies en silla o sofá, manos en el suelo. Trabaja la porción superior del pecho.'),
+      sets('ex-fb-hombros1', 'Pike Push-up (Flexión en Pica)', 'Hombros', 'tren_superior', 'Caderas elevadas, cuerpo en V invertida. Dobla los codos bajando la cabeza al suelo y empuja.'),
+      sets('ex-fb-triceps1', 'Fondos entre Sillas', 'Tríceps', 'tren_superior', 'Manos en el borde de una silla detrás, piernas extendidas. Baja flexionando los codos y sube.'),
+      sets('ex-fb-biceps1', 'Curl con Mochila o Bolsa', 'Bíceps', 'tren_superior', 'Agarra una mochila con peso con palmas hacia arriba y flexiona los codos controladamente.'),
+    ];
+    warmup = ['5 min de movilidad de hombros (rotaciones de brazos)', 'Aperturas dinámicas de pecho (20 reps sin peso)', 'Flexiones de rodillas lentas x 10 (activación)'];
+    cooldown = ['Estiramiento de pectoral en marco de puerta (30s)', 'Estiramiento de tríceps detrás de la cabeza (30s por brazo)', 'Rotación interna/externa de hombros suave (15s por lado)'];
+  } else if (userProfile.split === 'Tren Inferior') {
+    exercises = [
+      sets('ex-fb-cuad1', 'Sentadillas Corporales Profundas', 'Cuádriceps', 'tren_inferior', 'Pies a la anchura de hombros, desciende hasta los muslos paralelos al suelo o más abajo.'),
+      sets('ex-fb-fem1', 'Peso Muerto a Una Pierna sin Carga', 'Femorales', 'tren_inferior', 'De pie en una pierna, inclina el torso hacia adelante con la espalda recta hasta sentir el estiramiento femoral.'),
+      sets('ex-fb-cuad2', 'Zancadas Alternas en el Sitio', 'Cuádriceps', 'tren_inferior', 'Da un paso al frente y baja la rodilla trasera cerca del suelo. Alterna piernas.'),
+      sets('ex-fb-fem2', 'Puente de Glúteos con Pausa', 'Femorales', 'tren_inferior', 'Tumbado boca arriba, pies apoyados. Eleva la cadera apretando glúteos y femorales. Aguanta 2s arriba.'),
+      sets('ex-fb-glut1', 'Elevación de Cadera en el Suelo (Hip Thrust)', 'Glúteos', 'tren_inferior', 'Espalda en el suelo, rodillas dobladas. Empuja la cadera hacia arriba apretando los glúteos al máximo.'),
+      sets('ex-fb-gem1', 'Elevación de Talones en Escalón', 'Gemelos', 'tren_inferior', 'De pie en el borde de un escalón, baja los talones y sube sobre las puntas completamente.'),
+    ];
+    warmup = ['5 min de marcha en el sitio con rodillas altas', 'Movilidad de cadera (rotaciones 90/90: 10 reps por lado)', 'Sentadillas corporales lentas x 15 (activación)'];
+    cooldown = ['Estiramiento de cuádriceps de pie (30s por pierna)', 'Estiramiento de isquiotibiales sentado (30s)', 'Estiramiento de glúteos cruzando pierna sobre la otra (30s)'];
+  } else {
+    exercises = [
+      sets('ex-fb-pecho1', 'Flexiones de Pecho', 'Pecho', 'tren_superior', 'Manos a la anchura de hombros, baja el pecho hasta casi tocar el suelo y empuja.'),
+      sets('ex-fb-cuad1', 'Sentadillas Corporales Profundas', 'Cuádriceps', 'tren_inferior', 'Pies a la anchura de hombros, desciende hasta los muslos paralelos al suelo o más abajo.'),
+      sets('ex-fb-espalda1', 'Remo Invertido en Mesa', 'Espalda', 'tren_superior', 'Tumbado bajo una mesa, agarra el borde y tira del pecho hacia arriba retrayendo las escápulas.'),
+      sets('ex-fb-fem1', 'Peso Muerto a Una Pierna sin Carga', 'Femorales', 'tren_inferior', 'De pie en una pierna, inclina el torso hacia adelante con la espalda recta hasta sentir el estiramiento femoral.'),
+      sets('ex-fb-core1', 'Plancha Abdominal', 'Core', 'ambos', 'Apóyate sobre antebrazos y puntas de pies. Cuerpo en línea recta, core contraído. Aguanta.'),
+      sets('ex-fb-glut1', 'Elevación de Cadera en el Suelo (Hip Thrust)', 'Glúteos', 'tren_inferior', 'Espalda en el suelo, rodillas dobladas. Empuja la cadera hacia arriba apretando los glúteos al máximo.'),
+    ];
+    warmup = ['5 min de elíptica o trote suave en el sitio', 'Movilidad articular general (hombros, cadera, rodillas)', 'Sentadillas corporales + flexiones x 10 (activación)'];
+    cooldown = ['Estiramiento general de cadena posterior (45s)', 'Postura del niño para relajar la espalda baja (1 min)', 'Estiramiento cruzado de hombros (30s por lado)'];
+  }
+
   return {
     id: `fallback-${Math.random().toString(36).substring(2, 7)}`,
     split: userProfile.split,
     goal: userProfile.goal,
-    warmup: ['5 min de movilidad articular general', 'Sentadillas dinámicas libres (15 reps)'],
-    exercises: [
-      {
-        exercise: {
-          id: 'ex-fb1',
-          name: userProfile.split === 'Tren Inferior' ? 'Sentadillas Corporales Profundas' : 'Flexiones de Pecho',
-          target_muscle: userProfile.split === 'Tren Inferior' ? 'Cuádriceps' : 'Pecho',
-          split_category: userProfile.split === 'Tren Inferior' ? 'tren_inferior' : 'tren_superior',
-          youtube_video_url: 'https://www.youtube.com/embed/yR3_92s8Zt4',
-          difficulty: userProfile.experience,
-          description: 'Ejercicio de autocarga de emergencia offline. Realízalo con técnica controlada.',
-        },
-        sets: Array.from({ length: 3 }, (_, i) => ({
-          setIndex: i + 1,
-          suggestedReps: userProfile.goal === 'Perder Peso' ? 15 : 12,
-          suggestedWeightKg: 0,
-        })),
-        restTimerSeconds: 60,
-      },
-    ],
-    cooldown: ['Estiramientos generales pasivos (1 min)'],
+    warmup,
+    exercises,
+    cooldown,
     createdAt: new Date().toISOString(),
     isCompleted: false,
   };
@@ -65,6 +93,7 @@ export function useWorkout() {
   const [rerollingId, setRerollingId] = useState<string | null>(null);
   const [workoutSummary, setWorkoutSummary] = useState<WorkoutSummary | null>(null);
   const [showAbandonModal, setShowAbandonModal] = useState(false);
+  const [isOfflineMode, setIsOfflineMode] = useState(false);
 
   const persistRoutine = useCallback((routine: WorkoutRoutine | null) => {
     setActiveRoutine(routine);
@@ -93,6 +122,7 @@ export function useWorkout() {
       setProfile(userProfile);
       localStorage.setItem(PROFILE_KEY, JSON.stringify(userProfile));
       persistRoutine(buildOfflineRoutine(userProfile));
+      setIsOfflineMode(true);
     } finally {
       setLoading(false);
     }
@@ -171,6 +201,7 @@ export function useWorkout() {
     persistRoutine(null);
     setWorkoutSummary(null);
     setShowAbandonModal(false);
+    setIsOfflineMode(false);
   }, [persistRoutine]);
 
   const handleGoHome = useCallback(() => {
@@ -184,6 +215,7 @@ export function useWorkout() {
     rerollingId,
     workoutSummary,
     showAbandonModal,
+    isOfflineMode,
     setShowAbandonModal,
     handleGenerateRoutine,
     handleRerollExercise,

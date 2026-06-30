@@ -15,6 +15,7 @@ function App() {
     rerollingId,
     workoutSummary,
     showAbandonModal,
+    isOfflineMode,
     setShowAbandonModal,
     handleGenerateRoutine,
     handleRerollExercise,
@@ -150,6 +151,13 @@ function App() {
               ))}
             </ul>
           </div>
+
+          {isOfflineMode && (
+            <div className="glass fade-in" style={{ padding: '0.75rem 1rem', marginBottom: '1rem', borderLeft: '3px solid var(--color-warning, #f59e0b)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem' }}>
+              <span>⚠️</span>
+              <span>Modo offline — servidor no disponible. Rutina de ejercicios de peso corporal generada.</span>
+            </div>
+          )}
 
           <h2 className="exercises-heading">Ejercicios del Día 🏋️</h2>
 
