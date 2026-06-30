@@ -252,13 +252,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem 1rem 5rem 1rem;
 }
 
-/* Header */
-.app-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
 
 .logo {
   font-family: var(--font-heading);
