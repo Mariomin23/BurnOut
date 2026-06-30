@@ -359,3 +359,47 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
 }
+
+/* Skeleton loaders */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 25%,
+    rgba(255, 255, 255, 0.09) 50%,
+    rgba(255, 255, 255, 0.04) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-line {
+  height: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-line--short { width: 40%; }
+.skeleton-line--medium { width: 65%; }
+.skeleton-line--full { width: 100%; }
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 75px 65px 60px 40px;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-cell {
+  height: 32px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
