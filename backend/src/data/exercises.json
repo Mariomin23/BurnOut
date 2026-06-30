@@ -466,5 +466,41 @@
     "youtube_video_url": "https://www.youtube.com/embed/l4kQd9eWclI",
     "difficulty": "intermediate",
     "description": "Cuelga de una barra con agarre pronador. Eleva las piernas rectas (o dobladas) hasta la horizontal sin balancearte."
+  },
+  {
+    "id": "ex-128",
+    "name": "Curl Inclinado con Mancuernas",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/soxrZlIl35U",
+    "difficulty": "intermediate",
+    "description": "Sentado en banco inclinado a 45°, deja caer los brazos completamente y flexiona los codos llevando las mancuernas al hombro. El estiramiento completo maximiza la activación del bíceps."
+  },
+  {
+    "id": "ex-129",
+    "name": "Patada de Tríceps con Mancuerna",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/6SS6K3lAwZ8",
+    "difficulty": "beginner",
+    "description": "Con un brazo apoyado en banco, inclina el torso y extiende el codo hacia atrás hasta alinear el brazo con el torso. Aprieta el tríceps al final."
+  },
+  {
+    "id": "ex-219",
+    "name": "Saltos a la Comba (Calf Jump Rope)",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/u3zgHI8QnqE",
+    "difficulty": "beginner",
+    "description": "Salta a la comba aterrizando solo con las puntas de los pies. Mantén las rodillas semi-flexionadas y el core activo durante todo el ejercicio."
+  },
+  {
+    "id": "ex-220",
+    "name": "Elevación de Talones en Máquina Donkey",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/lY94mVMcpC4",
+    "difficulty": "intermediate",
+    "description": "Inclinado hacia adelante en la máquina donkey calf raise, realiza elevaciones completas de talón con máximo rango de movimiento para trabajar el gastrocnemio."
   }
 ]
