@@ -615,7 +615,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .exercise-card__name {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: var(--text-main);
   font-family: var(--font-heading);
   font-weight: 700;
 }
@@ -687,6 +687,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
   text-align: center;
   appearance: none;
+}
+
+.set-input:focus,
+.set-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.set-input:disabled,
+.set-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .set-complete-btn {
