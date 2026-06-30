@@ -1,0 +1,191 @@
+[
+  {
+    "id": "ex-101",
+    "name": "Press de Banca con Barra",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/gRVjAtPip0Y",
+    "difficulty": "intermediate",
+    "description": "Acuéstate en un banco plano, baja la barra al pecho controlado y empuja hacia arriba bloqueando los codos al final."
+  },
+  {
+    "id": "ex-102",
+    "name": "Press Inclinado con Mancuernas",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/8iPvfipIco0",
+    "difficulty": "intermediate",
+    "description": "Siéntate en un banco inclinado a 30-45 grados, empuja las mancuernas verticalmente manteniendo el control del recorrido."
+  },
+  {
+    "id": "ex-103",
+    "name": "Aperturas con Polea (Crossover)",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/tM6L0Oa0cMY",
+    "difficulty": "beginner",
+    "description": "De pie entre dos poleas, lleva las manos hacia el centro en un movimiento de abrazo arqueando levemente los brazos."
+  },
+  {
+    "id": "ex-104",
+    "name": "Dominadas Pronas",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/eGo4IYlbE5g",
+    "difficulty": "advanced",
+    "description": "Cuélgate de una barra con agarre amplio pronador y elévate intentando llevar la parte alta del pecho a la barra."
+  },
+  {
+    "id": "ex-105",
+    "name": "Remo con Barra",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/G8L_8nM0Cc0",
+    "difficulty": "intermediate",
+    "description": "Flexiona ligeramente las rodillas e inclina el torso hacia adelante. Tira de la barra hacia tu abdomen bajo retrayendo las escápulas."
+  },
+  {
+    "id": "ex-106",
+    "name": "Jalón al Pecho",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/0S4b3hH-4d0",
+    "difficulty": "beginner",
+    "description": "Siéntate en la máquina de jalón, tira de la barra hacia la parte superior del pecho contrayendo la espalda."
+  },
+  {
+    "id": "ex-107",
+    "name": "Press Militar con Barra",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/2yjwHeFToj0",
+    "difficulty": "intermediate",
+    "description": "De pie o sentado, empuja la barra sobre tu cabeza de forma vertical manteniendo el core estable."
+  },
+  {
+    "id": "ex-108",
+    "name": "Elevaciones Laterales con Mancuernas",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/3VcKaX_yLQI",
+    "difficulty": "beginner",
+    "description": "Sujeta dos mancuernas a los lados y elévalas lateralmente hasta la altura de tus hombros con los codos semi-flexionados."
+  },
+  {
+    "id": "ex-109",
+    "name": "Curl de Bíceps con Barra",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/ykJgrb5LmSw",
+    "difficulty": "beginner",
+    "description": "De pie con una barra, flexiona los codos llevando la barra hacia los hombros sin balancear el torso."
+  },
+  {
+    "id": "ex-110",
+    "name": "Extensión de Tríceps en Polea Alta",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "youtube_video_url": "https://www.youtube.com/embed/2-LAMgA9YHM",
+    "difficulty": "beginner",
+    "description": "De cara a la polea alta, empuja el accesorio (cuerda o barra) hacia abajo extendiendo los codos por completo."
+  },
+  {
+    "id": "ex-201",
+    "name": "Sentadillas Traseras con Barra",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/yR3_92s8Zt4",
+    "difficulty": "intermediate",
+    "description": "Coloca la barra en tus trapecios, desciende flexionando cadera y rodillas como si te sentaras, y empuja hacia arriba."
+  },
+  {
+    "id": "ex-202",
+    "name": "Prensa de Piernas 45°",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/yZ9gVv9wMsc",
+    "difficulty": "beginner",
+    "description": "Coloca los pies en la plataforma a lo ancho de tus hombros, destraba la prensa, baja controlado y empuja sin bloquear rodillas."
+  },
+  {
+    "id": "ex-203",
+    "name": "Zancadas Caminando con Mancuernas",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/D7KaRcUTQeE",
+    "difficulty": "beginner",
+    "description": "Da un paso al frente bajando tu cadera hasta que ambas rodillas queden dobladas en 90 grados, luego avanza con la otra pierna."
+  },
+  {
+    "id": "ex-204",
+    "name": "Peso Muerto Rumano con Mancuernas",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/2N-GFt412wc",
+    "difficulty": "intermediate",
+    "description": "De pie con mancuernas frente a ti, empuja tu cadera hacia atrás flexionando muy levemente las rodillas mientras bajas el torso."
+  },
+  {
+    "id": "ex-205",
+    "name": "Curl de Piernas Acostado",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/1Tq3QdYUuHs",
+    "difficulty": "beginner",
+    "description": "Túmbate boca abajo en la máquina, coloca el rodillo sobre tus tobillos y flexiona las piernas contrayendo los femorales."
+  },
+  {
+    "id": "ex-206",
+    "name": "Elevación de Talones de Pie",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/3_7V21k3kQA",
+    "difficulty": "beginner",
+    "description": "Colócate sobre el borde de un escalón o máquina, desciende los talones para estirar los gemelos y luego elévate sobre las puntas."
+  },
+  {
+    "id": "ex-207",
+    "name": "Hip Thrust con Barra",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "youtube_video_url": "https://www.youtube.com/embed/LM8XHLYJoYs",
+    "difficulty": "intermediate",
+    "description": "Apoya la parte alta de la espalda en un banco, coloca la barra sobre tu cadera y empuja hacia arriba apretando los glúteos."
+  },
+  {
+    "id": "ex-301",
+    "name": "Peso Muerto Convencional",
+    "target_muscle": "Espalda",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/op9kVnSso6Q",
+    "difficulty": "advanced",
+    "description": "Tira de la barra desde el suelo extendiendo cadera y rodillas simultáneamente, manteniendo la espalda neutra y core activado."
+  },
+  {
+    "id": "ex-302",
+    "name": "Kettlebell Swing",
+    "target_muscle": "Glúteos",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/sSESeQ551xU",
+    "difficulty": "intermediate",
+    "description": "Balancea la pesa rusa entre tus piernas mediante una bisagra de cadera explosiva, proyectando la pesa a la altura del pecho."
+  },
+  {
+    "id": "ex-303",
+    "name": "Plancha Abdominal",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/TvxNkmjdhMM",
+    "difficulty": "beginner",
+    "description": "Apóyate sobre tus antebrazos y puntas de los pies, manteniendo el cuerpo en línea recta y el abdomen contraído firmemente."
+  },
+  {
+    "id": "ex-304",
+    "name": "Rueda Abdominal (Ab Wheel)",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "youtube_video_url": "https://www.youtube.com/embed/rq7L77_qSsc",
+    "difficulty": "advanced",
+    "description": "De rodillas con la rueda, deslízate hacia adelante controladamente y regresa contrayendo el core sin arquear la espalda baja."
+  }
+]
