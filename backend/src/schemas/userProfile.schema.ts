@@ -11,10 +11,7 @@ export const UserProfileSchema = z.object({
 });
 
 export const RerollRequestSchema = z.object({
-  targetMuscle: z.string().min(1),
+  targetMuscle: z.enum(['Pecho', 'Espalda', 'Hombros', 'Bíceps', 'Tríceps', 'Cuádriceps', 'Femorales', 'Glúteos', 'Gemelos', 'Core']),
   excludedIds: z.array(z.string()),
   profile: UserProfileSchema,
 });
-
-export type ValidatedUserProfile = z.infer<typeof UserProfileSchema>;
-export type ValidatedRerollRequest = z.infer<typeof RerollRequestSchema>;
