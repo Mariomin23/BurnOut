@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto';
 import { IExerciseRepository } from '../repositories/exerciseRepository';
 import { 
   Exercise, 
@@ -13,7 +14,8 @@ export class RoutineService {
   constructor(private exerciseRepository: IExerciseRepository) {}
 
   public async generateRoutine(profile: UserProfile): Promise<WorkoutRoutine> {
-    const allExercises = await this.exerciseRepository.getAll();
+    const rawExercises = await this.exerciseRepository.getAll();
+    const allExercises = this.filterByDifficulty(rawExercises, profile.experience);
     const split = profile.split;
     const goal = profile.goal;
 
@@ -151,7 +153,7 @@ export class RoutineService {
     }
 
     return {
-      id: Math.random().toString(36).substring(2, 11),
+      id: randomUUID(),
       split,
       goal,
       warmup,
@@ -167,8 +169,9 @@ export class RoutineService {
     excludedIds: string[],
     profile: UserProfile
   ): Promise<WorkoutExercise> {
-    const allExercises = await this.exerciseRepository.getAll();
-    
+    const rawExercises = await this.exerciseRepository.getAll();
+    const allExercises = this.filterByDifficulty(rawExercises, profile.experience);
+
     // Filter matching muscle and not excluded
     let candidates = allExercises.filter(
       ex => ex.target_muscle.toLowerCase() === targetMuscle.toLowerCase() && !excludedIds.includes(ex.id)
@@ -285,6 +288,16 @@ export class RoutineService {
     // Cap at reasonable minimums/maximums
     if (suggested < 2.5) return 2.5;
     return suggested;
+  }
+
+  private filterByDifficulty(exercises: Exercise[], experience: Difficulty): Exercise[] {
+    if (experience === 'beginner') {
+      return exercises.filter(e => e.difficulty === 'beginner');
+    }
+    if (experience === 'intermediate') {
+      return exercises.filter(e => e.difficulty !== 'advanced');
+    }
+    return exercises;
   }
 
   private shuffle<T>(array: T[]): T[] {
