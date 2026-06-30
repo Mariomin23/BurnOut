@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import type { UserProfile, WorkoutRoutine, WorkoutExercise, RoutineSet } from '../types';
 
-const API_BASE_URL = 'http://localhost:5000/api/routines';
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? 'http://localhost:5000/api/routines';
 const ROUTINE_KEY = 'fit_poke_active_routine';
 const PROFILE_KEY = 'fit_poke_profile';
 

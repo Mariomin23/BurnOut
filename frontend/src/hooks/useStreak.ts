@@ -17,7 +17,9 @@ function readStreak(): number {
     if (!raw) return 0;
     const data: StreakData = JSON.parse(raw);
     const today = toDateString(new Date());
-    const yesterday = toDateString(new Date(Date.now() - 86400000));
+    const d = new Date();
+    d.setDate(d.getDate() - 1);
+    const yesterday = toDateString(d);
     if (data.lastWorkoutDate === today || data.lastWorkoutDate === yesterday) {
       return data.count;
     }
@@ -32,7 +34,9 @@ export function useStreak() {
 
   const recordWorkout = useCallback(() => {
     const today = toDateString(new Date());
-    const yesterday = toDateString(new Date(Date.now() - 86400000));
+    const d = new Date();
+    d.setDate(d.getDate() - 1);
+    const yesterday = toDateString(d);
 
     let newCount: number;
     try {
