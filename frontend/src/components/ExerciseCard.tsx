@@ -23,8 +23,12 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   isRerolling,
 }) => {
   const { exercise, sets, restTimerSeconds } = item;
-  const [showVideo, setShowVideo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(true);
+
+  const openVideoSearch = () => {
+    const query = encodeURIComponent(`${exercise.name} técnica ejercicio`);
+    window.open(`https://www.youtube.com/results?search_query=${query}`, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="glass fade-in" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '1.5rem' }}>
@@ -45,8 +49,8 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           <button
             className="btn btn-secondary btn-circle"
             style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}
-            onClick={() => setShowVideo(!showVideo)}
-            title="Ver vídeo técnico"
+            onClick={openVideoSearch}
+            title="Buscar vídeo técnico en YouTube"
           >
             📺
           </button>
@@ -65,20 +69,6 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
       {isExpanded && (
         <div className="exercise-card__body">
           <p className="exercise-card__description">{exercise.description}</p>
-
-          {showVideo && (
-            <div className="video-wrapper fade-in">
-              <iframe
-                src={exercise.youtube_video_url}
-                title={exercise.name}
-                frameBorder="0"
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          )}
 
           <div className="set-table-header">
             <div>Set</div>
