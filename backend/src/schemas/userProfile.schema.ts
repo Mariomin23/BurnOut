@@ -15,3 +15,22 @@ export const RerollRequestSchema = z.object({
   excludedIds: z.array(z.string()),
   profile: UserProfileSchema,
 });
+
+export const ExerciseSetLogSchema = z.object({
+  weightKg: z.number().min(0).max(500),
+  reps: z.number().int().min(0).max(100),
+  rpe: z.number().min(1).max(10),
+});
+
+export const HistorySchema = z
+  .array(
+    z.object({
+      exerciseId: z.string(),
+      lastSession: z.object({
+        date: z.string(),
+        goal: z.enum(['Perder Peso', 'Volumen', 'Mantenerse Activo']),
+        sets: z.array(ExerciseSetLogSchema).max(10),
+      }),
+    })
+  )
+  .max(30);
