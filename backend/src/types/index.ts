@@ -38,6 +38,7 @@ export interface WorkoutExercise {
   exercise: Exercise;
   sets: RoutineSet[];
   restTimerSeconds: number;
+  progressionDirection?: ProgressionDirection;
 }
 
 export interface WorkoutRoutine {
@@ -49,4 +50,23 @@ export interface WorkoutRoutine {
   cooldown: string[];
   createdAt: string;
   isCompleted: boolean;
+}
+
+export type GoalLabel = 'Perder Peso' | 'Volumen' | 'Mantenerse Activo';
+
+export type ProgressionDirection = 'up' | 'keep' | 'down';
+
+export interface ExerciseSetLog {
+  weightKg: number;
+  reps: number;
+  rpe: number;
+}
+
+export interface ExerciseHistorySummary {
+  exerciseId: string;
+  lastSession: {
+    date: string;
+    goal: GoalLabel;
+    sets: ExerciseSetLog[];
+  };
 }
