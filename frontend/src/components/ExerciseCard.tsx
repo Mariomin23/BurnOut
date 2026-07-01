@@ -80,7 +80,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           </div>
 
           {sets.map(set => {
-            const isCompleted = set.completedReps !== undefined;
+            const isCompleted = set.completed === true;
             return (
               <div
                 key={set.setIndex}
@@ -138,13 +138,10 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
                     className={`set-complete-btn${isCompleted ? ' set-complete-btn--done' : ' set-complete-btn--pending'}`}
                     onClick={() => {
                       if (isCompleted) {
-                        onUpdateSet(exercise.id, set.setIndex, {
-                          completedReps: undefined,
-                          completedWeightKg: undefined,
-                          completedRpe: undefined,
-                        });
+                        onUpdateSet(exercise.id, set.setIndex, { completed: false });
                       } else {
                         onUpdateSet(exercise.id, set.setIndex, {
+                          completed: true,
                           completedWeightKg: set.completedWeightKg ?? set.suggestedWeightKg,
                           completedReps: set.completedReps ?? set.suggestedReps,
                           completedRpe: set.completedRpe ?? 8,

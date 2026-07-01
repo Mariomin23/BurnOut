@@ -177,8 +177,8 @@ export function useWorkout() {
 
     activeRoutine.exercises.forEach(item => {
       item.sets.forEach(set => {
-        if (set.completedReps !== undefined) {
-          totalVolume += (set.completedWeightKg ?? 0) * set.completedReps;
+        if (set.completed) {
+          totalVolume += (set.completedWeightKg ?? 0) * (set.completedReps ?? 0);
           completedSetsCount++;
           totalRpeSum += set.completedRpe ?? 8;
         }

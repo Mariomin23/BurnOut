@@ -40,7 +40,7 @@ function App() {
     activeRoutine.exercises.forEach(item => {
       item.sets.forEach(set => {
         total++;
-        if (set.completedReps !== undefined) completed++;
+        if (set.completed) completed++;
       });
     });
     return total > 0 ? Math.round((completed / total) * 100) : 0;
