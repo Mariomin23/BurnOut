@@ -8,7 +8,7 @@ const PROFILE_KEY = 'fit_poke_profile';
 function buildOfflineRoutine(userProfile: UserProfile): WorkoutRoutine {
   const reps = userProfile.goal === 'Perder Peso' ? 15 : 12;
   const sets = (id: string, name: string, muscle: string, split_category: 'tren_superior' | 'tren_inferior' | 'ambos', description: string) => ({
-    exercise: { id, name, target_muscle: muscle, split_category, youtube_video_url: '', difficulty: userProfile.experience, description },
+    exercise: { id, name, target_muscle: muscle, split_category, difficulty: userProfile.experience, description },
     sets: Array.from({ length: 3 }, (_, i) => ({ setIndex: i + 1, suggestedReps: reps, suggestedWeightKg: 0 })),
     restTimerSeconds: 60,
   });

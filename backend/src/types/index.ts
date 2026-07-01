@@ -18,7 +18,6 @@ export interface Exercise {
   name: string;
   target_muscle: string;
   split_category: SplitCategory;
-  youtube_video_url: string;
   difficulty: Difficulty;
   description: string;
 }
