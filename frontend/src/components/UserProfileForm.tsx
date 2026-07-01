@@ -7,9 +7,9 @@ interface UserProfileFormProps {
 }
 
 export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLoading }) => {
-  const [weightKg, setWeightKg] = useState<number>(70);
-  const [heightCm, setHeightCm] = useState<number>(175);
-  const [age, setAge] = useState<number>(25);
+  const [weightKg, setWeightKg] = useState<string>('70');
+  const [heightCm, setHeightCm] = useState<string>('175');
+  const [age, setAge] = useState<string>('25');
   const [sex, setSex] = useState<Sex>('masculino');
   const [experience, setExperience] = useState<Difficulty>('intermediate');
   const [split, setSplit] = useState<'Tren Superior' | 'Tren Inferior' | 'Full Body'>('Tren Superior');
@@ -18,9 +18,9 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit({
-      weightKg,
-      heightCm,
-      age,
+      weightKg: Number(weightKg),
+      heightCm: Number(heightCm),
+      age: Number(age),
       sex,
       experience,
       split,
@@ -62,7 +62,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
             max="250"
             className="form-input"
             value={weightKg}
-            onChange={(e) => setWeightKg(Number(e.target.value))}
+            onChange={(e) => setWeightKg(e.target.value)}
             required
           />
         </div>
@@ -76,7 +76,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
             max="250"
             className="form-input"
             value={heightCm}
-            onChange={(e) => setHeightCm(Number(e.target.value))}
+            onChange={(e) => setHeightCm(e.target.value)}
             required
           />
         </div>
@@ -92,7 +92,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
             max="100"
             className="form-input"
             value={age}
-            onChange={(e) => setAge(Number(e.target.value))}
+            onChange={(e) => setAge(e.target.value)}
             required
           />
         </div>
