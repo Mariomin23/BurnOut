@@ -20,12 +20,15 @@ export interface Exercise {
   split_category: SplitCategory;
   difficulty: Difficulty;
   description: string;
+  /** Load relative to the muscle's reference compound lift (0 = bodyweight/autocarga) */
+  weight_factor: number;
 }
 
 export interface RoutineSet {
   setIndex: number;
   suggestedReps: number;
   suggestedWeightKg: number;
+  completed?: boolean;
   completedReps?: number;
   completedWeightKg?: number;
   completedRpe?: number;

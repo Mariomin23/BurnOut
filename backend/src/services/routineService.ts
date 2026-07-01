@@ -227,52 +227,40 @@ export class RoutineService {
     };
   }
 
+  // Baseline load for the muscle's reference compound lift, as fraction of bodyweight (intermediate level)
+  private static readonly MUSCLE_BASE_FACTOR: Record<string, number> = {
+    'Pecho': 0.5,       // Press de banca
+    'Espalda': 0.5,     // Remo con barra
+    'Hombros': 0.3,     // Press militar
+    'Bíceps': 0.15,     // Curl con barra
+    'Tríceps': 0.15,    // Press francés
+    'Cuádriceps': 0.8,  // Sentadilla trasera
+    'Femorales': 0.65,  // Peso muerto rumano
+    'Glúteos': 0.65,    // Referencia cadena posterior
+    'Gemelos': 0.9,     // Elevación de talones de pie
+    'Core': 0.15,       // Lastre ligero (disco)
+  };
+
+  private static readonly EXPERIENCE_FACTOR: Record<Difficulty, number> = {
+    beginner: 0.5,
+    intermediate: 1,
+    advanced: 1.6,
+  };
+
   private calculateSuggestedWeight(exercise: Exercise, profile: UserProfile): number {
-    const weight = profile.weightKg;
-    const experience = profile.experience;
-    const sex = profile.sex;
+    const loadFactor = exercise.weight_factor ?? 1;
+    if (loadFactor === 0) {
+      return 0; // Bodyweight / autocarga
+    }
+
     const muscle = exercise.target_muscle;
-
-    // Bodyweight exercises or very light accessory default to 0 (bodyweight)
-    if (
-      exercise.name.includes("Plancha") || 
-      exercise.name.includes("Dominadas") || 
-      exercise.name.includes("Abdominal") ||
-      muscle === "Core"
-    ) {
-      return 0; // Bodyweight
-    }
-
-    let multiplier = 0.2;
-
-    switch (experience) {
-      case 'beginner':
-        if (muscle === 'Cuádriceps') multiplier = 0.4;
-        else if (muscle === 'Femorales' || muscle === 'Glúteos') multiplier = 0.35;
-        else if (muscle === 'Pecho' || muscle === 'Espalda') multiplier = 0.25;
-        else if (muscle === 'Hombros') multiplier = 0.15;
-        else multiplier = 0.1;
-        break;
-
-      case 'intermediate':
-        if (muscle === 'Cuádriceps') multiplier = 0.8;
-        else if (muscle === 'Femorales' || muscle === 'Glúteos') multiplier = 0.65;
-        else if (muscle === 'Pecho' || muscle === 'Espalda') multiplier = 0.5;
-        else if (muscle === 'Hombros') multiplier = 0.3;
-        else multiplier = 0.15;
-        break;
-
-      case 'advanced':
-        if (muscle === 'Cuádriceps') multiplier = 1.2;
-        else if (muscle === 'Femorales' || muscle === 'Glúteos') multiplier = 1.0;
-        else if (muscle === 'Pecho' || muscle === 'Espalda') multiplier = 0.8;
-        else if (muscle === 'Hombros') multiplier = 0.5;
-        else multiplier = 0.2;
-        break;
-    }
+    let multiplier =
+      (RoutineService.MUSCLE_BASE_FACTOR[muscle] ?? 0.2) *
+      RoutineService.EXPERIENCE_FACTOR[profile.experience] *
+      loadFactor;
 
     // Sex modifiers
-    if (sex === 'femenino') {
+    if (profile.sex === 'femenino') {
       if (muscle === 'Pecho' || muscle === 'Espalda' || muscle === 'Hombros') {
         multiplier *= 0.7; // Lower upper body suggested starting weights
       } else if (muscle === 'Glúteos' || muscle === 'Femorales') {
@@ -280,12 +268,12 @@ export class RoutineService {
       }
     }
 
-    let suggested = weight * multiplier;
+    let suggested = profile.weightKg * multiplier;
 
     // Round to nearest standard dumbbell/plate jump (2.5 kg)
     suggested = Math.round(suggested / 2.5) * 2.5;
 
-    // Cap at reasonable minimums/maximums
+    // Cap at reasonable minimum
     if (suggested < 2.5) return 2.5;
     return suggested;
   }

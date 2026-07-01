@@ -5,7 +5,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Acuéstate en un banco plano, baja la barra al pecho controlado y empuja hacia arriba bloqueando los codos al final."
+    "description": "Acuéstate en un banco plano, baja la barra al pecho controlado y empuja hacia arriba bloqueando los codos al final.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-102",
@@ -13,7 +14,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Siéntate en un banco inclinado a 30-45 grados, empuja las mancuernas verticalmente manteniendo el control del recorrido."
+    "description": "Siéntate en un banco inclinado a 30-45 grados, empuja las mancuernas verticalmente manteniendo el control del recorrido.",
+    "weight_factor": 0.7
   },
   {
     "id": "ex-103",
@@ -21,7 +23,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "De pie entre dos poleas, lleva las manos hacia el centro en un movimiento de abrazo arqueando levemente los brazos."
+    "description": "De pie entre dos poleas, lleva las manos hacia el centro en un movimiento de abrazo arqueando levemente los brazos.",
+    "weight_factor": 0.35
   },
   {
     "id": "ex-104",
@@ -29,7 +32,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "advanced",
-    "description": "Cuélgate de una barra con agarre amplio pronador y elévate intentando llevar la parte alta del pecho a la barra."
+    "description": "Cuélgate de una barra con agarre amplio pronador y elévate intentando llevar la parte alta del pecho a la barra.",
+    "weight_factor": 0
   },
   {
     "id": "ex-105",
@@ -37,7 +41,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Flexiona ligeramente las rodillas e inclina el torso hacia adelante. Tira de la barra hacia tu abdomen bajo retrayendo las escápulas."
+    "description": "Flexiona ligeramente las rodillas e inclina el torso hacia adelante. Tira de la barra hacia tu abdomen bajo retrayendo las escápulas.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-106",
@@ -45,7 +50,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Siéntate en la máquina de jalón, tira de la barra hacia la parte superior del pecho contrayendo la espalda."
+    "description": "Siéntate en la máquina de jalón, tira de la barra hacia la parte superior del pecho contrayendo la espalda.",
+    "weight_factor": 1.1
   },
   {
     "id": "ex-107",
@@ -53,7 +59,8 @@
     "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "De pie o sentado, empuja la barra sobre tu cabeza de forma vertical manteniendo el core estable."
+    "description": "De pie o sentado, empuja la barra sobre tu cabeza de forma vertical manteniendo el core estable.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-108",
@@ -61,7 +68,8 @@
     "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Sujeta dos mancuernas a los lados y elévalas lateralmente hasta la altura de tus hombros con los codos semi-flexionados."
+    "description": "Sujeta dos mancuernas a los lados y elévalas lateralmente hasta la altura de tus hombros con los codos semi-flexionados.",
+    "weight_factor": 0.3
   },
   {
     "id": "ex-109",
@@ -69,7 +77,8 @@
     "target_muscle": "Bíceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "De pie con una barra, flexiona los codos llevando la barra hacia los hombros sin balancear el torso."
+    "description": "De pie con una barra, flexiona los codos llevando la barra hacia los hombros sin balancear el torso.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-110",
@@ -77,7 +86,8 @@
     "target_muscle": "Tríceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "De cara a la polea alta, empuja el accesorio (cuerda o barra) hacia abajo extendiendo los codos por completo."
+    "description": "De cara a la polea alta, empuja el accesorio (cuerda o barra) hacia abajo extendiendo los codos por completo.",
+    "weight_factor": 1.2
   },
   {
     "id": "ex-201",
@@ -85,7 +95,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "Coloca la barra en tus trapecios, desciende flexionando cadera y rodillas como si te sentaras, y empuja hacia arriba."
+    "description": "Coloca la barra en tus trapecios, desciende flexionando cadera y rodillas como si te sentaras, y empuja hacia arriba.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-202",
@@ -93,7 +104,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Coloca los pies en la plataforma a lo ancho de tus hombros, destraba la prensa, baja controlado y empuja sin bloquear rodillas."
+    "description": "Coloca los pies en la plataforma a lo ancho de tus hombros, destraba la prensa, baja controlado y empuja sin bloquear rodillas.",
+    "weight_factor": 1.8
   },
   {
     "id": "ex-203",
@@ -101,7 +113,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Da un paso al frente bajando tu cadera hasta que ambas rodillas queden dobladas en 90 grados, luego avanza con la otra pierna."
+    "description": "Da un paso al frente bajando tu cadera hasta que ambas rodillas queden dobladas en 90 grados, luego avanza con la otra pierna.",
+    "weight_factor": 0.5
   },
   {
     "id": "ex-204",
@@ -109,7 +122,8 @@
     "target_muscle": "Femorales",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "De pie con mancuernas frente a ti, empuja tu cadera hacia atrás flexionando muy levemente las rodillas mientras bajas el torso."
+    "description": "De pie con mancuernas frente a ti, empuja tu cadera hacia atrás flexionando muy levemente las rodillas mientras bajas el torso.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-205",
@@ -117,7 +131,8 @@
     "target_muscle": "Femorales",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Túmbate boca abajo en la máquina, coloca el rodillo sobre tus tobillos y flexiona las piernas contrayendo los femorales."
+    "description": "Túmbate boca abajo en la máquina, coloca el rodillo sobre tus tobillos y flexiona las piernas contrayendo los femorales.",
+    "weight_factor": 0.7
   },
   {
     "id": "ex-206",
@@ -125,7 +140,8 @@
     "target_muscle": "Gemelos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Colócate sobre el borde de un escalón o máquina, desciende los talones para estirar los gemelos y luego elévate sobre las puntas."
+    "description": "Colócate sobre el borde de un escalón o máquina, desciende los talones para estirar los gemelos y luego elévate sobre las puntas.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-207",
@@ -133,7 +149,8 @@
     "target_muscle": "Glúteos",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "Apoya la parte alta de la espalda en un banco, coloca la barra sobre tu cadera y empuja hacia arriba apretando los glúteos."
+    "description": "Apoya la parte alta de la espalda en un banco, coloca la barra sobre tu cadera y empuja hacia arriba apretando los glúteos.",
+    "weight_factor": 1.4
   },
   {
     "id": "ex-301",
@@ -141,7 +158,8 @@
     "target_muscle": "Espalda",
     "split_category": "ambos",
     "difficulty": "advanced",
-    "description": "Tira de la barra desde el suelo extendiendo cadera y rodillas simultáneamente, manteniendo la espalda neutra y core activado."
+    "description": "Tira de la barra desde el suelo extendiendo cadera y rodillas simultáneamente, manteniendo la espalda neutra y core activado.",
+    "weight_factor": 2.0
   },
   {
     "id": "ex-302",
@@ -149,7 +167,8 @@
     "target_muscle": "Glúteos",
     "split_category": "ambos",
     "difficulty": "intermediate",
-    "description": "Balancea la pesa rusa entre tus piernas mediante una bisagra de cadera explosiva, proyectando la pesa a la altura del pecho."
+    "description": "Balancea la pesa rusa entre tus piernas mediante una bisagra de cadera explosiva, proyectando la pesa a la altura del pecho.",
+    "weight_factor": 0.4
   },
   {
     "id": "ex-303",
@@ -157,7 +176,8 @@
     "target_muscle": "Core",
     "split_category": "ambos",
     "difficulty": "beginner",
-    "description": "Apóyate sobre tus antebrazos y puntas de los pies, manteniendo el cuerpo en línea recta y el abdomen contraído firmemente."
+    "description": "Apóyate sobre tus antebrazos y puntas de los pies, manteniendo el cuerpo en línea recta y el abdomen contraído firmemente.",
+    "weight_factor": 0
   },
   {
     "id": "ex-304",
@@ -165,7 +185,8 @@
     "target_muscle": "Core",
     "split_category": "ambos",
     "difficulty": "advanced",
-    "description": "De rodillas con la rueda, deslízate hacia adelante controladamente y regresa contrayendo el core sin arquear la espalda baja."
+    "description": "De rodillas con la rueda, deslízate hacia adelante controladamente y regresa contrayendo el core sin arquear la espalda baja.",
+    "weight_factor": 0
   },
   {
     "id": "ex-111",
@@ -173,7 +194,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "En paralelas, inclina el torso hacia adelante para activar el pecho. Baja hasta que los hombros queden al nivel de los codos."
+    "description": "En paralelas, inclina el torso hacia adelante para activar el pecho. Baja hasta que los hombros queden al nivel de los codos.",
+    "weight_factor": 0
   },
   {
     "id": "ex-112",
@@ -181,7 +203,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Tumbado en banco declinado, empuja las mancuernas verticalmente desde el pecho hacia arriba. Activa la porción inferior del pectoral."
+    "description": "Tumbado en banco declinado, empuja las mancuernas verticalmente desde el pecho hacia arriba. Activa la porción inferior del pectoral.",
+    "weight_factor": 0.7
   },
   {
     "id": "ex-113",
@@ -189,7 +212,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Tumbado con mancuernas, abre los brazos en semicírculo hasta sentir el estiramiento en el pecho. Cierra controlando el peso."
+    "description": "Tumbado con mancuernas, abre los brazos en semicírculo hasta sentir el estiramiento en el pecho. Cierra controlando el peso.",
+    "weight_factor": 0.3
   },
   {
     "id": "ex-114",
@@ -197,7 +221,8 @@
     "target_muscle": "Pecho",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Sentado en la máquina de press, empuja las agarraderas hacia adelante extendiendo los codos por completo. Ideal para principiantes."
+    "description": "Sentado en la máquina de press, empuja las agarraderas hacia adelante extendiendo los codos por completo. Ideal para principiantes.",
+    "weight_factor": 0.9
   },
   {
     "id": "ex-115",
@@ -205,7 +230,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Apoya una rodilla y mano en el banco. Tira de la mancuerna hacia tu cadera retrayendo la escápula al final del movimiento."
+    "description": "Apoya una rodilla y mano en el banco. Tira de la mancuerna hacia tu cadera retrayendo la escápula al final del movimiento.",
+    "weight_factor": 0.45
   },
   {
     "id": "ex-116",
@@ -213,7 +239,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Sentado en la máquina de remo, tira de las agarraderas hacia tu abdomen juntando los omóplatos. Mantén la espalda erguida."
+    "description": "Sentado en la máquina de remo, tira de las agarraderas hacia tu abdomen juntando los omóplatos. Mantén la espalda erguida.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-117",
@@ -221,7 +248,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Con polea alta y cuerda, tira hacia tu cara separando las manos al final. Activa trapecios medios y manguito rotador."
+    "description": "Con polea alta y cuerda, tira hacia tu cara separando las manos al final. Activa trapecios medios y manguito rotador.",
+    "weight_factor": 0.5
   },
   {
     "id": "ex-118",
@@ -229,7 +257,8 @@
     "target_muscle": "Espalda",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Tumbado transversalmente en un banco, sostén la mancuerna sobre el pecho y baja los brazos por encima de la cabeza estirando el dorsal."
+    "description": "Tumbado transversalmente en un banco, sostén la mancuerna sobre el pecho y baja los brazos por encima de la cabeza estirando el dorsal.",
+    "weight_factor": 0.4
   },
   {
     "id": "ex-119",
@@ -237,7 +266,8 @@
     "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Empieza con mancuernas frente a ti (como el top de un curl). Al subir, rota las palmas hacia fuera y empuja verticalmente sobre la cabeza."
+    "description": "Empieza con mancuernas frente a ti (como el top de un curl). Al subir, rota las palmas hacia fuera y empuja verticalmente sobre la cabeza.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-120",
@@ -245,7 +275,8 @@
     "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "De pie con un disco sujetado a dos manos, eleva los brazos rectos hasta la horizontal activando el haz anterior del deltoides."
+    "description": "De pie con un disco sujetado a dos manos, eleva los brazos rectos hasta la horizontal activando el haz anterior del deltoides.",
+    "weight_factor": 0.35
   },
   {
     "id": "ex-121",
@@ -253,7 +284,8 @@
     "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Apoyado boca abajo en banco inclinado, eleva las mancuernas lateralmente hasta la horizontal trabajando el haz posterior del deltoides."
+    "description": "Apoyado boca abajo en banco inclinado, eleva las mancuernas lateralmente hasta la horizontal trabajando el haz posterior del deltoides.",
+    "weight_factor": 0.3
   },
   {
     "id": "ex-122",
@@ -261,7 +293,8 @@
     "target_muscle": "Bíceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Con agarre neutro (pulgar arriba), flexiona los codos llevando las mancuernas hacia el hombro. Activa el braquial y braquiorradial."
+    "description": "Con agarre neutro (pulgar arriba), flexiona los codos llevando las mancuernas hacia el hombro. Activa el braquial y braquiorradial.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-123",
@@ -269,7 +302,8 @@
     "target_muscle": "Bíceps",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Apoya los tríceps en el banco Scott para aislar los bíceps. Baja lentamente hasta casi la extensión completa y sube contrayendo."
+    "description": "Apoya los tríceps en el banco Scott para aislar los bíceps. Baja lentamente hasta casi la extensión completa y sube contrayendo.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-124",
@@ -277,7 +311,8 @@
     "target_muscle": "Bíceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "De pie frente a la polea baja con barra recta, flexiona los codos sin mover los hombros. Tensión constante durante todo el recorrido."
+    "description": "De pie frente a la polea baja con barra recta, flexiona los codos sin mover los hombros. Tensión constante durante todo el recorrido.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-125",
@@ -285,7 +320,8 @@
     "target_muscle": "Tríceps",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "En paralelas, mantén el torso vertical para aislar los tríceps. Baja controlado y extiende los codos completamente en la subida."
+    "description": "En paralelas, mantén el torso vertical para aislar los tríceps. Baja controlado y extiende los codos completamente en la subida.",
+    "weight_factor": 0
   },
   {
     "id": "ex-126",
@@ -293,7 +329,8 @@
     "target_muscle": "Tríceps",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Tumbado con barra EZ, baja la barra hacia la frente doblando solo los codos. Extiende para activar la cabeza larga del tríceps."
+    "description": "Tumbado con barra EZ, baja la barra hacia la frente doblando solo los codos. Extiende para activar la cabeza larga del tríceps.",
+    "weight_factor": 1.0
   },
   {
     "id": "ex-127",
@@ -301,7 +338,8 @@
     "target_muscle": "Tríceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Sostén una mancuerna sobre la cabeza con ambas manos. Dobla los codos bajando el peso detrás de la cabeza y extiende."
+    "description": "Sostén una mancuerna sobre la cabeza con ambas manos. Dobla los codos bajando el peso detrás de la cabeza y extiende.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-208",
@@ -309,7 +347,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Sentado en la máquina, extiende las rodillas completamente. Mantén el pie en posición neutra. Ideal para aislar el cuádriceps."
+    "description": "Sentado en la máquina, extiende las rodillas completamente. Mantén el pie en posición neutra. Ideal para aislar el cuádriceps.",
+    "weight_factor": 0.6
   },
   {
     "id": "ex-209",
@@ -317,7 +356,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Sostén una kettlebell frente al pecho y desciende en sentadilla profunda. Los codos empujan las rodillas hacia afuera al bajar."
+    "description": "Sostén una kettlebell frente al pecho y desciende en sentadilla profunda. Los codos empujan las rodillas hacia afuera al bajar.",
+    "weight_factor": 0.35
   },
   {
     "id": "ex-210",
@@ -325,7 +365,8 @@
     "target_muscle": "Cuádriceps",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "En la máquina de hack squat, coloca los pies a lo ancho de los hombros. Baja hasta 90° de rodilla sin despegar los talones."
+    "description": "En la máquina de hack squat, coloca los pies a lo ancho de los hombros. Baja hasta 90° de rodilla sin despegar los talones.",
+    "weight_factor": 1.2
   },
   {
     "id": "ex-211",
@@ -333,7 +374,8 @@
     "target_muscle": "Femorales",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "De pie en la máquina, flexiona una pierna llevando el talón hacia el glúteo. Mantén la cadera estable durante todo el movimiento."
+    "description": "De pie en la máquina, flexiona una pierna llevando el talón hacia el glúteo. Mantén la cadera estable durante todo el movimiento.",
+    "weight_factor": 0.5
   },
   {
     "id": "ex-212",
@@ -341,7 +383,8 @@
     "target_muscle": "Femorales",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "Barra en trapecios, rodillas levemente dobladas. Inclina el torso hacia adelante desde la cadera hasta sentir el estiramiento femoral."
+    "description": "Barra en trapecios, rodillas levemente dobladas. Inclina el torso hacia adelante desde la cadera hasta sentir el estiramiento femoral.",
+    "weight_factor": 0.6
   },
   {
     "id": "ex-213",
@@ -349,7 +392,8 @@
     "target_muscle": "Femorales",
     "split_category": "tren_inferior",
     "difficulty": "advanced",
-    "description": "Stance ancho con pies girados 45°. Agarre de barra entre las piernas. Empuja el suelo hacia afuera al subir activando femorales y aductores."
+    "description": "Stance ancho con pies girados 45°. Agarre de barra entre las piernas. Empuja el suelo hacia afuera al subir activando femorales y aductores.",
+    "weight_factor": 1.5
   },
   {
     "id": "ex-214",
@@ -357,7 +401,8 @@
     "target_muscle": "Glúteos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "De pie en la máquina de cable, extiende la pierna hacia atrás apretando el glúteo al final. Mantén el core estable durante el movimiento."
+    "description": "De pie en la máquina de cable, extiende la pierna hacia atrás apretando el glúteo al final. Mantén el core estable durante el movimiento.",
+    "weight_factor": 0.6
   },
   {
     "id": "ex-215",
@@ -365,7 +410,8 @@
     "target_muscle": "Glúteos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Sentado en la máquina de abductor, separa las piernas contra la resistencia activando el glúteo medio y tensor de la fascia lata."
+    "description": "Sentado en la máquina de abductor, separa las piernas contra la resistencia activando el glúteo medio y tensor de la fascia lata.",
+    "weight_factor": 0.8
   },
   {
     "id": "ex-216",
@@ -373,7 +419,8 @@
     "target_muscle": "Glúteos",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "Pie trasero elevado en banco, desciende la rodilla delantera hacia el suelo. Activa glúteo, cuádriceps y estabilizadores de cadera."
+    "description": "Pie trasero elevado en banco, desciende la rodilla delantera hacia el suelo. Activa glúteo, cuádriceps y estabilizadores de cadera.",
+    "weight_factor": 0.4
   },
   {
     "id": "ex-217",
@@ -381,7 +428,8 @@
     "target_muscle": "Gemelos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Sentado con las rodillas bajo el soporte de la máquina, eleva los talones sobre las puntas de los pies contrayendo el sóleo."
+    "description": "Sentado con las rodillas bajo el soporte de la máquina, eleva los talones sobre las puntas de los pies contrayendo el sóleo.",
+    "weight_factor": 0.7
   },
   {
     "id": "ex-218",
@@ -389,7 +437,8 @@
     "target_muscle": "Gemelos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "En la prensa 45° sin peso ni bloqueo de rodillas, coloca las puntas de los pies en el borde de la plataforma y haz elevaciones de gemelos."
+    "description": "En la prensa 45° sin peso ni bloqueo de rodillas, coloca las puntas de los pies en el borde de la plataforma y haz elevaciones de gemelos.",
+    "weight_factor": 1.2
   },
   {
     "id": "ex-305",
@@ -397,7 +446,8 @@
     "target_muscle": "Core",
     "split_category": "ambos",
     "difficulty": "beginner",
-    "description": "Tumbado boca arriba, eleva el torso contrayendo el recto abdominal. No tires del cuello — la fuerza viene del abdomen."
+    "description": "Tumbado boca arriba, eleva el torso contrayendo el recto abdominal. No tires del cuello — la fuerza viene del abdomen.",
+    "weight_factor": 0
   },
   {
     "id": "ex-306",
@@ -405,7 +455,8 @@
     "target_muscle": "Core",
     "split_category": "ambos",
     "difficulty": "intermediate",
-    "description": "Sentado con pies elevados y torso inclinado 45°, rota de lado a lado llevando el disco a tocar el suelo en cada repetición."
+    "description": "Sentado con pies elevados y torso inclinado 45°, rota de lado a lado llevando el disco a tocar el suelo en cada repetición.",
+    "weight_factor": 0.6
   },
   {
     "id": "ex-307",
@@ -413,7 +464,8 @@
     "target_muscle": "Core",
     "split_category": "ambos",
     "difficulty": "intermediate",
-    "description": "Cuelga de una barra con agarre pronador. Eleva las piernas rectas (o dobladas) hasta la horizontal sin balancearte."
+    "description": "Cuelga de una barra con agarre pronador. Eleva las piernas rectas (o dobladas) hasta la horizontal sin balancearte.",
+    "weight_factor": 0
   },
   {
     "id": "ex-128",
@@ -421,7 +473,8 @@
     "target_muscle": "Bíceps",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
-    "description": "Sentado en banco inclinado a 45°, deja caer los brazos completamente y flexiona los codos llevando las mancuernas al hombro. El estiramiento completo maximiza la activación del bíceps."
+    "description": "Sentado en banco inclinado a 45°, deja caer los brazos completamente y flexiona los codos llevando las mancuernas al hombro. El estiramiento completo maximiza la activación del bíceps.",
+    "weight_factor": 0.7
   },
   {
     "id": "ex-129",
@@ -429,7 +482,8 @@
     "target_muscle": "Tríceps",
     "split_category": "tren_superior",
     "difficulty": "beginner",
-    "description": "Con un brazo apoyado en banco, inclina el torso y extiende el codo hacia atrás hasta alinear el brazo con el torso. Aprieta el tríceps al final."
+    "description": "Con un brazo apoyado en banco, inclina el torso y extiende el codo hacia atrás hasta alinear el brazo con el torso. Aprieta el tríceps al final.",
+    "weight_factor": 0.5
   },
   {
     "id": "ex-219",
@@ -437,7 +491,8 @@
     "target_muscle": "Gemelos",
     "split_category": "tren_inferior",
     "difficulty": "beginner",
-    "description": "Salta a la comba aterrizando solo con las puntas de los pies. Mantén las rodillas semi-flexionadas y el core activo durante todo el ejercicio."
+    "description": "Salta a la comba aterrizando solo con las puntas de los pies. Mantén las rodillas semi-flexionadas y el core activo durante todo el ejercicio.",
+    "weight_factor": 0
   },
   {
     "id": "ex-220",
@@ -445,6 +500,7 @@
     "target_muscle": "Gemelos",
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
-    "description": "Inclinado hacia adelante en la máquina donkey calf raise, realiza elevaciones completas de talón con máximo rango de movimiento para trabajar el gastrocnemio."
+    "description": "Inclinado hacia adelante en la máquina donkey calf raise, realiza elevaciones completas de talón con máximo rango de movimiento para trabajar el gastrocnemio.",
+    "weight_factor": 1.0
   }
 ]
