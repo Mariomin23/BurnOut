@@ -135,7 +135,7 @@ export const RestTimer: React.FC<RestTimerProps> = ({ initialSeconds, onClose })
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase' }}>
             {secondsLeft === 0 ? '¡Tiempo completado!' : 'Descanso'}
           </div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>
+          <div style={{ fontSize: '1.6rem', fontWeight: 700, fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums', letterSpacing: '-0.02em', lineHeight: '1.15' }}>
             {formatTime(secondsLeft)}
           </div>
         </div>

@@ -99,11 +99,10 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
 
         <div className="input-group">
           <label>Experiencia</label>
-          <select 
-            className="form-input" 
+          <select
+            className="form-input"
             value={experience}
             onChange={(e) => setExperience(e.target.value as Difficulty)}
-            style={{ appearance: 'none', background: 'var(--bg-input)' }}
           >
             <option value="beginner">Principiante</option>
             <option value="intermediate">Intermedio</option>
