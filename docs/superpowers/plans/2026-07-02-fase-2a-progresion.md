@@ -10,6 +10,13 @@
 
 **Spec:** `docs/superpowers/specs/2026-07-02-fase-2a-progresion-design.md`
 
+> **ESTADO (2026-07-02):** Ejecución por subagentes en curso.
+> - ✅ Task 1 (commit 33aaf2e) — vitest backend + tipos. Revisada (spec+calidad).
+> - ✅ Task 2 (commits ae09fa5 + 912e7ae) — ProgressionService, 17 tests. Revisada; fixes aplicados (sin `?? 1`, tests frontera RPE 8.0 y autocarga+cambio objetivo).
+> - ✅ Task 3 (commit 94ddfdb) — HistorySchema Zod, 6 tests (23 total). Revisada.
+> - ⏭️ Siguiente: **Task 4** (RoutineService: sesgo 70/30 + prescripción). Luego 5–10.
+> - Ejecución: superpowers:subagent-driven-development, implementer por tarea + review spec + review calidad. `contextburn.md` tiene edits del usuario sin commitear — no tocar.
+
 **Convenciones del repo:** commits Conventional Commits terminados en `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>`. Rutas relativas a la raíz del repo. El directorio del proyecto contiene un espacio (`proyectos personales`) — citar rutas en shell.
 
 ---
