@@ -48,6 +48,12 @@ describe('prescribe — autocarga (weight_factor 0)', () => {
     const p = svc.prescribe(bodyweight, 'Volumen', session('Volumen', sets([[0, 12, 8]])), 0);
     expect(p.suggestedReps).toBe(12);
   });
+
+  it('con cambio de objetivo sigue en autocarga: mejor marca + 1 capada al rango nuevo', () => {
+    // La regla de autocarga se evalúa antes que el cambio de objetivo (orden del spec)
+    const p = svc.prescribe(bodyweight, 'Perder Peso', session('Volumen', sets([[0, 14, 8]])), 0);
+    expect(p).toEqual({ suggestedWeightKg: 0, suggestedReps: 15, direction: 'keep' });
+  });
 });
 
 describe('prescribe — subir peso', () => {
@@ -71,6 +77,12 @@ describe('prescribe — subir peso', () => {
   it('no sube si el RPE medio supera 8 aunque llegue al tope', () => {
     const p = svc.prescribe(barbell, 'Volumen', session('Volumen', sets([[40, 12, 9], [40, 12, 9]])), 40);
     expect(p.direction).not.toBe('up');
+  });
+
+  it('sube con RPE medio exactamente 8.0 (frontera inclusiva)', () => {
+    const p = svc.prescribe(barbell, 'Volumen', session('Volumen', sets([[40, 12, 7], [40, 12, 9]])), 40);
+    expect(p.direction).toBe('up');
+    expect(p.suggestedWeightKg).toBe(42.5);
   });
 });
 

@@ -25,7 +25,7 @@ export class ProgressionService {
       return { suggestedWeightKg: fallbackWeightKg, suggestedReps: range.min };
     }
 
-    const loadFactor = exercise.weight_factor ?? 1;
+    const loadFactor = exercise.weight_factor;
     const bestReps = Math.max(...lastSession.sets.map(s => s.reps));
 
     if (loadFactor === 0) {
