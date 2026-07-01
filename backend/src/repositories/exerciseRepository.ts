@@ -1,6 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import { Exercise } from '../types';
+import exercisesData from '../data/exercises.json';
+
+const exercises = exercisesData as Exercise[];
 
 export interface IExerciseRepository {
   getAll(): Promise<Exercise[]>;
@@ -8,24 +9,11 @@ export interface IExerciseRepository {
 }
 
 export class JsonExerciseRepository implements IExerciseRepository {
-  private filePath = path.join(__dirname, '../data/exercises.json');
-
-  private loadExercises(): Exercise[] {
-    try {
-      const data = fs.readFileSync(this.filePath, 'utf-8');
-      return JSON.parse(data) as Exercise[];
-    } catch (error) {
-      console.error('Error loading exercises from JSON file:', error);
-      return [];
-    }
-  }
-
   public async getAll(): Promise<Exercise[]> {
-    return this.loadExercises();
+    return exercises;
   }
 
   public async getById(id: string): Promise<Exercise | null> {
-    const exercises = this.loadExercises();
     return exercises.find(ex => ex.id === id) || null;
   }
 }
