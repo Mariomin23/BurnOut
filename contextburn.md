@@ -173,3 +173,8 @@ interface RoutineSet {
   completedRpe?: number;       // escala 1-10
 }
 ```
+## BIBLIOTECA DE EJERCICIOS ##
+
+Debe haber minimo 50 ejercicios de cada tipo y ademas que el usuario pueda decidir si hacerlo con material del gimnasio o sin material
+
+Puede haber carrera y/o calistenia tambien.

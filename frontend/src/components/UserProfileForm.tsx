@@ -35,7 +35,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
       </h2>
 
       <div className="input-group">
-        <label>Género Biológico</label>
+        <label>Género</label>
         <div className="pill-selector" style={{ gridTemplateColumns: '1fr 1fr' }}>
           <div
             className={`pill-option ${sex === 'masculino' ? 'active' : ''}`}
