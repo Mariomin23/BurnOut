@@ -1,5 +1,7 @@
 # 🔥 BurnOut — Smart Gym Routine Generator
 
+**English** · **[Español](README.es.md)**
+
 > Open the app at the gym, pick your training split and goal, and get an instant, personalized workout — with suggested weights, rest timers, set-by-set tracking and automatic progression.
 
 **🌐 Live demo: [burnout.minuesa.es](https://burnout.minuesa.es)** · No sign-up required, works on mobile.
