@@ -10,12 +10,18 @@
 
 **Spec:** `docs/superpowers/specs/2026-07-02-fase-2a-progresion-design.md`
 
-> **ESTADO (2026-07-02):** Ejecución por subagentes en curso.
-> - ✅ Task 1 (commit 33aaf2e) — vitest backend + tipos. Revisada (spec+calidad).
-> - ✅ Task 2 (commits ae09fa5 + 912e7ae) — ProgressionService, 17 tests. Revisada; fixes aplicados (sin `?? 1`, tests frontera RPE 8.0 y autocarga+cambio objetivo).
-> - ✅ Task 3 (commit 94ddfdb) — HistorySchema Zod, 6 tests (23 total). Revisada.
-> - ⏭️ Siguiente: **Task 4** (RoutineService: sesgo 70/30 + prescripción). Luego 5–10.
-> - Ejecución: superpowers:subagent-driven-development, implementer por tarea + review spec + review calidad. `contextburn.md` tiene edits del usuario sin commitear — no tocar.
+> **ESTADO (2026-07-02): COMPLETADO.** Las 10 tasks ejecutadas y revisadas (spec + calidad por tarea).
+> - ✅ Task 1 (33aaf2e) — vitest backend + tipos.
+> - ✅ Task 2 (ae09fa5 + 912e7ae) — ProgressionService, 17 tests.
+> - ✅ Task 3 (94ddfdb) — HistorySchema Zod (23 tests backend).
+> - ✅ Task 4 (89eeb05) — RoutineService: sesgo 70/30 + prescripción (28 tests backend).
+> - ✅ Task 5 (7123e8c) — controller: parse tolerante de `history`.
+> - ✅ Task 6 (19b3931) — frontend: vitest + tipos + lib/history (6 tests).
+> - ✅ Task 7 (384d782 + fix 5255d8d) — useHistory + integración useWorkout (persistencia movida a useEffect tras review).
+> - ✅ Task 8 (7d8f1eb) — badge progresión en ExerciseCard.
+> - ✅ Task 9 — E2E Playwright: ALL CHECKS PASSED (badges ↑, pesos 42.5kg, historial 1→2).
+> - ✅ Task 10 — push a main; Render responde `progressionDirection":"up"`; Vercel READY (commit 7d8f1eb).
+> - Minors de review no bloqueantes anotados: duplicar bloque prescripción en routineService (extraer helper), test Full Body/Tren Inferior, mover estilos badge a index.css + border, SplitLabel type.
 
 **Convenciones del repo:** commits Conventional Commits terminados en `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>`. Rutas relativas a la raíz del repo. El directorio del proyecto contiene un espacio (`proyectos personales`) — citar rutas en shell.
 
