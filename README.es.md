@@ -1,3 +1,5 @@
+![BurnOut — Generador Inteligente de Rutinas de Gimnasio](docs/banner.png)
+
 # 🔥 BurnOut — Generador Inteligente de Rutinas de Gimnasio
 
 **[English](README.md)** · **Español**

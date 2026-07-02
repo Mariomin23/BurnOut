@@ -1,3 +1,5 @@
+![BurnOut — Smart Gym Routine Generator](docs/banner.png)
+
 # 🔥 BurnOut — Smart Gym Routine Generator
 
 **English** · **[Español](README.es.md)**
