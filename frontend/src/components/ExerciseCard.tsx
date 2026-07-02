@@ -63,11 +63,19 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
         <div className="exercise-card__actions" onClick={e => e.stopPropagation()}>
           <button
             className="btn btn-secondary btn-circle"
-            style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}
+            style={{ width: '32px', height: '32px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             onClick={openVideoSearch}
             title="Buscar vídeo técnico en YouTube"
+            aria-label="Buscar vídeo técnico en YouTube"
           >
-            📺
+            {/* Logo oficial de YouTube — mantener la proporción 28.57:20 (guía de marca) */}
+            <svg width="20" height="14" viewBox="0 0 28.57 20" role="img" aria-hidden="true">
+              <path
+                fill="#FF0000"
+                d="M27.973 3.123A3.578 3.578 0 0 0 25.447.597C23.22 0 14.285 0 14.285 0S5.35 0 3.123.597A3.578 3.578 0 0 0 .597 3.123C0 5.35 0 10 0 10s0 4.65.597 6.877a3.578 3.578 0 0 0 2.526 2.526C5.35 20 14.285 20 14.285 20s8.935 0 11.162-.597a3.578 3.578 0 0 0 2.526-2.526C28.57 14.65 28.57 10 28.57 10s0-4.65-.597-6.877z"
+              />
+              <path fill="#fff" d="M11.428 14.285 18.856 10l-7.428-4.285z" />
+            </svg>
           </button>
           <button
             className="btn btn-primary btn-circle"

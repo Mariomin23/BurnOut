@@ -178,3 +178,7 @@ interface RoutineSet {
 Debe haber minimo 50 ejercicios de cada tipo y ademas que el usuario pueda decidir si hacerlo con material del gimnasio o sin material
 
 Puede haber carrera y/o calistenia tambien.
+
+## Interfaz visual ##
+
+el logo de video, debe ser el logo de youtube, respetanto los tamaños
