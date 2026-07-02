@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import type { UserProfile, WorkoutRoutine, WorkoutExercise, RoutineSet } from '../types';
+import { useHistory } from './useHistory';
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? 'http://localhost:5000/api/routines';
 const ROUTINE_KEY = 'fit_poke_active_routine';
@@ -71,6 +72,8 @@ export interface WorkoutSummary {
 }
 
 export function useWorkout() {
+  const { history, appendWorkout, buildSummary } = useHistory();
+
   const [profile, setProfile] = useState<UserProfile | null>(() => {
     try {
       const raw = localStorage.getItem(PROFILE_KEY);
@@ -111,7 +114,7 @@ export function useWorkout() {
       const response = await fetch(`${API_BASE_URL}/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userProfile),
+        body: JSON.stringify({ ...userProfile, history: buildSummary() }),
       });
       if (!response.ok) throw new Error('No se pudo generar la rutina');
       const routineData: WorkoutRoutine = await response.json();
@@ -126,7 +129,7 @@ export function useWorkout() {
     } finally {
       setLoading(false);
     }
-  }, [persistRoutine]);
+  }, [persistRoutine, buildSummary]);
 
   const handleRerollExercise = useCallback(async (exerciseId: string, targetMuscle: string) => {
     if (!activeRoutine || !profile) return;
@@ -136,7 +139,7 @@ export function useWorkout() {
       const response = await fetch(`${API_BASE_URL}/reroll`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ targetMuscle, excludedIds, profile }),
+        body: JSON.stringify({ targetMuscle, excludedIds, profile, history: buildSummary() }),
       });
       if (!response.ok) throw new Error('Error al hacer re-roll');
       const newExercise: WorkoutExercise = await response.json();
@@ -151,7 +154,7 @@ export function useWorkout() {
     } finally {
       setRerollingId(null);
     }
-  }, [activeRoutine, profile, persistRoutine]);
+  }, [activeRoutine, profile, persistRoutine, buildSummary]);
 
   const handleUpdateSet = useCallback((exerciseId: string, setIndex: number, updatedFields: Partial<RoutineSet>) => {
     if (!activeRoutine) return;
@@ -192,10 +195,11 @@ export function useWorkout() {
         ? Number((totalRpeSum / completedSetsCount).toFixed(1))
         : 0,
     };
+    appendWorkout(activeRoutine);
     setWorkoutSummary(summary);
     persistRoutine(null);
     return summary;
-  }, [activeRoutine, persistRoutine]);
+  }, [activeRoutine, persistRoutine, appendWorkout]);
 
   const handleAbandonWorkout = useCallback(() => {
     persistRoutine(null);
@@ -209,6 +213,7 @@ export function useWorkout() {
   }, []);
 
   return {
+    history,
     profile,
     activeRoutine,
     loading,
