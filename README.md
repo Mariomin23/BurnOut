@@ -53,7 +53,7 @@ The parts I'd want you to look at as a reviewer:
 | Backend | Node.js, Express, TypeScript, Zod |
 | Testing | Vitest (backend + frontend) |
 | Data | Static JSON behind a repository interface (MongoDB-ready) |
-| Deploy | Vercel (frontend + serverless API), custom domain |
+| Deploy | Vercel (frontend, custom domain) + Render (Express API) |
 
 ## Run it locally
 
