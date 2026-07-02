@@ -1,9 +1,20 @@
 import { Request, Response } from 'express';
 import { RoutineService } from '../services/routineService';
-import { UserProfileSchema, RerollRequestSchema } from '../schemas/userProfile.schema';
+import { UserProfileSchema, RerollRequestSchema, HistorySchema } from '../schemas/userProfile.schema';
 
 export class RoutineController {
   constructor(private routineService: RoutineService) {}
+
+  /** history inválido se ignora (nunca 400): los datos viejos del móvil no deben romper la generación */
+  private parseHistory(raw: unknown) {
+    if (raw === undefined) return [];
+    const parsed = HistorySchema.safeParse(raw);
+    if (!parsed.success) {
+      console.warn('Invalid history payload ignored');
+      return [];
+    }
+    return parsed.data;
+  }
 
   public generate = async (req: Request, res: Response): Promise<void> => {
     const result = UserProfileSchema.safeParse(req.body);
@@ -12,7 +23,8 @@ export class RoutineController {
       return;
     }
     try {
-      const routine = await this.routineService.generateRoutine(result.data);
+      const history = this.parseHistory(req.body.history);
+      const routine = await this.routineService.generateRoutine(result.data, history);
       res.json(routine);
     } catch (error) {
       console.error('Error generating routine:', error);
@@ -28,7 +40,8 @@ export class RoutineController {
     }
     try {
       const { targetMuscle, excludedIds, profile } = result.data;
-      const workoutExercise = await this.routineService.rerollExercise(targetMuscle, excludedIds, profile);
+      const history = this.parseHistory(req.body.history);
+      const workoutExercise = await this.routineService.rerollExercise(targetMuscle, excludedIds, profile, history);
       res.json(workoutExercise);
     } catch (error) {
       console.error('Error in re-roll:', error);
