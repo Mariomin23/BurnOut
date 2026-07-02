@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { ExerciseHistorySummary, WorkoutLog, WorkoutRoutine } from '../types';
 import { HISTORY_KEY, appendToHistory, buildWorkoutLog, summarizeHistory } from '../lib/history';
 
@@ -13,14 +13,18 @@ export function useHistory() {
     }
   });
 
+  useEffect(() => {
+    try {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+    } catch {
+      // quota / modo privado: el historial vive solo en memoria esta sesión
+    }
+  }, [history]);
+
   const appendWorkout = useCallback((routine: WorkoutRoutine) => {
     const log = buildWorkoutLog(routine, new Date().toISOString());
     if (!log) return;
-    setHistory(prev => {
-      const next = appendToHistory(prev, log);
-      localStorage.setItem(HISTORY_KEY, JSON.stringify(next));
-      return next;
-    });
+    setHistory(prev => appendToHistory(prev, log));
   }, []);
 
   const buildSummary = useCallback(
