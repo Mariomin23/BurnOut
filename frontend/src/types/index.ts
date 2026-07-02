@@ -3,6 +3,10 @@ export type GoalCategory = 'perder_peso' | 'volumen' | 'mantenerse_activo';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 export type Sex = 'masculino' | 'femenino';
 
+export type GoalLabel = 'Perder Peso' | 'Volumen' | 'Mantenerse Activo';
+
+export type ProgressionDirection = 'up' | 'keep' | 'down';
+
 export interface UserProfile {
   weightKg: number;
   heightCm: number;
@@ -10,7 +14,7 @@ export interface UserProfile {
   sex: Sex;
   experience: Difficulty;
   split: 'Tren Superior' | 'Tren Inferior' | 'Full Body';
-  goal: 'Perder Peso' | 'Volumen' | 'Mantenerse Activo';
+  goal: GoalLabel;
 }
 
 export interface Exercise {
@@ -38,15 +42,47 @@ export interface WorkoutExercise {
   exercise: Exercise;
   sets: RoutineSet[];
   restTimerSeconds: number;
+  progressionDirection?: ProgressionDirection;
 }
 
 export interface WorkoutRoutine {
   id: string;
   split: 'Tren Superior' | 'Tren Inferior' | 'Full Body';
-  goal: 'Perder Peso' | 'Volumen' | 'Mantenerse Activo';
+  goal: GoalLabel;
   warmup: string[];
   exercises: WorkoutExercise[];
   cooldown: string[];
   createdAt: string;
   isCompleted: boolean;
+}
+
+export interface ExerciseSetLog {
+  weightKg: number;
+  reps: number;
+  rpe: number;
+}
+
+export interface ExerciseLog {
+  exerciseId: string;
+  exerciseName: string;
+  targetMuscle: string;
+  sets: ExerciseSetLog[];
+}
+
+export interface WorkoutLog {
+  id: string;
+  date: string;
+  split: 'Tren Superior' | 'Tren Inferior' | 'Full Body';
+  goal: GoalLabel;
+  totalVolumeKg: number;
+  exercises: ExerciseLog[];
+}
+
+export interface ExerciseHistorySummary {
+  exerciseId: string;
+  lastSession: {
+    date: string;
+    goal: GoalLabel;
+    sets: ExerciseSetLog[];
+  };
 }
