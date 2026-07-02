@@ -41,6 +41,21 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
             <span className={`badge-pill badge-difficulty--${exercise.difficulty}`} style={{ fontSize: '0.65rem' }}>
               {DIFFICULTY_LABEL[exercise.difficulty] ?? exercise.difficulty}
             </span>
+            {item.progressionDirection && (
+              <span
+                className={`badge-pill progression-badge progression-badge--${item.progressionDirection}`}
+                style={{ fontSize: '0.65rem' }}
+                title={
+                  item.progressionDirection === 'up' ? 'Progresión: sube el peso'
+                  : item.progressionDirection === 'down' ? 'Descarga: baja el peso'
+                  : 'Consolida: mismo peso, busca más reps'
+                }
+              >
+                {item.progressionDirection === 'up' ? '↑ Progresa'
+                  : item.progressionDirection === 'down' ? '↓ Descarga'
+                  : '= Consolida'}
+              </span>
+            )}
           </div>
           <h3 className="exercise-card__name">{exercise.name}</h3>
         </div>
