@@ -8,7 +8,9 @@
 
 **🌐 Live demo: [burnout.minuesa.es](https://burnout.minuesa.es)** · No sign-up required, works on mobile.
 
-<!-- TODO: add a screenshot or short GIF here — docs/screenshot.png -->
+<p align="center">
+  <img src="docs/screenshot.png" width="320" alt="BurnOut — profile & goal setup screen">
+</p>
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React 19](https://img.shields.io/badge/React_19-61DAFB?logo=react&logoColor=black)](https://react.dev/)

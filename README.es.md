@@ -8,7 +8,9 @@
 
 **🌐 Demo en vivo: [burnout.minuesa.es](https://burnout.minuesa.es)** · Sin registro, funciona en el móvil.
 
-<!-- TODO: añadir una captura de pantalla o GIF corto aquí — docs/screenshot.png -->
+<p align="center">
+  <img src="docs/screenshot.png" width="320" alt="BurnOut — pantalla de configuración de perfil y objetivo">
+</p>
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React 19](https://img.shields.io/badge/React_19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
