@@ -1,15 +1,18 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { UserProfileForm } from './components/UserProfileForm';
 import { ExerciseCard } from './components/ExerciseCard';
 import { ExerciseCardSkeleton } from './components/ExerciseCardSkeleton';
 import { RestTimer } from './components/RestTimer';
 import { ConfirmModal } from './components/ConfirmModal';
+import { HistoryView } from './components/HistoryView';
 import { useWorkout } from './hooks/useWorkout';
 import { useStreak } from './hooks/useStreak';
 import { useRestTimer } from './hooks/useRestTimer';
 
 function App() {
+  const [view, setView] = useState<'home' | 'history'>('home');
   const {
+    history,
     activeRoutine,
     loading,
     rerollingId,
@@ -49,7 +52,7 @@ function App() {
   return (
     <div className="container">
       <header className="app-header fade-in">
-        <h1 className="logo" onClick={handleGoHome} style={{ cursor: 'pointer' }}>
+        <h1 className="logo" onClick={() => { setView('home'); handleGoHome(); }} style={{ cursor: 'pointer' }}>
           <span>☄️</span> BurnOut
         </h1>
         {streak > 0 && (
@@ -111,8 +114,23 @@ function App() {
       )}
 
       {/* Profile form */}
-      {!loading && !activeRoutine && !workoutSummary && (
-        <UserProfileForm onSubmit={handleGenerateRoutine} isLoading={loading} />
+      {!loading && !activeRoutine && !workoutSummary && view === 'home' && (
+        <div className="fade-in">
+          <UserProfileForm onSubmit={handleGenerateRoutine} isLoading={loading} />
+          {history.length > 0 && (
+            <button
+              className="btn btn-secondary history-entry-btn"
+              onClick={() => setView('history')}
+            >
+              📈 Historial y Progreso ({history.length})
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* History & progress */}
+      {!loading && !activeRoutine && !workoutSummary && view === 'history' && (
+        <HistoryView history={history} onBack={() => setView('home')} />
       )}
 
       {/* Active workout */}

@@ -92,6 +92,8 @@ Mejoras identificadas sobre la base existente de Fase 1. Ver spec completo en `d
 * Historial de entrenamientos con fecha, volumen total y grupos musculares trabajados.
 * Visualización de progreso por ejercicio (gráfico de peso vs. semanas).
 
+> ✅ COMPLETADO (2026-07-08): vista "Historial y Progreso" en el frontend con stats agregadas, gráfico SVG de progreso por ejercicio (peso del top set por sesión; reps si es autocarga) y listado de entrenamientos con fecha, volumen y músculos. Design doc: `docs/superpowers/specs/2026-07-08-fase-2b-graficos-design.md`.
+
 ---
 
 ## 6. FASE 3 — INFRAESTRUCTURA (FUTURA)
