@@ -1,10 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import type { WorkoutLog } from '../types';
+import type { GamificationState } from '../lib/gamification';
 import { listTrackedExercises, buildProgressSeries, workoutMuscles } from '../lib/progress';
 import { ProgressChart } from './ProgressChart';
+import { AchievementsSection } from './AchievementsSection';
 
 interface HistoryViewProps {
   history: WorkoutLog[];
+  gamification: GamificationState;
   onBack: () => void;
 }
 
@@ -16,7 +19,7 @@ const formatWorkoutDate = (iso: string) =>
     year: 'numeric',
   });
 
-export const HistoryView: React.FC<HistoryViewProps> = ({ history, onBack }) => {
+export const HistoryView: React.FC<HistoryViewProps> = ({ history, gamification, onBack }) => {
   const tracked = useMemo(() => listTrackedExercises(history), [history]);
   const [selectedId, setSelectedId] = useState<string>(() => tracked[0]?.exerciseId ?? '');
 
@@ -48,6 +51,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({ history, onBack }) => 
           <div className="history-stat__label">Volumen acumulado</div>
         </div>
       </div>
+
+      <AchievementsSection gamification={gamification} />
 
       {tracked.length > 0 && (
         <div className="glass history-section">

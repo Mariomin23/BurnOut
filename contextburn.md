@@ -116,6 +116,8 @@ Mejoras identificadas sobre la base existente de Fase 1. Ver spec completo en `d
 * Metadatos semánticos dinámicos y JSON-LD para indexar fichas de ejercicios.
 * URLs canónicas por ejercicio para posicionamiento orgánico.
 
+> ✅ COMPLETADO (2026-07-08): 21 medallas en 4 grupos (volumen, entrenos, rachas, maestría), niveles por XP con 11 títulos y barra de progreso, badge de nivel en header; 150 fichas estáticas en `/ejercicios/<slug>/` con JSON-LD (ExercisePlan + BreadcrumbList), canónicas, índice, sitemap.xml (152 URLs) y robots.txt generados en el build. Design doc: `docs/superpowers/specs/2026-07-08-fase-4-gamificacion-seo-design.md`.
+
 ---
 
 ## 8. ORQUESTACIÓN MULTI-AGENTE (SUB-AGENTES)

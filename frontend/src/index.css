@@ -1189,6 +1189,150 @@ select.form-input {
 }
 
 /* ============================================================
+   Gamificación (Fase 4)
+   ============================================================ */
+.header-badges {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badge-level {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--color-accent);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-round);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  white-space: nowrap;
+}
+.badge-level strong { font-variant-numeric: tabular-nums; }
+
+.achievements-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.level-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-md, 12px);
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  margin-bottom: 1.1rem;
+}
+
+.level-card__badge {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.level-card__info { flex: 1; min-width: 0; }
+
+.level-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.level-card__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.level-card__xp {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.level-card__next {
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.medal-group { margin-bottom: 1rem; }
+.medal-group:last-child { margin-bottom: 0; }
+
+.medal-group__title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.medal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 0.5rem;
+}
+
+.medal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem;
+  padding: 0.6rem 0.35rem;
+  border-radius: var(--radius-md, 12px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.45;
+}
+
+.medal--earned {
+  opacity: 1;
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  box-shadow: 0 0 16px -8px rgba(var(--color-primary-rgb), 0.5);
+}
+
+.medal__emoji { font-size: 1.35rem; line-height: 1; }
+
+.medal__title {
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.medal__desc {
+  font-size: 0.55rem;
+  color: var(--text-dim);
+  line-height: 1.2;
+}
+
+.mastered-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mastered-chip {
+  background: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary-bright);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.28);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ============================================================
    Auth (Fase 3)
    ============================================================ */
 .auth-panel {

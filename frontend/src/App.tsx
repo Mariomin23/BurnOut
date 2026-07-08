@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { UserProfileForm } from './components/UserProfileForm';
 import { ExerciseCard } from './components/ExerciseCard';
 import { ExerciseCardSkeleton } from './components/ExerciseCardSkeleton';
@@ -10,6 +10,7 @@ import { useWorkout } from './hooks/useWorkout';
 import { useAuth } from './hooks/useAuth';
 import { useStreak } from './hooks/useStreak';
 import { useRestTimer } from './hooks/useRestTimer';
+import { computeGamification } from './lib/gamification';
 
 function App() {
   const [view, setView] = useState<'home' | 'history'>('home');
@@ -31,8 +32,18 @@ function App() {
     handleGoHome,
   } = useWorkout(token);
 
-  const { streak, recordWorkout } = useStreak();
+  const { streak, bestStreak, recordWorkout } = useStreak();
+  const gamification = useMemo(() => computeGamification(history, bestStreak), [history, bestStreak]);
   const { restDuration, timerKey, handleStartRest, handleCloseTimer } = useRestTimer();
+
+  // Metadatos dinámicos: título del documento según la vista activa
+  useEffect(() => {
+    document.title = activeRoutine
+      ? 'Entrenamiento en curso | BurnOut'
+      : view === 'history'
+        ? 'Historial y Progreso | BurnOut'
+        : 'BurnOut | Entrenador Inteligente';
+  }, [view, activeRoutine]);
 
   const onCompleteWorkout = () => {
     handleCompleteWorkout();
@@ -58,11 +69,18 @@ function App() {
         <h1 className="logo" onClick={() => { setView('home'); handleGoHome(); }} style={{ cursor: 'pointer' }}>
           <span>☄️</span> BurnOut
         </h1>
-        {streak > 0 && (
-          <div className="badge-pill badge-streak">
-            🔥 Racha: <strong>{streak}</strong>
-          </div>
-        )}
+        <div className="header-badges">
+          {gamification.totalWorkouts > 0 && (
+            <div className="badge-pill badge-level" title={`${gamification.levelTitle} — ${gamification.xp.toLocaleString('es-ES')} XP`}>
+              ⭐ Nv. <strong>{gamification.level}</strong>
+            </div>
+          )}
+          {streak > 0 && (
+            <div className="badge-pill badge-streak">
+              🔥 Racha: <strong>{streak}</strong>
+            </div>
+          )}
+        </div>
       </header>
 
       {/* Loading skeletons */}
@@ -141,7 +159,7 @@ function App() {
 
       {/* History & progress */}
       {!loading && !activeRoutine && !workoutSummary && view === 'history' && (
-        <HistoryView history={history} onBack={() => setView('home')} />
+        <HistoryView history={history} gamification={gamification} onBack={() => setView('home')} />
       )}
 
       {/* Active workout */}
