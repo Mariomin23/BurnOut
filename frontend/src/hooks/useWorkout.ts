@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react';
 import type { UserProfile, WorkoutRoutine, WorkoutExercise, RoutineSet } from '../types';
 import { useHistory } from './useHistory';
+import { ROUTINES_API_URL } from '../lib/api';
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? 'http://localhost:5000/api/routines';
+const API_BASE_URL = ROUTINES_API_URL;
 const ROUTINE_KEY = 'fit_poke_active_routine';
 const PROFILE_KEY = 'fit_poke_profile';
 
@@ -71,8 +72,8 @@ export interface WorkoutSummary {
   avgRpe: number;
 }
 
-export function useWorkout() {
-  const { history, appendWorkout, buildSummary } = useHistory();
+export function useWorkout(token: string | null = null) {
+  const { history, appendWorkout, buildSummary } = useHistory(token);
 
   const [profile, setProfile] = useState<UserProfile | null>(() => {
     try {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildWorkoutLog, appendToHistory, summarizeHistory } from './history';
+import { buildWorkoutLog, appendToHistory, mergeHistories, summarizeHistory } from './history';
 import type { WorkoutRoutine, WorkoutLog } from '../types';
 
 const routine = (overrides: Partial<WorkoutRoutine> = {}): WorkoutRoutine => ({
@@ -90,5 +90,32 @@ describe('summarizeHistory', () => {
     const summary = summarizeHistory(history, 30);
     expect(summary).toHaveLength(30);
     expect(summary.map(s => s.exerciseId)).toContain('ex-39'); // el último workout entra
+  });
+});
+
+describe('mergeHistories', () => {
+  const log = (id: string, date: string): WorkoutLog => ({
+    id, date, split: 'Tren Superior', goal: 'Volumen', totalVolumeKg: 100,
+    exercises: [{ exerciseId: 'ex-101', exerciseName: 'Press', targetMuscle: 'Pecho', sets: [{ weightKg: 40, reps: 10, rpe: 8 }] }],
+  });
+
+  it('fusiona sin duplicados y ordena por fecha ascendente', () => {
+    const local = [log('a', '2026-07-01'), log('b', '2026-07-05')];
+    const remote = [log('b', '2026-07-05'), log('c', '2026-07-03')];
+    const merged = mergeHistories(local, remote);
+    expect(merged.map(l => l.id)).toEqual(['a', 'c', 'b']);
+  });
+
+  it('ante el mismo id gana la versión local', () => {
+    const localB = { ...log('b', '2026-07-05'), totalVolumeKg: 999 };
+    const merged = mergeHistories([localB], [log('b', '2026-07-05')]);
+    expect(merged).toHaveLength(1);
+    expect(merged[0].totalVolumeKg).toBe(999);
+  });
+
+  it('respeta el máximo quedándose con lo más reciente', () => {
+    const local = [log('a', '2026-07-01'), log('b', '2026-07-02')];
+    const remote = [log('c', '2026-07-03')];
+    expect(mergeHistories(local, remote, 2).map(l => l.id)).toEqual(['b', 'c']);
   });
 });

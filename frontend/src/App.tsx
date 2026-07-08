@@ -5,12 +5,15 @@ import { ExerciseCardSkeleton } from './components/ExerciseCardSkeleton';
 import { RestTimer } from './components/RestTimer';
 import { ConfirmModal } from './components/ConfirmModal';
 import { HistoryView } from './components/HistoryView';
+import { AuthPanel } from './components/AuthPanel';
 import { useWorkout } from './hooks/useWorkout';
+import { useAuth } from './hooks/useAuth';
 import { useStreak } from './hooks/useStreak';
 import { useRestTimer } from './hooks/useRestTimer';
 
 function App() {
   const [view, setView] = useState<'home' | 'history'>('home');
+  const { token, email, authLoading, authError, login, register, logout } = useAuth();
   const {
     history,
     activeRoutine,
@@ -26,7 +29,7 @@ function App() {
     handleCompleteWorkout,
     handleAbandonWorkout,
     handleGoHome,
-  } = useWorkout();
+  } = useWorkout(token);
 
   const { streak, recordWorkout } = useStreak();
   const { restDuration, timerKey, handleStartRest, handleCloseTimer } = useRestTimer();
@@ -125,6 +128,14 @@ function App() {
               📈 Historial y Progreso ({history.length})
             </button>
           )}
+          <AuthPanel
+            email={email}
+            authLoading={authLoading}
+            authError={authError}
+            onLogin={login}
+            onRegister={register}
+            onLogout={logout}
+          />
         </div>
       )}
 

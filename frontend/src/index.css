@@ -1189,6 +1189,67 @@ select.form-input {
 }
 
 /* ============================================================
+   Auth (Fase 3)
+   ============================================================ */
+.auth-panel {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+}
+
+.auth-panel--form {
+  display: block;
+}
+
+.auth-panel__status strong { color: var(--color-primary-bright); }
+
+.auth-panel__toggle-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.85rem;
+  font-size: 0.85rem;
+}
+
+.auth-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.auth-panel__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.auth-panel__small-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.auth-panel--form .form-input { margin-bottom: 0.6rem; }
+
+.auth-panel__error {
+  color: var(--color-danger);
+  font-size: 0.78rem;
+  margin-bottom: 0.6rem;
+}
+
+.auth-panel__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.auth-panel__actions .btn { padding: 0.7rem; }
+
+/* ============================================================
    Accessibility: honor reduced motion
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

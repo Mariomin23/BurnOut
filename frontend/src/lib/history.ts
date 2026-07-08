@@ -50,6 +50,24 @@ export function appendToHistory(
   return [...history, log].slice(-max);
 }
 
+/**
+ * Fusiona historial local y remoto: dedup por id (gana la primera aparición,
+ * local primero), orden ascendente por fecha, cap al máximo.
+ */
+export function mergeHistories(
+  local: WorkoutLog[],
+  remote: WorkoutLog[],
+  max: number = MAX_WORKOUTS
+): WorkoutLog[] {
+  const byId = new Map<string, WorkoutLog>();
+  for (const log of [...local, ...remote]) {
+    if (!byId.has(log.id)) byId.set(log.id, log);
+  }
+  return [...byId.values()]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(-max);
+}
+
 export function summarizeHistory(
   history: WorkoutLog[],
   maxExercises: number = MAX_SUMMARY_EXERCISES

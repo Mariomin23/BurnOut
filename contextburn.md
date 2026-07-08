@@ -102,6 +102,8 @@ Mejoras identificadas sobre la base existente de Fase 1. Ver spec completo en `d
 * **Autenticación:** JWT o sesiones para persistir historial por usuario.
 * **PWA:** Service worker + manifest para instalación nativa en móvil y offline completo.
 
+> ✅ COMPLETADO (2026-07-08): `MongoExerciseRepository` + `HybridExerciseRepository` (fallback a JSON sin conexión), seed idempotente en cada arranque, auth JWT (bcrypt + tokens 30d) con historial por usuario en `/api/history` sincronizado con el localStorage, y PWA instalable (vite-plugin-pwa, manifest + service worker + iconos). Requiere `MONGO_URI` y `JWT_SECRET` en Render. Design doc: `docs/superpowers/specs/2026-07-08-fase-3-infraestructura-design.md`.
+
 ---
 
 ## 7. FASE 4 — RETENCIÓN Y DESCUBRIBILIDAD (FUTURA)
