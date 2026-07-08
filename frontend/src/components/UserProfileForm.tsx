@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { UserProfile, Difficulty, Sex } from '../types';
+import type { UserProfile, Difficulty, Sex, EquipmentCategory } from '../types';
 
 interface UserProfileFormProps {
   onSubmit: (profile: UserProfile) => void;
@@ -14,6 +14,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
   const [experience, setExperience] = useState<Difficulty>('intermediate');
   const [split, setSplit] = useState<'Tren Superior' | 'Tren Inferior' | 'Full Body'>('Tren Superior');
   const [goal, setGoal] = useState<'Perder Peso' | 'Volumen' | 'Mantenerse Activo'>('Volumen');
+  const [equipment, setEquipment] = useState<EquipmentCategory>('gym');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
       experience,
       split,
       goal,
+      equipment,
     });
   };
 
@@ -161,6 +163,26 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
             style={{ fontSize: '0.75rem' }}
           >
             Salud
+          </div>
+        </div>
+      </div>
+
+      <div className="input-group">
+        <label>Material Disponible</label>
+        <div className="pill-selector" style={{ gridTemplateColumns: '1fr 1fr' }}>
+          <div
+            className={`pill-option ${equipment === 'gym' ? 'active' : ''}`}
+            onClick={() => setEquipment('gym')}
+            style={{ fontSize: '0.75rem' }}
+          >
+            Gimnasio 🏋️
+          </div>
+          <div
+            className={`pill-option ${equipment === 'none' ? 'active' : ''}`}
+            onClick={() => setEquipment('none')}
+            style={{ fontSize: '0.75rem' }}
+          >
+            Sin material 🤸
           </div>
         </div>
       </div>

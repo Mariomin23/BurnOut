@@ -8,10 +8,12 @@ export const UserProfileSchema = z.object({
   experience: z.enum(['beginner', 'intermediate', 'advanced']),
   split: z.enum(['Tren Superior', 'Tren Inferior', 'Full Body']),
   goal: z.enum(['Perder Peso', 'Volumen', 'Mantenerse Activo']),
+  // default 'gym' para clientes antiguos que no envían la preferencia de material
+  equipment: z.enum(['gym', 'none']).default('gym'),
 });
 
 export const RerollRequestSchema = z.object({
-  targetMuscle: z.enum(['Pecho', 'Espalda', 'Hombros', 'Bíceps', 'Tríceps', 'Cuádriceps', 'Femorales', 'Glúteos', 'Gemelos', 'Core']),
+  targetMuscle: z.enum(['Pecho', 'Espalda', 'Hombros', 'Bíceps', 'Tríceps', 'Cuádriceps', 'Femorales', 'Glúteos', 'Gemelos', 'Core', 'Cardio', 'Full Body']),
   excludedIds: z.array(z.string()),
   profile: UserProfileSchema,
 });

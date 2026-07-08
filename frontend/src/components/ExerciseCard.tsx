@@ -41,6 +41,11 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
             <span className={`badge-pill badge-difficulty--${exercise.difficulty}`} style={{ fontSize: '0.65rem' }}>
               {DIFFICULTY_LABEL[exercise.difficulty] ?? exercise.difficulty}
             </span>
+            {exercise.equipment === 'none' && (
+              <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }} title="No requiere material de gimnasio">
+                Sin material
+              </span>
+            )}
             {item.progressionDirection && (
               <span
                 className={`badge-pill progression-badge progression-badge--${item.progressionDirection}`}

@@ -24,7 +24,10 @@ export class RoutineService {
     history: ExerciseHistorySummary[] = []
   ): Promise<WorkoutRoutine> {
     const rawExercises = await this.exerciseRepository.getAll();
-    const allExercises = this.filterByDifficulty(rawExercises, profile.experience);
+    const allExercises = this.filterByEquipment(
+      this.filterByDifficulty(rawExercises, profile.experience),
+      profile.equipment
+    );
     const split = profile.split;
     const goal = profile.goal;
     const historyIds = new Set(history.map(h => h.exerciseId));
@@ -116,8 +119,17 @@ export class RoutineService {
     let warmup: string[] = [];
     let cooldown: string[] = [];
 
+    const noEquipment = profile.equipment === 'none';
+
     if (split === 'Tren Superior') {
-      warmup = [
+      warmup = noEquipment
+        ? [
+            "5 min de trote suave o marcha en el sitio para entrar en calor",
+            "Círculos amplios de brazos hacia adelante y atrás (15 reps por sentido)",
+            "Rotaciones de hombro sin peso (2 series x 12 reps por sentido)",
+            "Aperturas dinámicas de pecho en el sitio (sin peso, activación muscular)"
+          ]
+        : [
         "5 min de cardio ligero (elíptica/remo) para entrar en calor",
         "Movilidad articular de hombros con banda elástica (dislocaciones: 15 reps)",
         "Rotadores de hombro con polea o mancuerna ligera (2 series x 12 reps)",
@@ -130,7 +142,9 @@ export class RoutineService {
       ];
     } else if (split === 'Tren Inferior') {
       warmup = [
-        "5 min de caminata en cinta con pendiente",
+        noEquipment
+          ? "5 min de marcha en el sitio con rodillas altas"
+          : "5 min de caminata en cinta con pendiente",
         "Movilidad de cadera dinámica (rotaciones 90/90 sentado: 10 reps por lado)",
         "Sentadillas profundas sin carga (peso corporal: 15 reps lentas)",
         "Zancadas dinámicas en el sitio sin peso (activación rodilla/glúteo)"
@@ -142,7 +156,7 @@ export class RoutineService {
       ];
     } else { // Full Body
       warmup = [
-        "5 min de elíptica o trote suave",
+        noEquipment ? "5 min de trote suave en el sitio" : "5 min de elíptica o trote suave",
         "Movilidad articular general (cuello, hombros, cadera, rodillas)",
         "Sentadillas corporales + flexiones inclinadas (12 reps de cada una)",
         "Plancha abdominal corta (30s de activación del core)"
@@ -173,7 +187,10 @@ export class RoutineService {
     history: ExerciseHistorySummary[] = []
   ): Promise<WorkoutExercise> {
     const rawExercises = await this.exerciseRepository.getAll();
-    const allExercises = this.filterByDifficulty(rawExercises, profile.experience);
+    const allExercises = this.filterByEquipment(
+      this.filterByDifficulty(rawExercises, profile.experience),
+      profile.equipment
+    );
 
     // Filter matching muscle and not excluded
     let candidates = allExercises.filter(
@@ -240,6 +257,8 @@ export class RoutineService {
     'Glúteos': 0.65,    // Referencia cadena posterior
     'Gemelos': 0.9,     // Elevación de talones de pie
     'Core': 0.15,       // Lastre ligero (disco)
+    'Full Body': 0.3,   // Movimientos compuestos con carga moderada (thruster, clean)
+    'Cardio': 0,        // Sin carga externa
   };
 
   private static readonly EXPERIENCE_FACTOR: Record<Difficulty, number> = {
@@ -277,6 +296,14 @@ export class RoutineService {
     // Cap at reasonable minimum
     if (suggested < 2.5) return 2.5;
     return suggested;
+  }
+
+  /** 'gym' permite todo el catálogo; 'none' restringe a ejercicios sin material. */
+  private filterByEquipment(exercises: Exercise[], equipment: UserProfile['equipment']): Exercise[] {
+    if (equipment === 'none') {
+      return exercises.filter(e => e.equipment === 'none');
+    }
+    return exercises;
   }
 
   private filterByDifficulty(exercises: Exercise[], experience: Difficulty): Exercise[] {

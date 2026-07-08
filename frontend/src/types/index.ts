@@ -2,6 +2,8 @@ export type SplitCategory = 'tren_superior' | 'tren_inferior' | 'ambos';
 export type GoalCategory = 'perder_peso' | 'volumen' | 'mantenerse_activo';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 export type Sex = 'masculino' | 'femenino';
+/** 'gym' = con material de gimnasio, 'none' = solo peso corporal / sin material */
+export type EquipmentCategory = 'gym' | 'none';
 
 export type GoalLabel = 'Perder Peso' | 'Volumen' | 'Mantenerse Activo';
 
@@ -15,6 +17,7 @@ export interface UserProfile {
   experience: Difficulty;
   split: 'Tren Superior' | 'Tren Inferior' | 'Full Body';
   goal: GoalLabel;
+  equipment: EquipmentCategory;
 }
 
 export interface Exercise {
@@ -26,6 +29,7 @@ export interface Exercise {
   description: string;
   /** Load relative to the muscle's reference compound lift (0 = bodyweight/autocarga) */
   weight_factor?: number;
+  equipment?: EquipmentCategory;
 }
 
 export interface RoutineSet {

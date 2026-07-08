@@ -6,7 +6,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Acuéstate en un banco plano, baja la barra al pecho controlado y empuja hacia arriba bloqueando los codos al final.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-102",
@@ -15,7 +16,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Siéntate en un banco inclinado a 30-45 grados, empuja las mancuernas verticalmente manteniendo el control del recorrido.",
-    "weight_factor": 0.7
+    "weight_factor": 0.7,
+    "equipment": "gym"
   },
   {
     "id": "ex-103",
@@ -24,7 +26,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "De pie entre dos poleas, lleva las manos hacia el centro en un movimiento de abrazo arqueando levemente los brazos.",
-    "weight_factor": 0.35
+    "weight_factor": 0.35,
+    "equipment": "gym"
   },
   {
     "id": "ex-104",
@@ -33,7 +36,8 @@
     "split_category": "tren_superior",
     "difficulty": "advanced",
     "description": "Cuélgate de una barra con agarre amplio pronador y elévate intentando llevar la parte alta del pecho a la barra.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-105",
@@ -42,7 +46,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Flexiona ligeramente las rodillas e inclina el torso hacia adelante. Tira de la barra hacia tu abdomen bajo retrayendo las escápulas.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-106",
@@ -51,7 +56,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Siéntate en la máquina de jalón, tira de la barra hacia la parte superior del pecho contrayendo la espalda.",
-    "weight_factor": 1.1
+    "weight_factor": 1.1,
+    "equipment": "gym"
   },
   {
     "id": "ex-107",
@@ -60,7 +66,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "De pie o sentado, empuja la barra sobre tu cabeza de forma vertical manteniendo el core estable.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-108",
@@ -69,7 +76,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Sujeta dos mancuernas a los lados y elévalas lateralmente hasta la altura de tus hombros con los codos semi-flexionados.",
-    "weight_factor": 0.3
+    "weight_factor": 0.3,
+    "equipment": "gym"
   },
   {
     "id": "ex-109",
@@ -78,7 +86,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "De pie con una barra, flexiona los codos llevando la barra hacia los hombros sin balancear el torso.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-110",
@@ -87,7 +96,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "De cara a la polea alta, empuja el accesorio (cuerda o barra) hacia abajo extendiendo los codos por completo.",
-    "weight_factor": 1.2
+    "weight_factor": 1.2,
+    "equipment": "gym"
   },
   {
     "id": "ex-201",
@@ -96,7 +106,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "Coloca la barra en tus trapecios, desciende flexionando cadera y rodillas como si te sentaras, y empuja hacia arriba.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-202",
@@ -105,7 +116,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Coloca los pies en la plataforma a lo ancho de tus hombros, destraba la prensa, baja controlado y empuja sin bloquear rodillas.",
-    "weight_factor": 1.8
+    "weight_factor": 1.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-203",
@@ -114,7 +126,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Da un paso al frente bajando tu cadera hasta que ambas rodillas queden dobladas en 90 grados, luego avanza con la otra pierna.",
-    "weight_factor": 0.5
+    "weight_factor": 0.5,
+    "equipment": "gym"
   },
   {
     "id": "ex-204",
@@ -123,7 +136,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "De pie con mancuernas frente a ti, empuja tu cadera hacia atrás flexionando muy levemente las rodillas mientras bajas el torso.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-205",
@@ -132,7 +146,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Túmbate boca abajo en la máquina, coloca el rodillo sobre tus tobillos y flexiona las piernas contrayendo los femorales.",
-    "weight_factor": 0.7
+    "weight_factor": 0.7,
+    "equipment": "gym"
   },
   {
     "id": "ex-206",
@@ -141,7 +156,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Colócate sobre el borde de un escalón o máquina, desciende los talones para estirar los gemelos y luego elévate sobre las puntas.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-207",
@@ -150,7 +166,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "Apoya la parte alta de la espalda en un banco, coloca la barra sobre tu cadera y empuja hacia arriba apretando los glúteos.",
-    "weight_factor": 1.4
+    "weight_factor": 1.4,
+    "equipment": "gym"
   },
   {
     "id": "ex-301",
@@ -159,7 +176,8 @@
     "split_category": "ambos",
     "difficulty": "advanced",
     "description": "Tira de la barra desde el suelo extendiendo cadera y rodillas simultáneamente, manteniendo la espalda neutra y core activado.",
-    "weight_factor": 2.0
+    "weight_factor": 2,
+    "equipment": "gym"
   },
   {
     "id": "ex-302",
@@ -168,7 +186,8 @@
     "split_category": "ambos",
     "difficulty": "intermediate",
     "description": "Balancea la pesa rusa entre tus piernas mediante una bisagra de cadera explosiva, proyectando la pesa a la altura del pecho.",
-    "weight_factor": 0.4
+    "weight_factor": 0.4,
+    "equipment": "gym"
   },
   {
     "id": "ex-303",
@@ -177,7 +196,8 @@
     "split_category": "ambos",
     "difficulty": "beginner",
     "description": "Apóyate sobre tus antebrazos y puntas de los pies, manteniendo el cuerpo en línea recta y el abdomen contraído firmemente.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "none"
   },
   {
     "id": "ex-304",
@@ -186,7 +206,8 @@
     "split_category": "ambos",
     "difficulty": "advanced",
     "description": "De rodillas con la rueda, deslízate hacia adelante controladamente y regresa contrayendo el core sin arquear la espalda baja.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-111",
@@ -195,7 +216,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "En paralelas, inclina el torso hacia adelante para activar el pecho. Baja hasta que los hombros queden al nivel de los codos.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-112",
@@ -204,7 +226,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Tumbado en banco declinado, empuja las mancuernas verticalmente desde el pecho hacia arriba. Activa la porción inferior del pectoral.",
-    "weight_factor": 0.7
+    "weight_factor": 0.7,
+    "equipment": "gym"
   },
   {
     "id": "ex-113",
@@ -213,7 +236,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Tumbado con mancuernas, abre los brazos en semicírculo hasta sentir el estiramiento en el pecho. Cierra controlando el peso.",
-    "weight_factor": 0.3
+    "weight_factor": 0.3,
+    "equipment": "gym"
   },
   {
     "id": "ex-114",
@@ -222,7 +246,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Sentado en la máquina de press, empuja las agarraderas hacia adelante extendiendo los codos por completo. Ideal para principiantes.",
-    "weight_factor": 0.9
+    "weight_factor": 0.9,
+    "equipment": "gym"
   },
   {
     "id": "ex-115",
@@ -231,7 +256,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Apoya una rodilla y mano en el banco. Tira de la mancuerna hacia tu cadera retrayendo la escápula al final del movimiento.",
-    "weight_factor": 0.45
+    "weight_factor": 0.45,
+    "equipment": "gym"
   },
   {
     "id": "ex-116",
@@ -240,7 +266,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Sentado en la máquina de remo, tira de las agarraderas hacia tu abdomen juntando los omóplatos. Mantén la espalda erguida.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-117",
@@ -249,7 +276,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Con polea alta y cuerda, tira hacia tu cara separando las manos al final. Activa trapecios medios y manguito rotador.",
-    "weight_factor": 0.5
+    "weight_factor": 0.5,
+    "equipment": "gym"
   },
   {
     "id": "ex-118",
@@ -258,7 +286,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Tumbado transversalmente en un banco, sostén la mancuerna sobre el pecho y baja los brazos por encima de la cabeza estirando el dorsal.",
-    "weight_factor": 0.4
+    "weight_factor": 0.4,
+    "equipment": "gym"
   },
   {
     "id": "ex-119",
@@ -267,7 +296,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Empieza con mancuernas frente a ti (como el top de un curl). Al subir, rota las palmas hacia fuera y empuja verticalmente sobre la cabeza.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-120",
@@ -276,7 +306,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "De pie con un disco sujetado a dos manos, eleva los brazos rectos hasta la horizontal activando el haz anterior del deltoides.",
-    "weight_factor": 0.35
+    "weight_factor": 0.35,
+    "equipment": "gym"
   },
   {
     "id": "ex-121",
@@ -285,7 +316,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Apoyado boca abajo en banco inclinado, eleva las mancuernas lateralmente hasta la horizontal trabajando el haz posterior del deltoides.",
-    "weight_factor": 0.3
+    "weight_factor": 0.3,
+    "equipment": "gym"
   },
   {
     "id": "ex-122",
@@ -294,7 +326,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Con agarre neutro (pulgar arriba), flexiona los codos llevando las mancuernas hacia el hombro. Activa el braquial y braquiorradial.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-123",
@@ -303,7 +336,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Apoya los tríceps en el banco Scott para aislar los bíceps. Baja lentamente hasta casi la extensión completa y sube contrayendo.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-124",
@@ -312,7 +346,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "De pie frente a la polea baja con barra recta, flexiona los codos sin mover los hombros. Tensión constante durante todo el recorrido.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-125",
@@ -321,7 +356,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "En paralelas, mantén el torso vertical para aislar los tríceps. Baja controlado y extiende los codos completamente en la subida.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-126",
@@ -330,7 +366,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Tumbado con barra EZ, baja la barra hacia la frente doblando solo los codos. Extiende para activar la cabeza larga del tríceps.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
   },
   {
     "id": "ex-127",
@@ -339,7 +376,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Sostén una mancuerna sobre la cabeza con ambas manos. Dobla los codos bajando el peso detrás de la cabeza y extiende.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-208",
@@ -348,7 +386,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Sentado en la máquina, extiende las rodillas completamente. Mantén el pie en posición neutra. Ideal para aislar el cuádriceps.",
-    "weight_factor": 0.6
+    "weight_factor": 0.6,
+    "equipment": "gym"
   },
   {
     "id": "ex-209",
@@ -357,7 +396,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Sostén una kettlebell frente al pecho y desciende en sentadilla profunda. Los codos empujan las rodillas hacia afuera al bajar.",
-    "weight_factor": 0.35
+    "weight_factor": 0.35,
+    "equipment": "gym"
   },
   {
     "id": "ex-210",
@@ -366,7 +406,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "En la máquina de hack squat, coloca los pies a lo ancho de los hombros. Baja hasta 90° de rodilla sin despegar los talones.",
-    "weight_factor": 1.2
+    "weight_factor": 1.2,
+    "equipment": "gym"
   },
   {
     "id": "ex-211",
@@ -375,7 +416,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "De pie en la máquina, flexiona una pierna llevando el talón hacia el glúteo. Mantén la cadera estable durante todo el movimiento.",
-    "weight_factor": 0.5
+    "weight_factor": 0.5,
+    "equipment": "gym"
   },
   {
     "id": "ex-212",
@@ -384,7 +426,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "Barra en trapecios, rodillas levemente dobladas. Inclina el torso hacia adelante desde la cadera hasta sentir el estiramiento femoral.",
-    "weight_factor": 0.6
+    "weight_factor": 0.6,
+    "equipment": "gym"
   },
   {
     "id": "ex-213",
@@ -393,7 +436,8 @@
     "split_category": "tren_inferior",
     "difficulty": "advanced",
     "description": "Stance ancho con pies girados 45°. Agarre de barra entre las piernas. Empuja el suelo hacia afuera al subir activando femorales y aductores.",
-    "weight_factor": 1.5
+    "weight_factor": 1.5,
+    "equipment": "gym"
   },
   {
     "id": "ex-214",
@@ -402,7 +446,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "De pie en la máquina de cable, extiende la pierna hacia atrás apretando el glúteo al final. Mantén el core estable durante el movimiento.",
-    "weight_factor": 0.6
+    "weight_factor": 0.6,
+    "equipment": "gym"
   },
   {
     "id": "ex-215",
@@ -411,7 +456,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Sentado en la máquina de abductor, separa las piernas contra la resistencia activando el glúteo medio y tensor de la fascia lata.",
-    "weight_factor": 0.8
+    "weight_factor": 0.8,
+    "equipment": "gym"
   },
   {
     "id": "ex-216",
@@ -420,7 +466,8 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "Pie trasero elevado en banco, desciende la rodilla delantera hacia el suelo. Activa glúteo, cuádriceps y estabilizadores de cadera.",
-    "weight_factor": 0.4
+    "weight_factor": 0.4,
+    "equipment": "gym"
   },
   {
     "id": "ex-217",
@@ -429,7 +476,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Sentado con las rodillas bajo el soporte de la máquina, eleva los talones sobre las puntas de los pies contrayendo el sóleo.",
-    "weight_factor": 0.7
+    "weight_factor": 0.7,
+    "equipment": "gym"
   },
   {
     "id": "ex-218",
@@ -438,7 +486,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "En la prensa 45° sin peso ni bloqueo de rodillas, coloca las puntas de los pies en el borde de la plataforma y haz elevaciones de gemelos.",
-    "weight_factor": 1.2
+    "weight_factor": 1.2,
+    "equipment": "gym"
   },
   {
     "id": "ex-305",
@@ -447,7 +496,8 @@
     "split_category": "ambos",
     "difficulty": "beginner",
     "description": "Tumbado boca arriba, eleva el torso contrayendo el recto abdominal. No tires del cuello — la fuerza viene del abdomen.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "none"
   },
   {
     "id": "ex-306",
@@ -456,7 +506,8 @@
     "split_category": "ambos",
     "difficulty": "intermediate",
     "description": "Sentado con pies elevados y torso inclinado 45°, rota de lado a lado llevando el disco a tocar el suelo en cada repetición.",
-    "weight_factor": 0.6
+    "weight_factor": 0.6,
+    "equipment": "gym"
   },
   {
     "id": "ex-307",
@@ -465,7 +516,8 @@
     "split_category": "ambos",
     "difficulty": "intermediate",
     "description": "Cuelga de una barra con agarre pronador. Eleva las piernas rectas (o dobladas) hasta la horizontal sin balancearte.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-128",
@@ -474,7 +526,8 @@
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Sentado en banco inclinado a 45°, deja caer los brazos completamente y flexiona los codos llevando las mancuernas al hombro. El estiramiento completo maximiza la activación del bíceps.",
-    "weight_factor": 0.7
+    "weight_factor": 0.7,
+    "equipment": "gym"
   },
   {
     "id": "ex-129",
@@ -483,7 +536,8 @@
     "split_category": "tren_superior",
     "difficulty": "beginner",
     "description": "Con un brazo apoyado en banco, inclina el torso y extiende el codo hacia atrás hasta alinear el brazo con el torso. Aprieta el tríceps al final.",
-    "weight_factor": 0.5
+    "weight_factor": 0.5,
+    "equipment": "gym"
   },
   {
     "id": "ex-219",
@@ -492,7 +546,8 @@
     "split_category": "tren_inferior",
     "difficulty": "beginner",
     "description": "Salta a la comba aterrizando solo con las puntas de los pies. Mantén las rodillas semi-flexionadas y el core activo durante todo el ejercicio.",
-    "weight_factor": 0
+    "weight_factor": 0,
+    "equipment": "gym"
   },
   {
     "id": "ex-220",
@@ -501,6 +556,947 @@
     "split_category": "tren_inferior",
     "difficulty": "intermediate",
     "description": "Inclinado hacia adelante en la máquina donkey calf raise, realiza elevaciones completas de talón con máximo rango de movimiento para trabajar el gastrocnemio.",
-    "weight_factor": 1.0
+    "weight_factor": 1,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-130",
+    "name": "Flexiones de Pecho",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Manos a la anchura de los hombros, cuerpo en línea recta. Baja el pecho hasta casi tocar el suelo y empuja extendiendo los codos.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-131",
+    "name": "Flexiones Inclinadas (manos elevadas)",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Apoya las manos en una superficie elevada (banco, mesa o pared). Cuanto más alta la superficie, más fácil. Ideal para progresar hacia la flexión completa.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-132",
+    "name": "Flexiones Declinadas (pies elevados)",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "Pies sobre una silla o escalón y manos en el suelo. Baja controlado hasta rozar el suelo con el pecho. Enfatiza la porción superior del pectoral.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-133",
+    "name": "Flexiones Arqueras",
+    "target_muscle": "Pecho",
+    "split_category": "tren_superior",
+    "difficulty": "advanced",
+    "description": "Manos muy abiertas. Desplaza el peso hacia un lado flexionando solo ese codo mientras el otro brazo queda extendido. Alterna lados en cada repetición.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-134",
+    "name": "Remo Invertido en Mesa",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Túmbate bajo una mesa robusta y agarra el borde con ambas manos. Tira del pecho hacia arriba retrayendo las escápulas y baja controlado.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-135",
+    "name": "Superman en el Suelo",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Boca abajo con brazos extendidos al frente, eleva a la vez brazos y piernas contrayendo toda la cadena posterior. Aguanta 2 segundos arriba.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-136",
+    "name": "Remo con Toalla en Puerta",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "Enrolla una toalla en el pomo o marco de una puerta firme, inclínate hacia atrás con los brazos extendidos y rema llevando el pecho hacia las manos.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-137",
+    "name": "Dominadas Supinas (Chin-up)",
+    "target_muscle": "Espalda",
+    "split_category": "tren_superior",
+    "difficulty": "advanced",
+    "description": "Cuélgate de la barra con las palmas mirando hacia ti a la anchura de los hombros. Sube hasta pasar la barbilla por encima de la barra y baja controlado.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-138",
+    "name": "Pike Push-up (Flexión en Pica)",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "Caderas elevadas formando una V invertida. Flexiona los codos bajando la cabeza hacia el suelo entre las manos y empuja de vuelta.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-139",
+    "name": "Elevaciones Laterales con Botellas de Agua",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Con una botella o mochila ligera en cada mano, eleva los brazos lateralmente hasta la altura de los hombros con los codos semi-flexionados.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-140",
+    "name": "Flexión en Pica con Pies Elevados",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "difficulty": "advanced",
+    "description": "Igual que el pike push-up pero con los pies sobre una silla, acercando el torso a la vertical. Antesala de las flexiones en pino.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-141",
+    "name": "Press de Hombros con Mancuernas Sentado",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Sentado con respaldo, empuja las mancuernas desde la altura de las orejas hasta extender los brazos sobre la cabeza sin arquear la zona lumbar.",
+    "weight_factor": 0.7,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-142",
+    "name": "Remo al Mentón con Barra",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "De pie con agarre algo más estrecho que los hombros, tira de la barra verticalmente hasta la altura del pecho llevando los codos altos.",
+    "weight_factor": 0.6,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-143",
+    "name": "Curl con Mochila Cargada",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Carga una mochila con libros o botellas y agárrala por las asas con las palmas hacia arriba. Flexiona los codos sin balancear el torso.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-144",
+    "name": "Curl Isométrico con Toalla",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "Pisa una toalla con un pie y agarra los extremos con la palma hacia arriba. Tira hacia arriba con el bíceps mientras la pierna ofrece resistencia. Mantén la tensión 5-10 segundos por repetición.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-145",
+    "name": "Curl Concentrado con Mancuerna",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Sentado, apoya el codo en la cara interna del muslo y flexiona llevando la mancuerna al hombro. Aísla el pico del bíceps sin impulso.",
+    "weight_factor": 0.4,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-146",
+    "name": "Curl 21 con Barra EZ",
+    "target_muscle": "Bíceps",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "7 repeticiones en la mitad inferior del recorrido, 7 en la mitad superior y 7 completas. Tensión continua total de 21 repeticiones por serie.",
+    "weight_factor": 0.7,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-147",
+    "name": "Fondos entre Sillas",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "difficulty": "beginner",
+    "description": "Manos en el borde de una silla firme detrás de ti y piernas extendidas al frente. Baja flexionando los codos hasta 90 grados y empuja para subir.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-148",
+    "name": "Flexiones Diamante",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "Junta las manos bajo el pecho formando un diamante con pulgares e índices. Baja con los codos pegados al cuerpo y empuja activando el tríceps.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-149",
+    "name": "Extensión de Tríceps en el Suelo (Bodyweight Skullcrusher)",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "difficulty": "advanced",
+    "description": "En posición de plancha con antebrazos apoyados, extiende los codos elevando el cuerpo hasta la posición de flexión alta solo con la fuerza del tríceps.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-150",
+    "name": "Press de Banca con Agarre Cerrado",
+    "target_muscle": "Tríceps",
+    "split_category": "tren_superior",
+    "difficulty": "intermediate",
+    "description": "En banco plano, agarra la barra a la anchura de los hombros. Baja al pecho con los codos pegados al torso y empuja enfatizando el tríceps.",
+    "weight_factor": 0.8,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-221",
+    "name": "Sentadilla Corporal Profunda",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Pies a la anchura de los hombros, desciende controlado hasta que los muslos queden paralelos al suelo o más abajo. Empuja el suelo para subir.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-222",
+    "name": "Sentadilla Isométrica en Pared",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Apoya la espalda en la pared y desliza hasta que las rodillas formen 90 grados. Mantén la posición entre 30 y 60 segundos por serie.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-223",
+    "name": "Sentadilla Búlgara con Peso Corporal",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Pie trasero elevado en una silla o banco. Desciende la rodilla trasera hacia el suelo manteniendo el torso erguido. Trabaja cada pierna por separado.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-224",
+    "name": "Sentadilla con Salto (Jump Squat)",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Desciende en sentadilla y explota hacia arriba en un salto vertical. Aterriza suave flexionando las rodillas y encadena la siguiente repetición.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-225",
+    "name": "Sentadilla Pistol Asistida",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "advanced",
+    "description": "Sentadilla a una pierna sujetándote de un marco de puerta o soporte. Baja lo más profundo posible con la otra pierna extendida al frente.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-226",
+    "name": "Sentadilla Frontal con Barra",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "advanced",
+    "description": "Barra apoyada en los deltoides frontales con los codos altos. Desciende manteniendo el torso vertical. Máxima demanda de cuádriceps y core.",
+    "weight_factor": 0.8,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-227",
+    "name": "Zancada Inversa con Barra",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Con la barra en los trapecios, da un paso hacia atrás y baja la rodilla trasera cerca del suelo. Vuelve a la posición inicial empujando con la pierna delantera.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-228",
+    "name": "Sissy Squat Asistida",
+    "target_muscle": "Cuádriceps",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Sujeto a un soporte, inclina el torso hacia atrás mientras doblas las rodillas y te elevas sobre las puntas. Estiramiento máximo del recto femoral.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-229",
+    "name": "Peso Muerto a Una Pierna sin Carga",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "De pie sobre una pierna, inclina el torso hacia adelante con la espalda recta extendiendo la otra pierna hacia atrás hasta sentir el estiramiento femoral.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-230",
+    "name": "Puente Femoral con Talones Elevados",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Boca arriba con los talones sobre una silla y las piernas semi-extendidas. Eleva la cadera empujando con los talones y aprieta femorales arriba.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-231",
+    "name": "Curl Femoral Deslizante con Toalla",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Boca arriba con los talones sobre una toalla en suelo liso. Eleva la cadera y desliza los talones hacia el glúteo flexionando las rodillas. Extiende controlado.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-232",
+    "name": "Curl Nórdico Asistido",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "advanced",
+    "description": "De rodillas con los tobillos sujetos (sofá o compañero), deja caer el torso hacia adelante frenando con los femorales. Ayúdate con las manos al final.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-233",
+    "name": "Peso Muerto Rumano con Barra",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Con la barra frente a los muslos, empuja la cadera hacia atrás bajando la barra pegada a las piernas hasta media espinilla. Sube contrayendo femorales y glúteos.",
+    "weight_factor": 1,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-234",
+    "name": "Curl Femoral Sentado en Máquina",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Sentado con el rodillo sobre los tobillos, flexiona las rodillas llevando los talones hacia atrás. La posición sentada estira más el femoral que la tumbada.",
+    "weight_factor": 0.7,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-235",
+    "name": "Hiperextensiones en Banco Romano",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Con la cadera apoyada en el banco a 45 grados, baja el torso y sube hasta la línea recta contrayendo femorales y glúteos, sin hiperextender la lumbar.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-236",
+    "name": "Peso Muerto Rumano a Una Pierna con Mancuerna",
+    "target_muscle": "Femorales",
+    "split_category": "tren_inferior",
+    "difficulty": "advanced",
+    "description": "Con una mancuerna en la mano contraria a la pierna de apoyo, realiza la bisagra de cadera a una pierna manteniendo la cadera cuadrada.",
+    "weight_factor": 0.4,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-237",
+    "name": "Hip Thrust en el Suelo con Peso Corporal",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Boca arriba con las rodillas dobladas y pies apoyados, empuja la cadera hacia arriba apretando los glúteos al máximo. Pausa de 2 segundos arriba.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-238",
+    "name": "Patada de Glúteo en Cuadrupedia",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "A cuatro patas, eleva una pierna flexionada hacia el techo empujando con el talón. Aprieta el glúteo arriba sin arquear la zona lumbar.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-239",
+    "name": "Abducción de Cadera Tumbado de Lado",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Tumbado de lado con el cuerpo alineado, eleva la pierna superior recta hacia el techo y baja controlado. Activa el glúteo medio.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-240",
+    "name": "Puente de Glúteo a Una Pierna",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Igual que el puente normal pero con una pierna extendida en el aire. Toda la carga recae en el glúteo de la pierna de apoyo. Evita rotar la cadera.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-241",
+    "name": "Peso Muerto Sumo con Mancuerna",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Stance ancho con las puntas hacia afuera y una mancuerna colgando entre las piernas. Baja empujando la cadera atrás y sube apretando glúteos.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-242",
+    "name": "Step-Up al Banco con Mancuernas",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Con una mancuerna en cada mano, sube a un banco empujando con el talón de la pierna de arriba. Baja controlado sin impulsarte con la pierna del suelo.",
+    "weight_factor": 0.35,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-243",
+    "name": "Hip Thrust en Máquina",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "En la máquina de hip thrust, empuja la plataforma con la cadera hasta la extensión completa apretando los glúteos. Recorrido guiado y seguro.",
+    "weight_factor": 1.2,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-244",
+    "name": "Zancada Lateral con Mancuerna",
+    "target_muscle": "Glúteos",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Da un paso amplio hacia un lado bajando la cadera sobre esa pierna con la otra extendida. Trabaja glúteo medio y aductores.",
+    "weight_factor": 0.3,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-245",
+    "name": "Elevación de Talones con Peso Corporal",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "De pie sobre el suelo o el borde de un escalón, elévate sobre las puntas de los pies con una pausa arriba y baja lento sintiendo el estiramiento.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-246",
+    "name": "Elevación de Talones a Una Pierna",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Sobre una sola pierna (apóyate en la pared para el equilibrio), realiza elevaciones de talón completas. Duplica la carga sobre cada gemelo.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-247",
+    "name": "Saltos Cortos en el Sitio (Pogo Hops)",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Salta repetidamente usando solo el tobillo, con las rodillas casi rectas y contactos rápidos con el suelo. Trabaja la reactividad del gemelo.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-248",
+    "name": "Caminata de Puntillas",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "Camina de puntillas con pasos cortos manteniendo los talones lo más altos posible durante 20-30 metros o 30-45 segundos por serie.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-249",
+    "name": "Elevación de Talones con Mancuernas",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "beginner",
+    "description": "De pie con una mancuerna en cada mano, elévate sobre las puntas de los pies y baja controlado. Hazlo sobre un escalón para mayor recorrido.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-250",
+    "name": "Elevación de Talones en Multipower",
+    "target_muscle": "Gemelos",
+    "split_category": "tren_inferior",
+    "difficulty": "intermediate",
+    "description": "Con la barra del multipower sobre los trapecios y las puntas de los pies en un disco o escalón, realiza elevaciones completas de talón.",
+    "weight_factor": 1.1,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-308",
+    "name": "Plancha Lateral",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Apoyado sobre un antebrazo y el lateral del pie, mantén el cuerpo en línea recta con la cadera elevada. Trabaja los oblicuos. Cambia de lado.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-309",
+    "name": "Dead Bug",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Boca arriba con brazos y rodillas a 90 grados. Extiende a la vez el brazo y la pierna contrarios sin despegar la lumbar del suelo. Alterna lados.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-310",
+    "name": "Bird Dog",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "A cuatro patas, extiende a la vez el brazo y la pierna contrarios hasta la horizontal manteniendo la cadera estable. Pausa de 2 segundos y alterna.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-311",
+    "name": "Mountain Climbers (Escaladores)",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "En posición de plancha alta, lleva las rodillas al pecho de forma alterna y rápida manteniendo la cadera baja y el core firme.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-312",
+    "name": "Bicycle Crunch",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Boca arriba con las manos en las sienes, lleva el codo hacia la rodilla contraria mientras extiendes la otra pierna. Rota desde el torso, no desde el cuello.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-313",
+    "name": "Sit-up Completo",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Boca arriba con las rodillas dobladas, incorpora el torso completo hasta sentarte y baja vértebra a vértebra de forma controlada.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-314",
+    "name": "Hollow Body Hold",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Boca arriba, despega hombros y piernas del suelo con la lumbar pegada, formando una banana. Mantén 20-40 segundos por serie.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-315",
+    "name": "V-Ups",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Boca arriba con brazos y piernas extendidos, eleva a la vez torso y piernas intentando tocar los pies con las manos formando una V.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-316",
+    "name": "Plancha con Toques de Hombro",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "En plancha alta, toca alternamente el hombro contrario con cada mano evitando que la cadera rote. Anti-rotación pura.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-317",
+    "name": "Dragon Flag",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Tumbado agarrando un soporte tras la cabeza, eleva el cuerpo recto apoyando solo la parte alta de la espalda y baja lento sin quebrar la línea.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-318",
+    "name": "Crunch en Polea Alta",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "De rodillas frente a la polea alta con la cuerda junto a las sienes, flexiona el torso llevando los codos hacia las rodillas. Carga progresiva para el abdomen.",
+    "weight_factor": 2,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-319",
+    "name": "Press Pallof en Polea",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "De pie perpendicular a la polea, extiende los brazos al frente resistiendo la rotación del cable. Mantén 3-5 segundos y vuelve. Anti-rotación.",
+    "weight_factor": 1,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-320",
+    "name": "Plancha con Disco en la Espalda",
+    "target_muscle": "Core",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Plancha de antebrazos clásica con un disco sobre la zona media de la espalda para añadir carga. Mantén la línea recta sin hundir la cadera.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-321",
+    "name": "Carrera Continua Suave (20-30 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Corre a un ritmo conversacional (puedes hablar sin ahogarte) durante 20-30 minutos. Base aeróbica fundamental para cualquier objetivo.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-322",
+    "name": "Trote Progresivo (15 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Empieza trotando muy suave y aumenta el ritmo ligeramente cada 5 minutos, acabando a un ritmo exigente pero sostenible.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-323",
+    "name": "Fartlek (cambios de ritmo, 20 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Carrera continua alternando tramos rápidos y lentos de forma libre: por ejemplo 1 minuto fuerte y 2 minutos suaves. Juego de ritmos sueco.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-324",
+    "name": "Intervalos de Sprint (8 x 30s)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Sprinta al 90% durante 30 segundos y recupera caminando 90 segundos. Repite 8 rondas. Máximo estímulo cardiovascular en poco tiempo.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-325",
+    "name": "Series en Cuesta (6 x 20s)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Busca una cuesta pronunciada y súbela esprintando 20 segundos. Baja caminando para recuperar. La pendiente reduce el impacto y aumenta la potencia.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-326",
+    "name": "Jumping Jacks",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Salta abriendo piernas y brazos por encima de la cabeza y vuelve a la posición inicial. Ritmo constante durante 45-60 segundos por serie.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-327",
+    "name": "Rodillas Altas en el Sitio (High Knees)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Corre en el sitio elevando las rodillas hasta la altura de la cadera a ritmo rápido, con los brazos acompañando la zancada. Series de 30-45 segundos.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-328",
+    "name": "Burpees",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Desde de pie: agáchate, lanza los pies atrás a posición de plancha, haz una flexión, recoge los pies y salta con palmada sobre la cabeza.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-329",
+    "name": "Shadow Boxing (3 x 2 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Boxea contra el aire lanzando combinaciones de golpes con desplazamiento constante. Asaltos de 2 minutos con 1 minuto de descanso.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-330",
+    "name": "Caminata Inclinada en Cinta",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Camina en la cinta con una inclinación del 10-12% a 5-6 km/h durante 15-20 minutos. Cardio de bajo impacto con gran activación de glúteos.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-331",
+    "name": "Remo en Ergómetro (intervalos)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "En la máquina de remo: 1 minuto a ritmo fuerte y 1 minuto suave durante 12-16 minutos. Secuencia: piernas, torso, brazos.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-332",
+    "name": "Bicicleta Estática HIIT (30s on / 30s off)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Pedalea al máximo con resistencia alta durante 30 segundos y recupera pedaleando suave otros 30. Repite 10-12 rondas.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-333",
+    "name": "Elíptica a Ritmo Medio (15 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Mantén un ritmo constante y moderado en la elíptica usando también los brazos. Cardio completo sin impacto articular.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-334",
+    "name": "Escalera (Stair Climber, 10 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Sube a ritmo constante en la máquina de escaleras sin apoyar todo el peso en el pasamanos. Exigente para piernas y sistema cardiovascular.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-335",
+    "name": "Salto a la Comba (3 x 1 min)",
+    "target_muscle": "Cardio",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Salta a la comba con rebotes cortos sobre las puntas de los pies. Rondas de 1 minuto con 45 segundos de descanso. Coordinación y gemelos.",
+    "weight_factor": 0,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-336",
+    "name": "Bear Crawl (Caminata de Oso)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "A cuatro patas con las rodillas despegadas del suelo, avanza moviendo mano y pie contrarios a la vez. Mantén la espalda plana y el core firme.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-337",
+    "name": "Inchworm (Oruga)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "De pie, baja las manos al suelo y camina con ellas hasta la posición de plancha; luego camina con los pies hacia las manos y reincorpórate.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-338",
+    "name": "Squat Thrust",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Desde de pie, apoya las manos en el suelo, lanza los pies atrás a posición de plancha y recógelos de un salto para volver a levantarte. Un burpee sin flexión ni salto.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-339",
+    "name": "Sprawl",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Como un burpee pero dejando caer la cadera al suelo con las piernas extendidas y abiertas al echar los pies atrás. Movimiento clásico de deportes de contacto.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-340",
+    "name": "Zancadas con Salto Alternas",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Desde la posición de zancada, salta y cambia de pierna en el aire aterrizando en zancada con la pierna contraria delante. Potencia y coordinación.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-341",
+    "name": "Skater Jumps (Saltos de Patinador)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Salta lateralmente de una pierna a otra llevando la pierna libre por detrás, como un patinador de velocidad. Estabilidad y potencia lateral.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-342",
+    "name": "Salto Horizontal (Broad Jump)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Desde parado, salta hacia adelante lo más lejos posible impulsándote con brazos y caderas. Aterriza en sentadilla estable y camina de vuelta.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-343",
+    "name": "Crab Walk (Caminata de Cangrejo)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Sentado con las manos apoyadas detrás y la cadera elevada, camina hacia adelante y atrás sobre manos y pies. Activa tríceps, glúteos y core.",
+    "weight_factor": 0,
+    "equipment": "none"
+  },
+  {
+    "id": "ex-344",
+    "name": "Thruster con Mancuernas",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Con una mancuerna en cada hombro, baja en sentadilla completa y, al subir, usa el impulso para empujar las mancuernas sobre la cabeza en un solo movimiento.",
+    "weight_factor": 1,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-345",
+    "name": "Clean con Kettlebell",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Desde el suelo, lleva la kettlebell hasta la posición de rack en el hombro con un tirón explosivo de cadera, dejando que gire suave alrededor de la muñeca.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-346",
+    "name": "Snatch con Mancuerna a Un Brazo",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Lleva la mancuerna del suelo a encima de la cabeza en un único movimiento explosivo guiado por la extensión de cadera. Alterna brazos por serie.",
+    "weight_factor": 0.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-347",
+    "name": "Farmer's Walk con Mancuernas Pesadas",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "beginner",
+    "description": "Camina erguido 20-30 metros con una mancuerna pesada en cada mano, hombros atrás y core apretado. Fuerza de agarre, trapecio y estabilidad total.",
+    "weight_factor": 1.5,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-348",
+    "name": "Wall Ball",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Con un balón medicinal frente al pecho, baja en sentadilla y al subir lánzalo contra una marca en la pared a 3 metros. Recógelo y encadena.",
+    "weight_factor": 0.4,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-349",
+    "name": "Turkish Get-Up con Kettlebell",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "advanced",
+    "description": "Tumbado con la kettlebell extendida sobre el pecho, levántate hasta quedar de pie sin dejar de mirar la pesa, pasando por codo, mano y rodilla. Baja invirtiendo la secuencia.",
+    "weight_factor": 0.4,
+    "equipment": "gym"
+  },
+  {
+    "id": "ex-350",
+    "name": "Salto al Cajón (Box Jump)",
+    "target_muscle": "Full Body",
+    "split_category": "ambos",
+    "difficulty": "intermediate",
+    "description": "Frente a un cajón estable, salta con ambos pies aterrizando suave en sentadilla parcial sobre él. Baja de un paso, nunca saltando hacia atrás.",
+    "weight_factor": 0,
+    "equipment": "gym"
   }
 ]

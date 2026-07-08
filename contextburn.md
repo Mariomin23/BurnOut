@@ -66,7 +66,7 @@ El usuario llega al gimnasio sin saber qué hacer. Abre la app en su móvil, sel
 Mejoras identificadas sobre la base existente de Fase 1. Ver spec completo en `docs/superpowers/specs/2026-06-30-burnout-improvements-design.md`.
 
 ### A. Backend
-* [ ] Expandir `exercises.json` a 50+ ejercicios (mínimo 5-6 por grupo muscular)
+* [x] Expandir `exercises.json` a 50+ ejercicios (mínimo 5-6 por grupo muscular) — ampliado a 150 (50 por categoría)
 * [ ] Validación de inputs con Zod en todos los endpoints
 * [ ] Filtrado por dificultad en el algoritmo de generación
 * [ ] `crypto.randomUUID()` para IDs de rutina (reemplaza `Math.random()`)
@@ -178,6 +178,8 @@ interface RoutineSet {
 Debe haber minimo 50 ejercicios de cada tipo y ademas que el usuario pueda decidir si hacerlo con material del gimnasio o sin material
 
 Puede haber carrera y/o calistenia tambien.
+
+> ✅ COMPLETADO (2026-07-08): 150 ejercicios (50 por categoría: `tren_superior`, `tren_inferior`, `ambos`), campo `equipment` (`gym`/`none`) en cada ejercicio, selector "Gimnasio / Sin material" en el formulario de perfil, y ejercicios de carrera (`Cardio`) y calistenia (`Full Body`) en la categoría `ambos`.
 
 ## Interfaz visual ##
 
