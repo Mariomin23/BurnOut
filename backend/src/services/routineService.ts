@@ -78,9 +78,10 @@ export class RoutineService {
         if (pick) selectedExercises.push(pick);
       }
 
-      const extraCompound = ambosExs.find(
+      const extraPool = this.shuffle(ambosExs.filter(
         e => e.target_muscle !== 'Core' && !selectedExercises.some(s => s.id === e.id)
-      );
+      ));
+      const extraCompound = this.takeWithBias(extraPool, historyIds);
       if (extraCompound) selectedExercises.push(extraCompound);
     }
 
@@ -319,11 +320,12 @@ export class RoutineService {
     return arr;
   }
 
-  /** Saca un ejercicio del pool; 70% de las veces prefiere uno con historial si lo hay. */
+  /** Saca un ejercicio del pool; prefiere frescos (sin historial reciente) 80% del tiempo. */
   private takeWithBias(pool: Exercise[], historyIds: Set<string>): Exercise | undefined {
     if (pool.length === 0) return undefined;
-    const histIndex = pool.findIndex(e => historyIds.has(e.id));
-    const index = histIndex >= 0 && this.rng() < 0.7 ? histIndex : 0;
+    const freshIndex = pool.findIndex(e => !historyIds.has(e.id));
+    // If a fresh exercise exists, pick it 80% of the time; otherwise fall back to index 0
+    const index = freshIndex >= 0 && this.rng() < 0.8 ? freshIndex : 0;
     return pool.splice(index, 1)[0];
   }
 }

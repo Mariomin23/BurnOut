@@ -37,21 +37,24 @@ const historyFor = (exerciseId: string): ExerciseHistorySummary => ({
 });
 
 describe('generateRoutine con historial', () => {
-  it('con rng < 0.7 los huecos eligen ejercicios con historial', async () => {
+  it('con rng < 0.8 los huecos evitan ejercicios con historial (prefieren frescos)', async () => {
     const svc = new RoutineService(repo, () => 0);
+    // pecho-c y espalda-c tienen historial → deben evitarse; pecho-a y espalda-a son frescos
     const routine = await svc.generateRoutine(profile, [historyFor('pecho-c'), historyFor('espalda-c')]);
     const ids = routine.exercises.map(e => e.exercise.id);
-    expect(ids).toContain('pecho-c');
-    expect(ids).toContain('espalda-c');
+    expect(ids).not.toContain('pecho-c');
+    expect(ids).not.toContain('espalda-c');
+    expect(ids).toContain('pecho-a');
+    expect(ids).toContain('espalda-a');
   });
 
-  it('el ejercicio con historial al tope recibe subida de peso y direction up', async () => {
+  it('el ejercicio fresco elegido recibe prescripción sin progressionDirection', async () => {
     const svc = new RoutineService(repo, () => 0);
+    // pecho-c tiene historial → se evita; el elegido (pecho-a) no tiene historial → sin direction
     const routine = await svc.generateRoutine(profile, [historyFor('pecho-c')]);
-    const item = routine.exercises.find(e => e.exercise.id === 'pecho-c')!;
-    expect(item.progressionDirection).toBe('up');
-    expect(item.sets[0].suggestedWeightKg).toBe(42.5);
-    expect(item.sets[0].suggestedReps).toBe(8); // mínimo del rango Volumen
+    const item = routine.exercises.find(e => e.exercise.id === 'pecho-a')!;
+    expect(item).toBeDefined();
+    expect(item.progressionDirection).toBeUndefined();
   });
 
   it('ejercicios sin historial usan fallback sin progressionDirection y reps al mínimo del rango', async () => {
