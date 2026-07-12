@@ -21,8 +21,8 @@ export class AuthController {
         email: email.toLowerCase(),
         passwordHash: await hashPassword(password),
       });
-      const token = signToken({ userId: user._id.toString(), email: user.email });
-      res.status(201).json({ token, email: user.email });
+      const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
+      res.status(201).json({ token, email: user.email, role: user.role });
     } catch (error) {
       console.error('Error en registro:', error);
       res.status(500).json({ error: 'Error interno al crear la cuenta' });
@@ -38,13 +38,12 @@ export class AuthController {
     const { email, password } = result.data;
     try {
       const user = await UserModel.findOne({ email: email.toLowerCase() });
-      // Mismo error para usuario inexistente y contraseña incorrecta (no filtrar qué emails existen)
       if (!user || !(await verifyPassword(password, user.passwordHash))) {
         res.status(401).json({ error: 'Credenciales incorrectas' });
         return;
       }
-      const token = signToken({ userId: user._id.toString(), email: user.email });
-      res.json({ token, email: user.email });
+      const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
+      res.json({ token, email: user.email, role: user.role });
     } catch (error) {
       console.error('Error en login:', error);
       res.status(500).json({ error: 'Error interno al iniciar sesión' });

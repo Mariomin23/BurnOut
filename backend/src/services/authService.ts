@@ -6,6 +6,7 @@ const TOKEN_TTL = '30d';
 export interface TokenPayload {
   userId: string;
   email: string;
+  role: 'user' | 'admin';
 }
 
 function getSecret(): string {
@@ -33,9 +34,9 @@ export function verifyToken(token: string): TokenPayload | null {
   try {
     const decoded = jwt.verify(token, getSecret());
     if (typeof decoded !== 'object' || decoded === null) return null;
-    const { userId, email } = decoded as Record<string, unknown>;
+    const { userId, email, role } = decoded as Record<string, unknown>;
     if (typeof userId !== 'string' || typeof email !== 'string') return null;
-    return { userId, email };
+    return { userId, email, role: role === 'admin' ? 'admin' : 'user' };
   } catch {
     return null;
   }
