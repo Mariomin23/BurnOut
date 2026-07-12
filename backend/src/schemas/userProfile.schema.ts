@@ -5,7 +5,7 @@ export const UserProfileSchema = z.object({
   heightCm: z.number().positive().max(250),
   age: z.number().int().min(14).max(100),
   sex: z.enum(['masculino', 'femenino']),
-  experience: z.enum(['beginner', 'intermediate', 'advanced']),
+  experience: z.enum(['beginner', 'intermediate', 'advanced']).default('intermediate'),
   split: z.enum(['Tren Superior', 'Tren Inferior', 'Full Body']),
   goal: z.enum(['Perder Peso', 'Volumen', 'Mantenerse Activo']),
   // default 'gym' para clientes antiguos que no envían la preferencia de material

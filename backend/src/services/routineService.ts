@@ -24,10 +24,7 @@ export class RoutineService {
     history: ExerciseHistorySummary[] = []
   ): Promise<WorkoutRoutine> {
     const rawExercises = await this.exerciseRepository.getAll();
-    const allExercises = this.filterByEquipment(
-      this.filterByDifficulty(rawExercises, profile.experience),
-      profile.equipment
-    );
+    const allExercises = this.filterByEquipment(rawExercises, profile.equipment);
     const split = profile.split;
     const goal = profile.goal;
     const historyIds = new Set(history.map(h => h.exerciseId));
@@ -187,10 +184,7 @@ export class RoutineService {
     history: ExerciseHistorySummary[] = []
   ): Promise<WorkoutExercise> {
     const rawExercises = await this.exerciseRepository.getAll();
-    const allExercises = this.filterByEquipment(
-      this.filterByDifficulty(rawExercises, profile.experience),
-      profile.equipment
-    );
+    const allExercises = this.filterByEquipment(rawExercises, profile.equipment);
 
     // Filter matching muscle and not excluded
     let candidates = allExercises.filter(
