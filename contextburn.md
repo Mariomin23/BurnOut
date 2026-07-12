@@ -199,7 +199,7 @@ el logo de video, debe ser el logo de youtube, respetanto los tamaños
 
 - Debe llevar un sweetAlert2 indicando que BurnOut No sustituye el trabajo de un entrenador y que lo utilices bajo tu responsabilidad. pon que los desarrolladores con este aviso quedan exentos de responsabilidad y para pasar el sweetalert2 que haya que pinchar un boton que ponga "lo entiendo y lo acepto".
 
-- Debe haber un area cliente. los roles seran el MongoDB como "user" o como "admin". esos roles los asignaré yo manualmente en la propia BBDD.
+- Debe haber un area cliente. los roles seran en MongoDB como "user" o como "admin". esos roles los asignaré yo manualmente en la propia BBDD.
 En el area de cliente podras ver tus entrenamientos hechos y tus ejercicios marcados como favoritos. Si estas registrado y has hecho login, podras marcar con una estrella tus ejercicios favoritos.
 En ese mismo area cliente podras ver cuantas repeticiones y con cuanto peso y que RPE tuviste en el entrenamiento anterior. 
 
