@@ -181,12 +181,27 @@ interface RoutineSet {
 ```
 ## BIBLIOTECA DE EJERCICIOS ##
 
-Debe haber minimo 50 ejercicios de cada tipo y ademas que el usuario pueda decidir si hacerlo con material del gimnasio o sin material
+Debe haber minimo 90 ejercicios de cada tipo y ademas que el usuario pueda decidir si hacerlo con material del gimnasio o sin material. 90 ejercicios de cada tipo y ademas 90 ejercicios sin material. busca burpees, pliometrias, carreras, bulgaras etc.
 
 Puede haber carrera y/o calistenia tambien.
 
 > ✅ COMPLETADO (2026-07-08): 150 ejercicios (50 por categoría: `tren_superior`, `tren_inferior`, `ambos`), campo `equipment` (`gym`/`none`) en cada ejercicio, selector "Gimnasio / Sin material" en el formulario de perfil, y ejercicios de carrera (`Cardio`) y calistenia (`Full Body`) en la categoría `ambos`.
 
+
+
 ## Interfaz visual ##
 
 el logo de video, debe ser el logo de youtube, respetanto los tamaños
+
+## FASE 2 ##
+
+- Se suprimen los ejercicios por avanzado, intermedio o principiante. te puede tocar cualquier ejercicio. si no te gusta le das a cambiar y ya esta. Se quita tambien del index avanzado medio o principiante. 
+
+- Debe llevar un sweetAlert2 indicando que BurnOut No sustituye el trabajo de un entrenador y que lo utilices bajo tu responsabilidad. pon que los desarrolladores con este aviso quedan exentos de responsabilidad y para pasar el sweetalert2 que haya que pinchar un boton que ponga "lo entiendo y lo acepto".
+
+- Debe haber un area cliente. los roles seran el MongoDB como "user" o como "admin". esos roles los asignaré yo manualmente en la propia BBDD.
+En el area de cliente podras ver tus entrenamientos hechos y tus ejercicios marcados como favoritos. Si estas registrado y has hecho login, podras marcar con una estrella tus ejercicios favoritos.
+En ese mismo area cliente podras ver cuantas repeticiones y con cuanto peso y que RPE tuviste en el entrenamiento anterior. 
+
+
+- Ha habido cambios en la linea 184. ahora son 90 ejercicios. se creativo y consulta las BBDD que consideres oportunas
