@@ -6,13 +6,15 @@ const AUTH_KEY = 'fit_poke_auth_v1';
 interface AuthState {
   token: string;
   email: string;
+  role: 'user' | 'admin';
 }
 
 function loadAuth(): AuthState | null {
   try {
     const raw = localStorage.getItem(AUTH_KEY);
     const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed.token === 'string' && typeof parsed.email === 'string' ? parsed : null;
+    if (!parsed || typeof parsed.token !== 'string' || typeof parsed.email !== 'string') return null;
+    return { token: parsed.token, email: parsed.email, role: parsed.role === 'admin' ? 'admin' : 'user' };
   } catch {
     return null;
   }
@@ -37,7 +39,11 @@ export function useAuth() {
         setAuthError(data.error ?? 'Error de autenticación');
         return false;
       }
-      const next: AuthState = { token: data.token, email: data.email };
+      const next: AuthState = {
+        token: data.token,
+        email: data.email,
+        role: data.role === 'admin' ? 'admin' : 'user',
+      };
       setAuth(next);
       localStorage.setItem(AUTH_KEY, JSON.stringify(next));
       return true;
@@ -61,6 +67,7 @@ export function useAuth() {
   return {
     token: auth?.token ?? null,
     email: auth?.email ?? null,
+    role: auth?.role ?? 'user',
     authLoading,
     authError,
     login,

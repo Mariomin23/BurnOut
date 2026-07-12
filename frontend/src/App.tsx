@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import Swal from 'sweetalert2';
 import { UserProfileForm } from './components/UserProfileForm';
 import { ExerciseCard } from './components/ExerciseCard';
 import { ExerciseCardSkeleton } from './components/ExerciseCardSkeleton';
@@ -35,6 +36,32 @@ function App() {
   const { streak, bestStreak, recordWorkout } = useStreak();
   const gamification = useMemo(() => computeGamification(history, bestStreak), [history, bestStreak]);
   const { restDuration, timerKey, handleStartRest, handleCloseTimer } = useRestTimer();
+
+  useEffect(() => {
+    if (!localStorage.getItem('burnout_disclaimer_v1')) {
+      Swal.fire({
+        title: '⚠️ Aviso importante',
+        html: `
+        <p style="text-align:left;line-height:1.6">
+          <strong>BurnOut</strong> es una herramienta de apoyo y <strong>no sustituye el trabajo
+          de un entrenador personal certificado</strong>.<br><br>
+          Utiliza esta aplicación bajo tu propia responsabilidad. Los desarrolladores de BurnOut
+          quedan exentos de cualquier responsabilidad derivada del uso de las rutinas generadas.<br><br>
+          Consulta a un profesional antes de iniciar cualquier programa de entrenamiento,
+          especialmente si tienes lesiones o condiciones médicas.
+        </p>
+      `,
+        confirmButtonText: 'Lo entiendo y lo acepto',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        confirmButtonColor: '#7c3aed',
+        background: '#1a1a2e',
+        color: '#e2e8f0',
+      }).then(() => {
+        localStorage.setItem('burnout_disclaimer_v1', 'true');
+      });
+    }
+  }, []);
 
   // Metadatos dinámicos: título del documento según la vista activa
   useEffect(() => {
