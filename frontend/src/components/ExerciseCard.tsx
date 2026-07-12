@@ -7,13 +7,10 @@ interface ExerciseCardProps {
   onUpdateSet: (exerciseId: string, setIndex: number, updatedFields: Partial<RoutineSet>) => void;
   onStartRest: (seconds: number) => void;
   isRerolling: boolean;
+  isFavorite?: boolean;
+  onToggleFavorite?: (exerciseId: string) => void;
+  showFavoriteButton?: boolean;
 }
-
-const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: 'Principiante',
-  intermediate: 'Intermedio',
-  advanced: 'Avanzado',
-};
 
 export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   item,
@@ -21,6 +18,9 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   onUpdateSet,
   onStartRest,
   isRerolling,
+  isFavorite = false,
+  onToggleFavorite,
+  showFavoriteButton = false,
 }) => {
   const { exercise, sets, restTimerSeconds } = item;
   const [isExpanded, setIsExpanded] = useState(true);
@@ -37,9 +37,6 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           <div className="exercise-card__badges">
             <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>
               {exercise.target_muscle}
-            </span>
-            <span className={`badge-pill badge-difficulty--${exercise.difficulty}`} style={{ fontSize: '0.65rem' }}>
-              {DIFFICULTY_LABEL[exercise.difficulty] ?? exercise.difficulty}
             </span>
             {exercise.equipment === 'none' && (
               <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }} title="No requiere material de gimnasio">
@@ -82,6 +79,17 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
               <path fill="#fff" d="M11.428 14.285 18.856 10l-7.428-4.285z" />
             </svg>
           </button>
+          {showFavoriteButton && (
+            <button
+              className="btn btn-secondary btn-circle"
+              style={{ width: '32px', height: '32px', fontSize: '1rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+              onClick={() => onToggleFavorite?.(exercise.id)}
+              title={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
+              aria-label={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
+            >
+              {isFavorite ? '⭐' : '☆'}
+            </button>
+          )}
           <button
             className="btn btn-primary btn-circle"
             style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}

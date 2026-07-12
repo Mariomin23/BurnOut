@@ -7,15 +7,18 @@ import { RestTimer } from './components/RestTimer';
 import { ConfirmModal } from './components/ConfirmModal';
 import { HistoryView } from './components/HistoryView';
 import { AuthPanel } from './components/AuthPanel';
+import { ClientArea } from './components/ClientArea';
+import { AdminPanel } from './components/AdminPanel';
 import { useWorkout } from './hooks/useWorkout';
 import { useAuth } from './hooks/useAuth';
 import { useStreak } from './hooks/useStreak';
 import { useRestTimer } from './hooks/useRestTimer';
+import { useFavorites } from './hooks/useFavorites';
 import { computeGamification } from './lib/gamification';
 
 function App() {
-  const [view, setView] = useState<'home' | 'history'>('home');
-  const { token, email, authLoading, authError, login, register, logout } = useAuth();
+  const [view, setView] = useState<'home' | 'history' | 'client' | 'admin'>('home');
+  const { token, email, role, authLoading, authError, login, register, logout } = useAuth();
   const {
     history,
     activeRoutine,
@@ -36,6 +39,7 @@ function App() {
   const { streak, bestStreak, recordWorkout } = useStreak();
   const gamification = useMemo(() => computeGamification(history, bestStreak), [history, bestStreak]);
   const { restDuration, timerKey, handleStartRest, handleCloseTimer } = useRestTimer();
+  const { favoriteExercises, favoriteIds, toggleFavorite } = useFavorites(token);
 
   useEffect(() => {
     if (!localStorage.getItem('burnout_disclaimer_v1')) {
@@ -108,6 +112,26 @@ function App() {
             </div>
           )}
         </div>
+        <nav style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+          {token && (
+            <button
+              className="btn btn-secondary"
+              style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
+              onClick={() => setView('client')}
+            >
+              Área Cliente
+            </button>
+          )}
+          {token && role === 'admin' && (
+            <button
+              className="btn btn-secondary"
+              style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
+              onClick={() => setView('admin')}
+            >
+              ⚙️ Admin
+            </button>
+          )}
+        </nav>
       </header>
 
       {/* Loading skeletons */}
@@ -189,6 +213,22 @@ function App() {
         <HistoryView history={history} gamification={gamification} onBack={() => setView('home')} />
       )}
 
+      {/* Client area */}
+      {!loading && !activeRoutine && !workoutSummary && view === 'client' && email && (
+        <ClientArea
+          email={email}
+          history={history}
+          gamification={gamification}
+          favoriteExercises={favoriteExercises}
+          onBack={() => setView('home')}
+        />
+      )}
+
+      {/* Admin panel */}
+      {!loading && !activeRoutine && !workoutSummary && view === 'admin' && role === 'admin' && email && (
+        <AdminPanel email={email} onBack={() => setView('home')} />
+      )}
+
       {/* Active workout */}
       {!loading && activeRoutine && !workoutSummary && (
         <div className="fade-in">
@@ -243,6 +283,9 @@ function App() {
               onUpdateSet={handleUpdateSet}
               onStartRest={handleStartRest}
               isRerolling={rerollingId === item.exercise.id}
+              showFavoriteButton={!!token}
+              isFavorite={favoriteIds.has(item.exercise.id)}
+              onToggleFavorite={toggleFavorite}
             />
           ))}
 

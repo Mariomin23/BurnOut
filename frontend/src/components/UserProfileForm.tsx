@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { UserProfile, Difficulty, Sex, EquipmentCategory } from '../types';
+import type { UserProfile, Sex, EquipmentCategory } from '../types';
 
 interface UserProfileFormProps {
   onSubmit: (profile: UserProfile) => void;
@@ -11,7 +11,6 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
   const [heightCm, setHeightCm] = useState<string>('175');
   const [age, setAge] = useState<string>('25');
   const [sex, setSex] = useState<Sex>('masculino');
-  const [experience, setExperience] = useState<Difficulty>('intermediate');
   const [split, setSplit] = useState<'Tren Superior' | 'Tren Inferior' | 'Full Body'>('Tren Superior');
   const [goal, setGoal] = useState<'Perder Peso' | 'Volumen' | 'Mantenerse Activo'>('Volumen');
   const [equipment, setEquipment] = useState<EquipmentCategory>('gym');
@@ -23,7 +22,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
       heightCm: Number(heightCm),
       age: Number(age),
       sex,
-      experience,
+      experience: 'intermediate',
       split,
       goal,
       equipment,
@@ -84,7 +83,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
         <div className="input-group">
           <label htmlFor="age">Edad (años)</label>
           <input
@@ -97,19 +96,6 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
             onChange={(e) => setAge(e.target.value)}
             required
           />
-        </div>
-
-        <div className="input-group">
-          <label>Experiencia</label>
-          <select
-            className="form-input"
-            value={experience}
-            onChange={(e) => setExperience(e.target.value as Difficulty)}
-          >
-            <option value="beginner">Principiante</option>
-            <option value="intermediate">Intermedio</option>
-            <option value="advanced">Avanzado</option>
-          </select>
         </div>
       </div>
 
