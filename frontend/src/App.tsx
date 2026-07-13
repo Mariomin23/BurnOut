@@ -112,23 +112,43 @@ function App() {
             </div>
           )}
         </div>
-        <nav style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
-          {token && (
+        <nav style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          {token ? (
+            <>
+              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted, #94a3b8)', maxWidth: '160px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                👤 {email}
+              </span>
+              <button
+                className="btn btn-secondary"
+                style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
+                onClick={() => setView('client')}
+              >
+                Área Cliente
+              </button>
+              {role === 'admin' && (
+                <button
+                  className="btn btn-secondary"
+                  style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
+                  onClick={() => setView('admin')}
+                >
+                  ⚙️ Admin
+                </button>
+              )}
+              <button
+                className="btn btn-danger"
+                style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
+                onClick={logout}
+              >
+                Cerrar sesión
+              </button>
+            </>
+          ) : (
             <button
-              className="btn btn-secondary"
+              className="btn btn-primary"
               style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
-              onClick={() => setView('client')}
+              onClick={() => setView('home')}
             >
-              Área Cliente
-            </button>
-          )}
-          {token && role === 'admin' && (
-            <button
-              className="btn btn-secondary"
-              style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
-              onClick={() => setView('admin')}
-            >
-              ⚙️ Admin
+              ☁️ Iniciar sesión
             </button>
           )}
         </nav>
