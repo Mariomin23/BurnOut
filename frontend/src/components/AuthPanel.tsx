@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface AuthPanelProps {
   email: string | null;
@@ -22,6 +22,7 @@ export const AuthPanel: React.FC<AuthPanelProps> = ({
   onExpanded,
 }) => {
   const [expanded, setExpanded] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (forceOpen && !email) {
@@ -29,6 +30,12 @@ export const AuthPanel: React.FC<AuthPanelProps> = ({
       onExpanded?.();
     }
   }, [forceOpen, email, onExpanded]);
+
+  useEffect(() => {
+    if (expanded) {
+      panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [expanded]);
   const [formEmail, setFormEmail] = useState('');
   const [formPassword, setFormPassword] = useState('');
 
@@ -64,7 +71,7 @@ export const AuthPanel: React.FC<AuthPanelProps> = ({
   };
 
   return (
-    <div className="glass auth-panel auth-panel--form fade-in">
+    <div ref={panelRef} className="glass auth-panel auth-panel--form fade-in">
       <div className="auth-panel__header">
         <span className="auth-panel__title">☁️ Cuenta BurnOut</span>
         <button className="btn btn-secondary auth-panel__small-btn" onClick={() => setExpanded(false)}>
