@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AuthPanelProps {
   email: string | null;
@@ -7,6 +7,8 @@ interface AuthPanelProps {
   onLogin: (email: string, password: string) => Promise<boolean>;
   onRegister: (email: string, password: string) => Promise<boolean>;
   onLogout: () => void;
+  forceOpen?: boolean;
+  onExpanded?: () => void;
 }
 
 export const AuthPanel: React.FC<AuthPanelProps> = ({
@@ -16,8 +18,17 @@ export const AuthPanel: React.FC<AuthPanelProps> = ({
   onLogin,
   onRegister,
   onLogout,
+  forceOpen,
+  onExpanded,
 }) => {
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    if (forceOpen && !email) {
+      setExpanded(true);
+      onExpanded?.();
+    }
+  }, [forceOpen, email, onExpanded]);
   const [formEmail, setFormEmail] = useState('');
   const [formPassword, setFormPassword] = useState('');
 

@@ -18,6 +18,7 @@ import { computeGamification } from './lib/gamification';
 
 function App() {
   const [view, setView] = useState<'home' | 'history' | 'client' | 'admin'>('home');
+  const [forceAuthOpen, setForceAuthOpen] = useState(false);
   const { token, email, role, authLoading, authError, login, register, logout } = useAuth();
   const {
     history,
@@ -146,7 +147,7 @@ function App() {
             <button
               className="btn btn-primary"
               style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem' }}
-              onClick={() => setView('home')}
+              onClick={() => { setView('home'); setForceAuthOpen(true); }}
             >
               ☁️ Iniciar sesión
             </button>
@@ -224,6 +225,8 @@ function App() {
             onLogin={login}
             onRegister={register}
             onLogout={logout}
+            forceOpen={forceAuthOpen}
+            onExpanded={() => setForceAuthOpen(false)}
           />
         </div>
       )}
