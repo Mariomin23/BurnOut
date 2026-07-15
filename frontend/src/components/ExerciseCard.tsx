@@ -62,6 +62,16 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           <h3 className="exercise-card__name">{exercise.name}</h3>
         </div>
 
+        {exercise.gif_url && (
+          <img
+            src={exercise.gif_url}
+            loading="lazy"
+            alt=""
+            aria-hidden="true"
+            className="exercise-card__gif"
+          />
+        )}
+
         <div className="exercise-card__actions" onClick={e => e.stopPropagation()}>
           <button
             className="btn btn-secondary btn-circle"
