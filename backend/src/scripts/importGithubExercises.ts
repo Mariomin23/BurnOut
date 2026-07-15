@@ -49,7 +49,7 @@ const WEIGHT_FACTOR_MAP: Record<string, number> = {
 // CRITICAL: these must match exactly the strings in routineService.ts generateRoutine().
 const TARGET_MUSCLE_MAP: Record<string, string> = {
   abs: 'Core',
-  adductors: 'Femorales',
+  adductors: 'Glúteos',
   biceps: 'Bíceps',
   calves: 'Gemelos',
   'cardiovascular system': 'Cardio',

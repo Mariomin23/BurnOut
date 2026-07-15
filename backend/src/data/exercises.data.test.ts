@@ -1,17 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import type { Exercise, Difficulty } from '../types';
+import type { Exercise } from '../types';
 import exercisesData from './exercises.json';
 
 const exercises = exercisesData as Exercise[];
 
-// Pools de dificultad que ve cada nivel de experiencia (ver RoutineService.filterByDifficulty)
-const DIFF_POOL: Record<Difficulty, Difficulty[]> = {
-  beginner: ['beginner'],
-  intermediate: ['beginner', 'intermediate'],
-  advanced: ['beginner', 'intermediate', 'advanced'],
-};
-
 // Huecos que rellena el generador por split: [categoría, músculo, nº de huecos]
+// Fase 2 eliminó el filtro por dificultad — cualquier ejercicio puede tocar cualquier hueco.
+// Todos los ejercicios importados tienen difficulty='intermediate' (dataset GitHub sin taxonomía).
 const SLOTS: Array<[string, string, number]> = [
   ['tren_superior', 'Pecho', 2],
   ['tren_superior', 'Espalda', 2],
@@ -26,6 +21,10 @@ const SLOTS: Array<[string, string, number]> = [
 ];
 
 describe('exercises.json — invariantes de la biblioteca', () => {
+  it('tiene al menos 1300 ejercicios en total', () => {
+    expect(exercises.length).toBeGreaterThanOrEqual(1300);
+  });
+
   it('tiene al menos 50 ejercicios por categoría de split', () => {
     const byCategory = new Map<string, number>();
     for (const e of exercises) {
@@ -53,36 +52,41 @@ describe('exercises.json — invariantes de la biblioteca', () => {
     }
   });
 
-  it('cada hueco del generador tiene candidatos para toda combinación de experiencia y material', () => {
-    for (const experience of Object.keys(DIFF_POOL) as Difficulty[]) {
-      for (const equipment of ['gym', 'none'] as const) {
-        for (const [category, muscle, needed] of SLOTS) {
-          const pool = exercises.filter(
-            e =>
-              e.split_category === category &&
-              e.target_muscle === muscle &&
-              DIFF_POOL[experience].includes(e.difficulty) &&
-              (equipment === 'gym' || e.equipment === 'none')
-          );
-          expect(
-            pool.length,
-            `${category}/${muscle} experience=${experience} equipment=${equipment}`
-          ).toBeGreaterThanOrEqual(needed);
-        }
+  it('todos los ejercicios del dataset GitHub tienen difficulty=intermediate', () => {
+    // El dataset de GitHub no tiene taxonomía de dificultad; todos se importan como
+    // intermediate. Fase 2 eliminó el filtrado por dificultad (filterByDifficulty es
+    // código muerto), así que esto no afecta la generación de rutinas.
+    const nonIntermediate = exercises.filter(e => e.difficulty !== 'intermediate');
+    expect(nonIntermediate.length).toBe(0);
+  });
 
-        // Full Body añade un compuesto extra de la categoría 'ambos' distinto de Core
-        const extras = exercises.filter(
+  it('cada hueco del generador tiene candidatos suficientes para gym y sin material', () => {
+    // Sin filtro de dificultad (comportamiento real en tiempo de ejecución).
+    for (const equipment of ['gym', 'none'] as const) {
+      for (const [category, muscle, needed] of SLOTS) {
+        const pool = exercises.filter(
           e =>
-            e.split_category === 'ambos' &&
-            e.target_muscle !== 'Core' &&
-            DIFF_POOL[experience].includes(e.difficulty) &&
+            e.split_category === category &&
+            e.target_muscle === muscle &&
             (equipment === 'gym' || e.equipment === 'none')
         );
         expect(
-          extras.length,
-          `ambos extra experience=${experience} equipment=${equipment}`
-        ).toBeGreaterThanOrEqual(1);
+          pool.length,
+          `${category}/${muscle} equipment=${equipment}`
+        ).toBeGreaterThanOrEqual(needed);
       }
+
+      // Full Body añade un compuesto extra de la categoría 'ambos' distinto de Core
+      const extras = exercises.filter(
+        e =>
+          e.split_category === 'ambos' &&
+          e.target_muscle !== 'Core' &&
+          (equipment === 'gym' || e.equipment === 'none')
+      );
+      expect(
+        extras.length,
+        `ambos extra equipment=${equipment}`
+      ).toBeGreaterThanOrEqual(1);
     }
   });
 });
