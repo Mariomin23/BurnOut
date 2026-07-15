@@ -26,6 +26,7 @@ app.use(cors({
     // allow vercel preview deployments
     if (/^https:\/\/[a-z0-9-]+-marios-projects-[a-z0-9]+\.vercel\.app$/.test(origin)) return callback(null, true);
     if (origin === 'https://burnout.minuesa.es' || origin === 'https://www.burnout.minuesa.es') return callback(null, true);
+    if (origin === 'https://burnoutapp.es' || origin === 'https://www.burnoutapp.es') return callback(null, true);
     callback(new Error('CORS: origen no permitido'));
   },
   credentials: true,
