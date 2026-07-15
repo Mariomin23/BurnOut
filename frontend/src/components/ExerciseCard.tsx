@@ -137,7 +137,11 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
                 </div>
 
                 <div className="set-row__target">
-                  {set.suggestedWeightKg > 0 ? `${set.suggestedWeightKg}kg` : 'Autocarga'} x {set.suggestedReps}
+                  {set.suggestedWeightKg === 0 && set.suggestedReps === 0
+                    ? '—'
+                    : set.suggestedWeightKg === 0
+                    ? `Autocarga × ${set.suggestedReps}`
+                    : `${set.suggestedWeightKg}kg × ${set.suggestedReps}`}
                 </div>
 
                 <input

@@ -6,7 +6,6 @@ import {
   WorkoutExercise,
   RoutineSet,
   UserProfile,
-  Difficulty,
   ExerciseHistorySummary,
 } from '../types';
 import { ProgressionService } from './progressionService';
@@ -92,12 +91,10 @@ export class RoutineService {
     const restTimerSeconds = goal === 'Perder Peso' ? 60 : goal === 'Volumen' ? 120 : 90;
 
     const exercisesWithSets: WorkoutExercise[] = selectedExercises.map(exercise => {
-      const fallbackWeight = this.calculateSuggestedWeight(exercise, profile);
       const prescription = this.progressionService.prescribe(
         exercise,
         goal,
-        historyMap.get(exercise.id),
-        fallbackWeight
+        historyMap.get(exercise.id)
       );
       const sets: RoutineSet[] = Array.from({ length: numSets }, (_, i) => ({
         setIndex: i + 1,
@@ -219,12 +216,10 @@ export class RoutineService {
     const restTimerSeconds = profile.goal === 'Perder Peso' ? 60 : profile.goal === 'Volumen' ? 120 : 90;
 
     const historyMap = new Map(history.map(h => [h.exerciseId, h.lastSession]));
-    const fallbackWeight = this.calculateSuggestedWeight(selectedExercise, profile);
     const prescription = this.progressionService.prescribe(
       selectedExercise,
       profile.goal,
-      historyMap.get(selectedExercise.id),
-      fallbackWeight
+      historyMap.get(selectedExercise.id)
     );
     const sets: RoutineSet[] = Array.from({ length: numSets }, (_, i) => ({
       setIndex: i + 1,
@@ -240,73 +235,10 @@ export class RoutineService {
     };
   }
 
-  // Baseline load for the muscle's reference compound lift, as fraction of bodyweight (intermediate level)
-  private static readonly MUSCLE_BASE_FACTOR: Record<string, number> = {
-    'Pecho': 0.5,       // Press de banca
-    'Espalda': 0.5,     // Remo con barra
-    'Hombros': 0.3,     // Press militar
-    'Bíceps': 0.15,     // Curl con barra
-    'Tríceps': 0.15,    // Press francés
-    'Cuádriceps': 0.8,  // Sentadilla trasera
-    'Femorales': 0.65,  // Peso muerto rumano
-    'Glúteos': 0.65,    // Referencia cadena posterior
-    'Gemelos': 0.9,     // Elevación de talones de pie
-    'Core': 0.15,       // Lastre ligero (disco)
-    'Full Body': 0.3,   // Movimientos compuestos con carga moderada (thruster, clean)
-    'Cardio': 0,        // Sin carga externa
-  };
-
-  private static readonly EXPERIENCE_FACTOR: Record<Difficulty, number> = {
-    beginner: 0.5,
-    intermediate: 1,
-    advanced: 1.6,
-  };
-
-  private calculateSuggestedWeight(exercise: Exercise, profile: UserProfile): number {
-    const loadFactor = exercise.weight_factor ?? 1;
-    if (loadFactor === 0) {
-      return 0; // Bodyweight / autocarga
-    }
-
-    const muscle = exercise.target_muscle;
-    let multiplier =
-      (RoutineService.MUSCLE_BASE_FACTOR[muscle] ?? 0.2) *
-      RoutineService.EXPERIENCE_FACTOR[profile.experience] *
-      loadFactor;
-
-    // Sex modifiers
-    if (profile.sex === 'femenino') {
-      if (muscle === 'Pecho' || muscle === 'Espalda' || muscle === 'Hombros') {
-        multiplier *= 0.7; // Lower upper body suggested starting weights
-      } else if (muscle === 'Glúteos' || muscle === 'Femorales') {
-        multiplier *= 1.1; // Slightly higher relative strength in lower chain
-      }
-    }
-
-    let suggested = profile.weightKg * multiplier;
-
-    // Round to nearest standard dumbbell/plate jump (2.5 kg)
-    suggested = Math.round(suggested / 2.5) * 2.5;
-
-    // Cap at reasonable minimum
-    if (suggested < 2.5) return 2.5;
-    return suggested;
-  }
-
   /** 'gym' permite todo el catálogo; 'none' restringe a ejercicios sin material. */
   private filterByEquipment(exercises: Exercise[], equipment: UserProfile['equipment']): Exercise[] {
     if (equipment === 'none') {
       return exercises.filter(e => e.equipment === 'none');
-    }
-    return exercises;
-  }
-
-  private filterByDifficulty(exercises: Exercise[], experience: Difficulty): Exercise[] {
-    if (experience === 'beginner') {
-      return exercises.filter(e => e.difficulty === 'beginner');
-    }
-    if (experience === 'intermediate') {
-      return exercises.filter(e => e.difficulty !== 'advanced');
     }
     return exercises;
   }
