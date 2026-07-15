@@ -87,7 +87,7 @@ function mapExercise(ex: GithubExercise) {
     target_muscle: TARGET_MUSCLE_MAP[ex.target] ?? ex.target,
     split_category: SPLIT_MAP[ex.body_part] ?? 'ambos',
     difficulty: 'intermediate',
-    description: ex.instructions['es'] ?? ex.instructions['en'] ?? '',
+    description: ex.instructions?.['es'] ?? ex.instructions?.['en'] ?? '',
     weight_factor: isBodyweight ? 0 : (WEIGHT_FACTOR_MAP[ex.body_part] ?? 0),
     equipment: isBodyweight ? 'none' : 'gym',
     gif_url: `${GITHUB_RAW_BASE}/${ex.gif_url}`,
@@ -98,6 +98,10 @@ function mapExercise(ex: GithubExercise) {
 function fetchJson(url: string): Promise<GithubExercise[]> {
   return new Promise((resolve, reject) => {
     https.get(url, (res) => {
+      if (res.statusCode !== 200) {
+        reject(new Error(`HTTP ${res.statusCode}: ${url}`));
+        return;
+      }
       const chunks: Buffer[] = [];
       res.on('data', (chunk: Buffer) => chunks.push(chunk));
       res.on('end', () => {
@@ -140,6 +144,13 @@ async function main() {
   Object.entries(byEquipment).sort().forEach(([k, v]) => console.log(`  ${k}: ${v}`));
   console.log('\nMuscle distribution (top 15):');
   Object.entries(byMuscle).sort((a, b) => b[1] - a[1]).slice(0, 15).forEach(([k, v]) => console.log(`  ${k}: ${v}`));
+
+  const knownMuscles = new Set(['Pecho','Espalda','Hombros','Bíceps','Tríceps','Cuádriceps','Femorales','Glúteos','Gemelos','Core','Cardio','Antebrazos','Cuello']);
+  const unknownMuscles = mapped.filter(e => !knownMuscles.has(e.target_muscle));
+  if (unknownMuscles.length > 0) {
+    const unknownNames = [...new Set(unknownMuscles.map(e => e.target_muscle))];
+    throw new Error(`${unknownMuscles.length} exercises have unmapped target_muscles: ${unknownNames.join(', ')}. Add them to TARGET_MUSCLE_MAP.`);
+  }
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(mapped, null, 2), 'utf-8');
   console.log(`\n✅ ${mapped.length} ejercicios escritos en ${OUTPUT_PATH}`);
