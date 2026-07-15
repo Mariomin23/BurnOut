@@ -199,9 +199,21 @@ el logo de video, debe ser el logo de youtube, respetanto los tamaños
 
 - Debe llevar un sweetAlert2 indicando que BurnOut No sustituye el trabajo de un entrenador y que lo utilices bajo tu responsabilidad. pon que los desarrolladores con este aviso quedan exentos de responsabilidad y para pasar el sweetalert2 que haya que pinchar un boton que ponga "lo entiendo y lo acepto".
 
-- Debe haber un area cliente. los roles seran en MongoDB como "user" o como "admin". esos roles los asignaré yo manualmente en la propia BBDD.
+- Debe haber un area cliente. los roles seran en2 MongoDB como "user" o como "admin". esos roles los asignaré yo manualmente en la propia BBDD.
 En el area de cliente podras ver tus entrenamientos hechos y tus ejercicios marcados como favoritos. Si estas registrado y has hecho login, podras marcar con una estrella tus ejercicios favoritos.
 En ese mismo area cliente podras ver cuantas repeticiones y con cuanto peso y que RPE tuviste en el entrenamiento anterior. 
 
 
 - Ha habido cambios en la linea 184. ahora son 90 ejercicios. se creativo y consulta las BBDD que consideres oportunas
+
+- Creamos un boton visible de login y logout
+- Creamos un timeout sesion de una hora. si el usuario no interactua en 30 min con la app, se cierra la sesion automaticamente
+- dale una mejora a la ciberseguridad
+
+## FASE 3 ##
+
+Vamos a meterle un super update, te voy a meter un source de github con mas de mil ejercicios. a parir de ahora los ejericios iran acompañados de un gif a la derecha que sacaras del source de github. ten en cuenta que hay que clasificar la zona por tren superior, tren inferior o full body. con o sin material. 
+
+el source es este: https://github.com/hasaneyldrm/exercises-dataset.git
+
+> ✅ COMPLETADO (2026-07-15): 1,324 ejercicios con GIF animado importados de hasaneyldrm/exercises-dataset. GIF 90×90 en header de ExerciseCard, lazy-loaded. Mapeo body_part→split_category y target→target_muscle alineado con routineService.ts. Seed limpia ejercicios obsoletos de MongoDB en cada deploy.
