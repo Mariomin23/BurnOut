@@ -4,9 +4,24 @@ export const ExerciseCardSkeleton: React.FC = () => {
   return (
     <div className="glass" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
       {/* Card header */}
-      <div style={{ padding: '1.25rem', borderBottom: '1px solid var(--border-color)' }}>
-        <div className="skeleton-shimmer skeleton-line skeleton-line--short" style={{ marginBottom: '0.5rem' }} />
-        <div className="skeleton-shimmer skeleton-line skeleton-line--medium" />
+      <div
+        style={{
+          padding: '1.25rem',
+          borderBottom: '1px solid var(--border-color)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <div className="skeleton-shimmer skeleton-line skeleton-line--short" style={{ marginBottom: '0.5rem' }} />
+          <div className="skeleton-shimmer skeleton-line skeleton-line--medium" />
+        </div>
+        {/* GIF placeholder */}
+        <div
+          className="skeleton-shimmer"
+          style={{ width: '90px', height: '90px', borderRadius: '8px', flexShrink: 0 }}
+        />
       </div>
 
       {/* Card body */}
