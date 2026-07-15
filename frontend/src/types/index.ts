@@ -30,6 +30,8 @@ export interface Exercise {
   /** Load relative to the muscle's reference compound lift (0 = bodyweight/autocarga) */
   weight_factor?: number;
   equipment?: EquipmentCategory;
+  gif_url?: string;
+  image_url?: string;
 }
 
 export interface RoutineSet {

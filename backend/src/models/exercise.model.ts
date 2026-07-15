@@ -11,6 +11,8 @@ const exerciseSchema = new Schema<Exercise>(
     description: { type: String, required: true },
     weight_factor: { type: Number, required: true, min: 0 },
     equipment: { type: String, required: true, enum: ['gym', 'none'] },
+    gif_url: { type: String },
+    image_url: { type: String },
   },
   { versionKey: false }
 );
