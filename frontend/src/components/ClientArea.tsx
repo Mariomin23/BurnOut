@@ -87,18 +87,35 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
                 <div
                   key={ex.id}
                   className="glass fade-in"
-                  style={{ padding: '1rem 1.25rem', marginBottom: '1rem', borderRadius: 'var(--radius-lg)' }}
+                  style={{ borderRadius: 'var(--radius-lg)', marginBottom: '1rem', overflow: 'hidden' }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.2rem' }}>
-                        ⭐ {ex.name}
+                  <div style={{ padding: '1rem 1.25rem 0.75rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.75rem' }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.3rem' }}>
+                          ⭐ {ex.name}
+                        </div>
+                        <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>
+                          {ex.target_muscle}
+                        </span>
+                        {ex.description && (
+                          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '0.5rem', lineHeight: '1.4' }}>
+                            {ex.description}
+                          </p>
+                        )}
                       </div>
-                      <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>
-                        {ex.target_muscle}
-                      </span>
+                      {ex.gif_url && (
+                        <img
+                          src={ex.gif_url}
+                          loading="lazy"
+                          alt=""
+                          aria-hidden="true"
+                          style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: 'var(--radius-md)', flexShrink: 0 }}
+                        />
+                      )}
                     </div>
                   </div>
+                  <div style={{ padding: '0 1.25rem 1rem' }}>
                   {last ? (
                     <div style={{ marginTop: '0.75rem' }}>
                       <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginBottom: '0.4rem' }}>
@@ -123,6 +140,7 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
                       Sin datos de sesiones anteriores
                     </p>
                   )}
+                  </div>
                 </div>
               );
             })
