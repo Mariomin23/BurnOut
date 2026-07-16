@@ -55,3 +55,6 @@ coverage/
 
 # Large datasets (exceed GitHub 100MB limit)
 ejercicios/exercises-dataset-main.zip
+
+.GUIA-ESCALADO-PROFESIONAL.md
+.PLAN-MEJORAS-2026-07-16.md
