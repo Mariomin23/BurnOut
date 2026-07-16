@@ -244,6 +244,7 @@ function App() {
           gamification={gamification}
           favoriteExercises={favoriteExercises}
           onBack={() => setView('home')}
+          onToggleFavorite={toggleFavorite}
         />
       )}
 

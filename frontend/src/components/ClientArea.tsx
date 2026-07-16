@@ -9,6 +9,7 @@ interface ClientAreaProps {
   gamification: GamificationState;
   favoriteExercises: Exercise[];
   onBack: () => void;
+  onToggleFavorite?: (exerciseId: string) => void;
 }
 
 type ClientTab = 'historial' | 'favoritos';
@@ -19,6 +20,7 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
   gamification,
   favoriteExercises,
   onBack,
+  onToggleFavorite,
 }) => {
   const [tab, setTab] = useState<ClientTab>('historial');
 
@@ -83,63 +85,90 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
           ) : (
             favoriteExercises.map(ex => {
               const last = lastSessionByExercise.get(ex.id);
+              const openVideo = () => {
+                const q = encodeURIComponent(`${ex.name} técnica ejercicio`);
+                window.open(`https://www.youtube.com/results?search_query=${q}`, '_blank', 'noopener,noreferrer');
+              };
               return (
-                <div
-                  key={ex.id}
-                  className="glass fade-in"
-                  style={{ borderRadius: 'var(--radius-lg)', marginBottom: '1rem', overflow: 'hidden' }}
-                >
-                  <div style={{ padding: '1rem 1.25rem 0.75rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.75rem' }}>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.3rem' }}>
-                          ⭐ {ex.name}
-                        </div>
+                <div key={ex.id} className="glass fade-in" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '1.5rem' }}>
+                  <div className="exercise-card__header">
+                    <div className="exercise-card__info">
+                      <div className="exercise-card__badges">
                         <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>
                           {ex.target_muscle}
                         </span>
-                        {ex.description && (
-                          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '0.5rem', lineHeight: '1.4' }}>
-                            {ex.description}
-                          </p>
+                        {ex.equipment === 'none' && (
+                          <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>Sin material</span>
                         )}
                       </div>
-                      {ex.gif_url && (
-                        <img
-                          src={ex.gif_url}
-                          loading="lazy"
-                          alt=""
-                          aria-hidden="true"
-                          style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: 'var(--radius-md)', flexShrink: 0 }}
-                        />
+                      <h3 className="exercise-card__name">{ex.name}</h3>
+                    </div>
+
+                    {ex.gif_url && (
+                      <img
+                        src={ex.gif_url}
+                        loading="lazy"
+                        alt=""
+                        aria-hidden="true"
+                        className="exercise-card__gif"
+                      />
+                    )}
+
+                    <div className="exercise-card__actions">
+                      <button
+                        className="btn btn-secondary btn-circle"
+                        style={{ width: '32px', height: '32px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                        onClick={openVideo}
+                        title="Buscar vídeo técnico en YouTube"
+                        aria-label="Buscar vídeo técnico en YouTube"
+                      >
+                        <svg width="20" height="14" viewBox="0 0 28.57 20" role="img" aria-hidden="true">
+                          <path fill="#FF0000" d="M27.973 3.123A3.578 3.578 0 0 0 25.447.597C23.22 0 14.285 0 14.285 0S5.35 0 3.123.597A3.578 3.578 0 0 0 .597 3.123C0 5.35 0 10 0 10s0 4.65.597 6.877a3.578 3.578 0 0 0 2.526 2.526C5.35 20 14.285 20 14.285 20s8.935 0 11.162-.597a3.578 3.578 0 0 0 2.526-2.526C28.57 14.65 28.57 10 28.57 10s0-4.65-.597-6.877z" />
+                          <path fill="#fff" d="M11.428 14.285 18.856 10l-7.428-4.285z" />
+                        </svg>
+                      </button>
+                      {onToggleFavorite && (
+                        <button
+                          className="btn btn-secondary btn-circle"
+                          style={{ width: '32px', height: '32px', fontSize: '1rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                          onClick={() => onToggleFavorite(ex.id)}
+                          title="Quitar de favoritos"
+                          aria-label="Quitar de favoritos"
+                        >
+                          ⭐
+                        </button>
                       )}
                     </div>
                   </div>
-                  <div style={{ padding: '0 1.25rem 1rem' }}>
-                  {last ? (
-                    <div style={{ marginTop: '0.75rem' }}>
-                      <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginBottom: '0.4rem' }}>
-                        Última sesión: {new Date(last.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })}
-                      </p>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                        {last.sets.map((s, i) => (
-                          <div
-                            key={i}
-                            className="glass"
-                            style={{ padding: '0.4rem 0.7rem', borderRadius: '0.5rem', fontSize: '0.75rem', textAlign: 'center' }}
-                          >
-                            <div style={{ fontWeight: 600 }}>Serie {i + 1}</div>
-                            <div>{s.weightKg > 0 ? `${s.weightKg} kg` : 'Autocarga'} × {s.reps} reps</div>
-                            {s.rpe > 0 && <div style={{ color: 'var(--color-text-muted)' }}>RPE {s.rpe}</div>}
-                          </div>
-                        ))}
+
+                  <div className="exercise-card__body">
+                    {ex.description && (
+                      <p className="exercise-card__description">{ex.description}</p>
+                    )}
+                    {last ? (
+                      <div style={{ marginTop: '0.75rem' }}>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginBottom: '0.4rem' }}>
+                          Última sesión: {new Date(last.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                          {last.sets.map((s, i) => (
+                            <div
+                              key={i}
+                              className="glass"
+                              style={{ padding: '0.4rem 0.7rem', borderRadius: '0.5rem', fontSize: '0.75rem', textAlign: 'center' }}
+                            >
+                              <div style={{ fontWeight: 600 }}>Serie {i + 1}</div>
+                              <div>{s.weightKg > 0 ? `${s.weightKg} kg` : 'Autocarga'} × {s.reps} reps</div>
+                              {s.rpe > 0 && <div style={{ color: 'var(--color-text-muted)' }}>RPE {s.rpe}</div>}
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ) : (
-                    <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
-                      Sin datos de sesiones anteriores
-                    </p>
-                  )}
+                    ) : (
+                      <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
+                        Sin datos de sesiones anteriores
+                      </p>
+                    )}
                   </div>
                 </div>
               );
