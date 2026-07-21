@@ -40,7 +40,7 @@ The parts I'd want you to look at as a reviewer:
 - **Layered backend architecture** — `Routes → Controllers → Services → Repositories`, with dependency injection at composition time ([`routineRoutes.ts`](backend/src/routes/routineRoutes.ts)). Business logic lives in services and is framework-agnostic.
 - **Repository pattern for a painless DB migration** — exercises are currently served from static JSON behind an `IExerciseRepository` interface. Swapping in MongoDB (planned Phase 3) means writing one new repository class; the service layer doesn't change.
 - **Input validation with Zod** — every endpoint validates its payload against a schema before it reaches business logic ([`userProfile.schema.ts`](backend/src/schemas/userProfile.schema.ts)).
-- **34 automated tests** (28 backend + 6 frontend, Vitest) covering the routine generation algorithm, the progression engine and the history logic. Core logic is written as **pure functions** ([`frontend/src/lib/history.ts`](frontend/src/lib/history.ts)) precisely so it can be tested without mocking React or Express.
+- **68 automated tests** (42 backend + 26 frontend, Vitest) covering the routine generation algorithm, the progression engine and the history logic. Core logic is written as **pure functions** ([`frontend/src/lib/history.ts`](frontend/src/lib/history.ts)) precisely so it can be tested without mocking React or Express.
 - **Custom hooks for separation of concerns** — `useWorkout`, `useStreak`, `useRestTimer`, `useHistory` keep `App.tsx` declarative and each concern independently testable.
 - **Shared domain types** — the `WorkoutRoutine` / `RoutineSet` contracts are typed end to end in TypeScript on both sides of the API.
 
@@ -73,8 +73,8 @@ npm run dev           # starts API and Vite dev server together
 Run the tests:
 
 ```bash
-npm test --prefix backend    # 28 tests
-npm test --prefix frontend   # 6 tests
+npm test --prefix backend    # 42 tests
+npm test --prefix frontend   # 26 tests
 ```
 
 ## Roadmap
