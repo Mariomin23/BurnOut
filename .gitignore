@@ -52,6 +52,7 @@ coverage/
 *.local
 .vercel
 .superpowers/
+graphify-out/
 
 # Large datasets (exceed GitHub 100MB limit)
 ejercicios/exercises-dataset-main.zip

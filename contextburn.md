@@ -217,3 +217,16 @@ Vamos a meterle un super update, te voy a meter un source de github con mas de m
 el source es este: https://github.com/hasaneyldrm/exercises-dataset.git
 
 > ✅ COMPLETADO (2026-07-15): 1,324 ejercicios con GIF animado importados de hasaneyldrm/exercises-dataset. GIF 90×90 en header de ExerciseCard, lazy-loaded. Mapeo body_part→split_category y target→target_muscle alineado con routineService.ts. Seed limpia ejercicios obsoletos de MongoDB en cada deploy.
+
+## FASE 4 ##
+
+- El usuario podra elegir crear una rutina a partir de sus favoritos. para ello debe haber seleccionado minimo 5 favoritos
+
+- Habra un buscador de ejercicios para meter en favoritos. La idea es crear rutinas personalizadas.
+- Siempre se quedara guardado el numero de repeticiones que hiciste la ultima vez que tocaste ese ejercicio. Tambien la api te dira con cuanto peso tiraste. 
+
+- El usuario podra subir una foto de perfil. 
+
+- En el SweetAlert2 habra un aviso que diga que posiblemente tarde entre 30 y 40 segundos en cargar por primera vez debido al coldStart del server. te dejo explicarselo como tu quieras al usuario, que sea facil y sin dar detalle de si es un server gratuito o no.
+
+- En el footer podra: Diseñado por Mario Minuesa y mi correo: mailto:"mario@minuesa.es"
