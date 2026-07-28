@@ -9,12 +9,16 @@ import { HistoryView } from './components/HistoryView';
 import { AuthPanel } from './components/AuthPanel';
 import { ClientArea } from './components/ClientArea';
 import { AdminPanel } from './components/AdminPanel';
+import { Footer } from './components/Footer';
 import { useWorkout } from './hooks/useWorkout';
 import { useAuth } from './hooks/useAuth';
 import { useStreak } from './hooks/useStreak';
 import { useRestTimer } from './hooks/useRestTimer';
 import { useFavorites } from './hooks/useFavorites';
+import { useProfile } from './hooks/useProfile';
 import { computeGamification } from './lib/gamification';
+import { summarizeHistory } from './lib/history';
+import type { UserProfile } from './types';
 
 function App() {
   const [view, setView] = useState<'home' | 'history' | 'client' | 'admin'>('home');
@@ -22,6 +26,7 @@ function App() {
   const { token, email, role, authLoading, authError, login, register, logout } = useAuth();
   const {
     history,
+    profile,
     activeRoutine,
     loading,
     rerollingId,
@@ -30,6 +35,7 @@ function App() {
     isOfflineMode,
     setShowAbandonModal,
     handleGenerateRoutine,
+    handleGenerateFromFavorites,
     handleRerollExercise,
     handleUpdateSet,
     handleCompleteWorkout,
@@ -41,6 +47,47 @@ function App() {
   const gamification = useMemo(() => computeGamification(history, bestStreak), [history, bestStreak]);
   const { restDuration, timerKey, handleStartRest, handleCloseTimer } = useRestTimer();
   const { favoriteExercises, favoriteIds, toggleFavorite } = useFavorites(token);
+  const { avatarUrl, avatarLoading, avatarError, uploadAvatar, removeAvatar } = useProfile(token);
+
+  // Peso, reps y RPE de la última vez que se tocó cada ejercicio
+  const lastSessionByExercise = useMemo(() => {
+    return new Map(summarizeHistory(history).map(entry => [entry.exerciseId, entry.lastSession]));
+  }, [history]);
+
+  const onGenerateFromFavorites = async (userProfile: UserProfile) => {
+    const result = await handleGenerateFromFavorites(userProfile);
+    if (result.ok) {
+      setView('home');
+      return;
+    }
+    Swal.fire({
+      title: 'No se pudo crear la rutina',
+      text: result.error,
+      icon: 'info',
+      confirmButtonText: 'Entendido',
+      confirmButtonColor: '#7c3aed',
+      background: '#1a1a2e',
+      color: '#e2e8f0',
+    });
+  };
+
+  /** Desde el Área Cliente no hay formulario: se reutiliza el último perfil guardado */
+  const onGenerateFromFavoritesWithSavedProfile = () => {
+    if (!profile) {
+      setView('home');
+      Swal.fire({
+        title: 'Configura tu perfil',
+        text: 'Rellena tus datos en la pantalla de inicio y pulsa "Rutina con mis favoritos".',
+        icon: 'info',
+        confirmButtonText: 'Vale',
+        confirmButtonColor: '#7c3aed',
+        background: '#1a1a2e',
+        color: '#e2e8f0',
+      });
+      return;
+    }
+    onGenerateFromFavorites(profile);
+  };
 
   useEffect(() => {
     if (!localStorage.getItem('burnout_disclaimer_v1')) {
@@ -54,6 +101,11 @@ function App() {
           quedan exentos de cualquier responsabilidad derivada del uso de las rutinas generadas.<br><br>
           Consulta a un profesional antes de iniciar cualquier programa de entrenamiento,
           especialmente si tienes lesiones o condiciones médicas.
+        </p>
+        <p style="text-align:left;line-height:1.6;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.12);padding-top:1rem">
+          ⏳ <strong>La primera rutina del día puede tardar entre 30 y 40 segundos.</strong>
+          BurnOut despierta su motor de entrenamiento cuando llevas un rato sin usarlo;
+          en cuanto arranca, todo va instantáneo. Dale un momento y no recargues la página.
         </p>
       `,
         confirmButtonText: 'Lo entiendo y lo acepto',
@@ -116,8 +168,15 @@ function App() {
         <nav style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
           {token ? (
             <>
+              {avatarUrl ? (
+                <img src={avatarUrl} alt="Tu foto de perfil" className="avatar avatar--sm" />
+              ) : (
+                <div className="avatar avatar--sm avatar--empty" aria-hidden="true">
+                  {email?.charAt(0).toUpperCase()}
+                </div>
+              )}
               <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted, #94a3b8)', maxWidth: '160px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                👤 {email}
+                {email}
               </span>
               <button
                 className="btn btn-secondary"
@@ -209,7 +268,13 @@ function App() {
       {/* Profile form */}
       {!loading && !activeRoutine && !workoutSummary && view === 'home' && (
         <div className="fade-in">
-          <UserProfileForm onSubmit={handleGenerateRoutine} isLoading={loading} />
+          <UserProfileForm
+            onSubmit={handleGenerateRoutine}
+            isLoading={loading}
+            onSubmitFavorites={onGenerateFromFavorites}
+            favoritesCount={favoriteExercises.length}
+            isLoggedIn={!!token}
+          />
           {history.length > 0 && (
             <button
               className="btn btn-secondary history-entry-btn"
@@ -243,8 +308,15 @@ function App() {
           history={history}
           gamification={gamification}
           favoriteExercises={favoriteExercises}
+          favoriteIds={favoriteIds}
           onBack={() => setView('home')}
           onToggleFavorite={toggleFavorite}
+          onGenerateFromFavorites={onGenerateFromFavoritesWithSavedProfile}
+          avatarUrl={avatarUrl}
+          avatarLoading={avatarLoading}
+          avatarError={avatarError}
+          onUploadAvatar={uploadAvatar}
+          onRemoveAvatar={removeAvatar}
         />
       )}
 
@@ -310,6 +382,7 @@ function App() {
               showFavoriteButton={!!token}
               isFavorite={favoriteIds.has(item.exercise.id)}
               onToggleFavorite={toggleFavorite}
+              lastSession={lastSessionByExercise.get(item.exercise.id)}
             />
           ))}
 
@@ -355,6 +428,8 @@ function App() {
           onClose={handleCloseTimer}
         />
       )}
+
+      <Footer />
     </div>
   );
 }

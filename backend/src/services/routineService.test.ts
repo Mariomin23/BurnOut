@@ -109,6 +109,55 @@ describe('filtro por material (equipment)', () => {
   });
 });
 
+describe('generateFromFavorites', () => {
+  const favorites: Exercise[] = [
+    ex('fav-1', 'Pecho'), ex('fav-2', 'Espalda'), ex('fav-3', 'Hombros'),
+    ex('fav-4', 'Bíceps'), ex('fav-5', 'Tríceps'), ex('fav-6', 'Core', 0),
+    ex('fav-7', 'Pecho'), ex('fav-8', 'Espalda'),
+  ];
+
+  it('usa solo ejercicios de la lista de favoritos', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateFromFavorites(favorites, profile);
+    const favIds = new Set(favorites.map(f => f.id));
+    for (const item of routine.exercises) {
+      expect(favIds.has(item.exercise.id)).toBe(true);
+    }
+  });
+
+  it('corta en 6 ejercicios sin repetir', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateFromFavorites(favorites, profile);
+    const ids = routine.exercises.map(e => e.exercise.id);
+    expect(ids).toHaveLength(6);
+    expect(new Set(ids).size).toBe(6);
+  });
+
+  it('respeta el número de favoritos cuando son menos de 6', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateFromFavorites(favorites.slice(0, 5), profile);
+    expect(routine.exercises).toHaveLength(5);
+  });
+
+  it('incluye calentamiento y vuelta a la calma del split del perfil', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateFromFavorites(favorites, { ...profile, split: 'Tren Inferior' });
+    expect(routine.split).toBe('Tren Inferior');
+    expect(routine.warmup.length).toBeGreaterThan(0);
+    expect(routine.cooldown.length).toBeGreaterThan(0);
+    expect(routine.warmup.join(' ')).toContain('cadera');
+  });
+
+  it('aplica la progresión del historial a los favoritos', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    // 6 favoritos exactos: ninguno se descarta al cortar la rutina
+    const routine = await svc.generateFromFavorites(favorites.slice(0, 6), profile, [historyFor('fav-1')]);
+    const item = routine.exercises.find(e => e.exercise.id === 'fav-1')!;
+    expect(item.progressionDirection).toBe('up');
+    expect(item.sets[0].suggestedWeightKg).toBe(42.5);
+  });
+});
+
 describe('rerollExercise con historial', () => {
   it('aplica prescripción si el ejercicio elegido tiene historial', async () => {
     const svc = new RoutineService(repo, () => 0);

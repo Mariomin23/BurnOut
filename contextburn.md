@@ -230,3 +230,11 @@ el source es este: https://github.com/hasaneyldrm/exercises-dataset.git
 - En el SweetAlert2 habra un aviso que diga que posiblemente tarde entre 30 y 40 segundos en cargar por primera vez debido al coldStart del server. te dejo explicarselo como tu quieras al usuario, que sea facil y sin dar detalle de si es un server gratuito o no.
 
 - En el footer podra: Diseñado por Mario Minuesa y mi correo: mailto:"mario@minuesa.es"
+
+> ✅ COMPLETADO (2026-07-28):
+> - **Rutina desde favoritos**: `POST /api/routines/from-favorites` (requiere sesión + BBDD) con mínimo de 5 favoritos; baraja y toma hasta 6, aplica progresión del historial y el calentamiento/vuelta a la calma del split elegido. Botón en el formulario de inicio y en el Área Cliente (deshabilitado con aviso si faltan favoritos).
+> - **Buscador de ejercicios**: `GET /api/exercises/search?q=&equipment=&limit=` sobre los 1.324 ejercicios, insensible a mayúsculas y tildes (regex tolerante en Mongo, normalización en el JSON de fallback). Componente `ExerciseSearch` con debounce de 350 ms y estrella para marcar favoritos, dentro de la pestaña Favoritos.
+> - **Última sesión por ejercicio**: peso, reps y RPE de la última vez se muestran en cada `ExerciseCard` durante el entreno (además de la prescripción que ya calculaba la API).
+> - **Foto de perfil**: `GET /api/profile/me`, `PUT/DELETE /api/profile/avatar`. La imagen se recorta a 256 px y se sube como data URL (validada por Zod: solo PNG/JPEG/WebP, máx. 400 KB de base64, parser dedicado de 600 KB y rate-limit propio). Se ve en la cabecera y en la nueva pestaña "Perfil" del Área Cliente.
+> - **Aviso de cold start** añadido al SweetAlert2 del disclaimer (30-40 s la primera rutina, sin mencionar el tipo de hosting).
+> - **Footer**: "Diseñado por Mario Minuesa" + mailto:mario@minuesa.es.

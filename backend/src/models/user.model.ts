@@ -6,6 +6,8 @@ export interface UserDoc {
   passwordHash: string;
   role: 'user' | 'admin';
   favorites: string[];
+  /** Foto de perfil como data URL (imagen ya redimensionada en el cliente) */
+  avatarUrl?: string;
   createdAt: Date;
 }
 
@@ -15,6 +17,7 @@ const userSchema = new Schema<UserDoc>(
     passwordHash: { type: String, required: true },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     favorites: { type: [String], default: [] },
+    avatarUrl: { type: String },
     createdAt: { type: Date, default: Date.now },
   },
   { versionKey: false }

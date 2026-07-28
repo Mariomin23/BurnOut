@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { WorkoutExercise, RoutineSet } from '../types';
+import type { WorkoutExercise, RoutineSet, ExerciseHistorySummary } from '../types';
 
 interface ExerciseCardProps {
   item: WorkoutExercise;
@@ -10,6 +10,8 @@ interface ExerciseCardProps {
   isFavorite?: boolean;
   onToggleFavorite?: (exerciseId: string) => void;
   showFavoriteButton?: boolean;
+  /** Última vez que se tocó este ejercicio: peso, reps y RPE reales */
+  lastSession?: ExerciseHistorySummary['lastSession'];
 }
 
 export const ExerciseCard: React.FC<ExerciseCardProps> = ({
@@ -21,6 +23,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   isFavorite = false,
   onToggleFavorite,
   showFavoriteButton = false,
+  lastSession,
 }) => {
   const { exercise, sets, restTimerSeconds } = item;
   const [isExpanded, setIsExpanded] = useState(true);
@@ -115,6 +118,22 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
       {isExpanded && (
         <div className="exercise-card__body">
           <p className="exercise-card__description">{exercise.description}</p>
+
+          {lastSession && lastSession.sets.length > 0 && (
+            <div className="last-session">
+              <span className="last-session__label">
+                🕑 Última vez ({new Date(lastSession.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })})
+              </span>
+              <div className="last-session__sets">
+                {lastSession.sets.map((s, i) => (
+                  <span key={i} className="last-session__set">
+                    {s.weightKg > 0 ? `${s.weightKg} kg` : 'Autocarga'} × {s.reps}
+                    {s.rpe > 0 && <em className="last-session__rpe"> RPE {s.rpe}</em>}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="set-table-header">
             <div>Set</div>

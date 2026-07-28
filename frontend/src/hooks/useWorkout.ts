@@ -132,6 +132,39 @@ export function useWorkout(token: string | null = null) {
     }
   }, [persistRoutine, buildSummary]);
 
+  /**
+   * Rutina construida con los favoritos guardados en la cuenta. Sin sesión o sin
+   * el mínimo de favoritos el backend responde 400 y devolvemos el motivo para
+   * enseñárselo al usuario (aquí no hay fallback offline: los favoritos viven en Mongo).
+   */
+  const handleGenerateFromFavorites = useCallback(async (
+    userProfile: UserProfile
+  ): Promise<{ ok: boolean; error?: string }> => {
+    if (!token) return { ok: false, error: 'Inicia sesión para usar tus favoritos' };
+    setLoading(true);
+    setWorkoutSummary(null);
+    try {
+      const response = await fetch(`${API_BASE_URL}/from-favorites`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ ...userProfile, history: buildSummary() }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        return { ok: false, error: data.error ?? 'No se pudo generar la rutina de favoritos' };
+      }
+      setProfile(userProfile);
+      localStorage.setItem(PROFILE_KEY, JSON.stringify(userProfile));
+      setIsOfflineMode(false);
+      persistRoutine(data as WorkoutRoutine);
+      return { ok: true };
+    } catch {
+      return { ok: false, error: 'No se pudo conectar con el servidor' };
+    } finally {
+      setLoading(false);
+    }
+  }, [token, persistRoutine, buildSummary]);
+
   const handleRerollExercise = useCallback(async (exerciseId: string, targetMuscle: string) => {
     if (!activeRoutine || !profile) return;
     setRerollingId(exerciseId);
@@ -224,6 +257,7 @@ export function useWorkout(token: string | null = null) {
     isOfflineMode,
     setShowAbandonModal,
     handleGenerateRoutine,
+    handleGenerateFromFavorites,
     handleRerollExercise,
     handleUpdateSet,
     handleCompleteWorkout,

@@ -22,7 +22,7 @@ export class AuthController {
         passwordHash: await hashPassword(password),
       });
       const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
-      res.status(201).json({ token, email: user.email, role: user.role });
+      res.status(201).json({ token, email: user.email, role: user.role, avatarUrl: null });
     } catch (error) {
       console.error('Error en registro:', error);
       res.status(500).json({ error: 'Error interno al crear la cuenta' });
@@ -43,7 +43,7 @@ export class AuthController {
         return;
       }
       const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
-      res.json({ token, email: user.email, role: user.role });
+      res.json({ token, email: user.email, role: user.role, avatarUrl: user.avatarUrl ?? null });
     } catch (error) {
       console.error('Error en login:', error);
       res.status(500).json({ error: 'Error interno al iniciar sesión' });

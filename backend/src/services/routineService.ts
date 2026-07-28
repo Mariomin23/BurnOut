@@ -87,10 +87,58 @@ export class RoutineService {
     selectedExercises = selectedExercises.filter(Boolean).slice(0, 6);
 
     // 2. Determine sets, reps, rest timers, and weights suggestions
+    const exercisesWithSets = this.buildWorkoutExercises(selectedExercises, goal, historyMap);
+
+    // 3. Inject warm-up and cool-down
+    const { warmup, cooldown } = this.buildPhases(split, profile.equipment);
+
+    return {
+      id: randomUUID(),
+      split,
+      goal,
+      warmup,
+      exercises: exercisesWithSets,
+      cooldown,
+      createdAt: new Date().toISOString(),
+      isCompleted: false
+    };
+  }
+
+  /**
+   * Rutina construida solo con los favoritos del usuario: se barajan y se toman
+   * hasta 6. Calentamiento y vuelta a la calma siguen el split del perfil.
+   */
+  public async generateFromFavorites(
+    favorites: Exercise[],
+    profile: UserProfile,
+    history: ExerciseHistorySummary[] = []
+  ): Promise<WorkoutRoutine> {
+    const historyMap = new Map(history.map(h => [h.exerciseId, h.lastSession]));
+    const selected = this.shuffle(favorites).slice(0, 6);
+    const { warmup, cooldown } = this.buildPhases(profile.split, profile.equipment);
+
+    return {
+      id: randomUUID(),
+      split: profile.split,
+      goal: profile.goal,
+      warmup,
+      exercises: this.buildWorkoutExercises(selected, profile.goal, historyMap),
+      cooldown,
+      createdAt: new Date().toISOString(),
+      isCompleted: false,
+    };
+  }
+
+  /** Series, reps y descanso a partir del objetivo + la progresión de cada ejercicio. */
+  private buildWorkoutExercises(
+    exercises: Exercise[],
+    goal: UserProfile['goal'],
+    historyMap: Map<string, ExerciseHistorySummary['lastSession']>
+  ): WorkoutExercise[] {
     const numSets = goal === 'Volumen' ? 4 : 3;
     const restTimerSeconds = goal === 'Perder Peso' ? 60 : goal === 'Volumen' ? 120 : 90;
 
-    const exercisesWithSets: WorkoutExercise[] = selectedExercises.map(exercise => {
+    return exercises.map(exercise => {
       const prescription = this.progressionService.prescribe(
         exercise,
         goal,
@@ -109,12 +157,17 @@ export class RoutineService {
         ...(prescription.direction ? { progressionDirection: prescription.direction } : {}),
       };
     });
+  }
 
-    // 3. Inject warm-up and cool-down
+  /** Calentamiento y vuelta a la calma específicos del split (y del material disponible). */
+  private buildPhases(
+    split: UserProfile['split'],
+    equipment: UserProfile['equipment']
+  ): { warmup: string[]; cooldown: string[] } {
     let warmup: string[] = [];
     let cooldown: string[] = [];
 
-    const noEquipment = profile.equipment === 'none';
+    const noEquipment = equipment === 'none';
 
     if (split === 'Tren Superior') {
       warmup = noEquipment
@@ -163,16 +216,7 @@ export class RoutineService {
       ];
     }
 
-    return {
-      id: randomUUID(),
-      split,
-      goal,
-      warmup,
-      exercises: exercisesWithSets,
-      cooldown,
-      createdAt: new Date().toISOString(),
-      isCompleted: false
-    };
+    return { warmup, cooldown };
   }
 
   public async rerollExercise(

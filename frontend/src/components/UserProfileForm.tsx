@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import type { UserProfile, Sex, EquipmentCategory } from '../types';
 
+/** Favoritos mínimos para que la rutina personalizada tenga variedad (mismo límite que el backend) */
+export const MIN_FAVORITES_FOR_ROUTINE = 5;
+
 interface UserProfileFormProps {
   onSubmit: (profile: UserProfile) => void;
   isLoading: boolean;
+  /** Si se pasa, aparece el botón de rutina a partir de favoritos */
+  onSubmitFavorites?: (profile: UserProfile) => void;
+  favoritesCount?: number;
+  isLoggedIn?: boolean;
 }
 
-export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLoading }) => {
+export const UserProfileForm: React.FC<UserProfileFormProps> = ({
+  onSubmit,
+  isLoading,
+  onSubmitFavorites,
+  favoritesCount = 0,
+  isLoggedIn = false,
+}) => {
   const [weightKg, setWeightKg] = useState<string>('70');
   const [heightCm, setHeightCm] = useState<string>('175');
   const [age, setAge] = useState<string>('25');
@@ -15,19 +28,23 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
   const [goal, setGoal] = useState<'Perder Peso' | 'Volumen' | 'Mantenerse Activo'>('Volumen');
   const [equipment, setEquipment] = useState<EquipmentCategory>('gym');
 
+  const buildProfile = (): UserProfile => ({
+    weightKg: Number(weightKg),
+    heightCm: Number(heightCm),
+    age: Number(age),
+    sex,
+    experience: 'intermediate',
+    split,
+    goal,
+    equipment,
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({
-      weightKg: Number(weightKg),
-      heightCm: Number(heightCm),
-      age: Number(age),
-      sex,
-      experience: 'intermediate',
-      split,
-      goal,
-      equipment,
-    });
+    onSubmit(buildProfile());
   };
+
+  const enoughFavorites = favoritesCount >= MIN_FAVORITES_FOR_ROUTINE;
 
   return (
     <form onSubmit={handleSubmit} className="glass fade-in" style={{ padding: '2rem', borderRadius: 'var(--radius-lg)' }}>
@@ -181,6 +198,26 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({ onSubmit, isLo
       >
         {isLoading ? 'Generando rutina...' : 'Generar Rutina ⚡'}
       </button>
+
+      {onSubmitFavorites && isLoggedIn && (
+        <>
+          <button
+            type="button"
+            className="btn btn-secondary favorites-routine-btn"
+            onClick={() => onSubmitFavorites(buildProfile())}
+            disabled={isLoading || !enoughFavorites}
+          >
+            ⭐ Rutina con mis favoritos ({favoritesCount})
+          </button>
+          {!enoughFavorites && (
+            <p className="favorites-routine-hint">
+              Marca al menos {MIN_FAVORITES_FOR_ROUTINE} favoritos (te faltan{' '}
+              {MIN_FAVORITES_FOR_ROUTINE - favoritesCount}) para crear rutinas a tu medida.
+              Búscalos en el Área Cliente.
+            </p>
+          )}
+        </>
+      )}
     </form>
   );
 };

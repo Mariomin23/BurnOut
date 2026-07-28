@@ -1,5 +1,5 @@
 import { Exercise } from '../types';
-import { IExerciseRepository, JsonExerciseRepository } from './exerciseRepository';
+import { IExerciseRepository, JsonExerciseRepository, SearchOptions } from './exerciseRepository';
 import { MongoExerciseRepository } from './mongoExerciseRepository';
 import { isDbConnected } from '../db/connection';
 
@@ -34,5 +34,17 @@ export class HybridExerciseRepository implements IExerciseRepository {
       }
     }
     return this.json.getById(id);
+  }
+
+  public async search(query: string, options?: SearchOptions): Promise<Exercise[]> {
+    if (isDbConnected()) {
+      try {
+        const exercises = await this.mongo.search(query, options);
+        if (exercises.length > 0) return exercises;
+      } catch (error) {
+        console.error('Mongo search falló — fallback a JSON:', error);
+      }
+    }
+    return this.json.search(query, options);
   }
 }
