@@ -70,6 +70,23 @@ describe('estimateOneRepMaxKg — carga base por peso corporal', () => {
     expect(estimateOneRepMaxKg(curl, woman)).toBeCloseTo(12);
   });
 
+  it('variantes pliométricas, unilaterales o con polea no heredan la carga del básico', () => {
+    for (const name of [
+      'barbell squat jump step rear lunge', 'barbell jump squat', 'dumbbell plyo squat',
+      'barbell single leg split squat', 'barbell one arm side deadlift', 'kettlebell pistol squat',
+      'barbell overhead squat', 'cable deadlift', 'dumbbell one arm incline chest press',
+    ]) {
+      expect(estimateOneRepMaxKg({ ...squat, name }, lifter), name).toBeNull();
+    }
+    // Un básico sigue contando
+    expect(estimateOneRepMaxKg({ ...squat, name: 'barbell sumo deadlift' }, lifter)).toBe(120);
+    expect(estimateOneRepMaxKg({ ...barbell, name: 'smith incline bench press' }, lifter)).toBe(80);
+  });
+
+  it('una variante de un músculo de aislamiento cae al ×0.25, no al del básico', () => {
+    expect(estimateOneRepMaxKg({ ...curl, name: 'dumbbell biceps curl squat' }, lifter)).toBe(20);
+  });
+
   it('devuelve null si la tabla no cubre el ejercicio', () => {
     expect(estimateOneRepMaxKg(row, lifter)).toBeNull();
     expect(estimateOneRepMaxKg(pullUp, lifter)).toBeNull();

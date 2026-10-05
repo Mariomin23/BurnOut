@@ -27,6 +27,12 @@ const ISOLATION_FACTOR = 0.25;
 
 const SQUAT_DEADLIFT = /squat|deadlift|sentadilla|peso muerto/i;
 const BENCH_PRESS = /bench press|chest press|press (de )?banca/i;
+/**
+ * Variantes que comparten nombre con el básico pero no su carga: pliométricas,
+ * unilaterales, de equilibrio, combinadas o con polea. Aplicarles el 1RM de la
+ * sentadilla/banca daría pesos peligrosos, así que no cuentan como básico.
+ */
+const NON_STANDARD_VARIANT = /jump|plyo|speed|lunge|split|single leg|one leg|one arm|pistol|overhead|zercher|jefferson|sissy|cossack|knee|jerk|get up|step-?up|bosu|curl|\brow\b|calf|frankenstein|twisting|guillotine|\bjm\b|cable/i;
 const ISOLATION_MUSCLES = new Set(['Bíceps', 'Tríceps', 'Hombros']);
 /** Material cuya carga no se mide en kg en la barra: sin sugerencia de peso */
 const NO_KG_IMPLEMENT = /\b(exercise ball|stability ball|medicine ball|bosu|assisted|band|battling|tire|roller)\b/i;
@@ -105,11 +111,12 @@ export function estimateOneRepMaxKg(exercise: Exercise, profile: LifterProfile):
   let baseFactor: number;
   let splitsAcrossHands = false;
   let lowerBody = false;
-  if (SQUAT_DEADLIFT.test(exercise.name)) {
+  const standard = !NON_STANDARD_VARIANT.test(exercise.name);
+  if (standard && SQUAT_DEADLIFT.test(exercise.name)) {
     baseFactor = SQUAT_DEADLIFT_FACTOR;
     splitsAcrossHands = true;
     lowerBody = true;
-  } else if (BENCH_PRESS.test(exercise.name)) {
+  } else if (standard && BENCH_PRESS.test(exercise.name)) {
     baseFactor = BENCH_FACTOR;
     splitsAcrossHands = true;
   } else if (ISOLATION_MUSCLES.has(exercise.target_muscle)) {
