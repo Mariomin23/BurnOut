@@ -87,7 +87,7 @@ export class RoutineService {
     selectedExercises = selectedExercises.filter(Boolean).slice(0, 6);
 
     // 2. Determine sets, reps, rest timers, and weights suggestions
-    const exercisesWithSets = this.buildWorkoutExercises(selectedExercises, goal, historyMap);
+    const exercisesWithSets = this.buildWorkoutExercises(selectedExercises, profile, historyMap);
 
     // 3. Inject warm-up and cool-down
     const { warmup, cooldown } = this.buildPhases(split, profile.equipment);
@@ -122,7 +122,7 @@ export class RoutineService {
       split: profile.split,
       goal: profile.goal,
       warmup,
-      exercises: this.buildWorkoutExercises(selected, profile.goal, historyMap),
+      exercises: this.buildWorkoutExercises(selected, profile, historyMap),
       cooldown,
       createdAt: new Date().toISOString(),
       isCompleted: false,
@@ -132,17 +132,19 @@ export class RoutineService {
   /** Series, reps y descanso a partir del objetivo + la progresión de cada ejercicio. */
   private buildWorkoutExercises(
     exercises: Exercise[],
-    goal: UserProfile['goal'],
+    profile: UserProfile,
     historyMap: Map<string, ExerciseHistorySummary['lastSession']>
   ): WorkoutExercise[] {
-    const numSets = goal === 'Volumen' ? 4 : 3;
+    const goal = profile.goal;
+    const numSets = this.setsFor(profile);
     const restTimerSeconds = goal === 'Perder Peso' ? 60 : goal === 'Volumen' ? 120 : 90;
 
     return exercises.map(exercise => {
       const prescription = this.progressionService.prescribe(
         exercise,
         goal,
-        historyMap.get(exercise.id)
+        historyMap.get(exercise.id),
+        profile
       );
       const sets: RoutineSet[] = Array.from({ length: numSets }, (_, i) => ({
         setIndex: i + 1,
@@ -155,6 +157,7 @@ export class RoutineService {
         sets,
         restTimerSeconds,
         ...(prescription.direction ? { progressionDirection: prescription.direction } : {}),
+        ...(prescription.targetRpe ? { targetRpe: prescription.targetRpe } : {}),
       };
     });
   }
@@ -256,14 +259,15 @@ export class RoutineService {
       ? candidates[Math.floor(this.rng() * candidates.length)]
       : allExercises[0];
 
-    const numSets = profile.goal === 'Volumen' ? 4 : 3;
+    const numSets = this.setsFor(profile);
     const restTimerSeconds = profile.goal === 'Perder Peso' ? 60 : profile.goal === 'Volumen' ? 120 : 90;
 
     const historyMap = new Map(history.map(h => [h.exerciseId, h.lastSession]));
     const prescription = this.progressionService.prescribe(
       selectedExercise,
       profile.goal,
-      historyMap.get(selectedExercise.id)
+      historyMap.get(selectedExercise.id),
+      profile
     );
     const sets: RoutineSet[] = Array.from({ length: numSets }, (_, i) => ({
       setIndex: i + 1,
@@ -276,7 +280,17 @@ export class RoutineService {
       sets,
       restTimerSeconds,
       ...(prescription.direction ? { progressionDirection: prescription.direction } : {}),
+      ...(prescription.targetRpe ? { targetRpe: prescription.targetRpe } : {}),
     };
+  }
+
+  /**
+   * Volumen por nivel: principiante 2-3 series, intermedio 3-4, avanzado 4-5.
+   * Dentro del nivel, el objetivo Volumen usa la cifra alta.
+   */
+  private setsFor(profile: UserProfile): number {
+    const base = profile.experience === 'beginner' ? 2 : profile.experience === 'advanced' ? 4 : 3;
+    return profile.goal === 'Volumen' ? base + 1 : base;
   }
 
   /** 'gym' permite todo el catálogo; 'none' restringe a ejercicios sin material. */

@@ -45,6 +45,8 @@ export interface WorkoutExercise {
   sets: RoutineSet[];
   restTimerSeconds: number;
   progressionDirection?: ProgressionDirection;
+  /** RPE objetivo de la primera sesión (carga calculada, sin historial) */
+  targetRpe?: number;
 }
 
 export interface WorkoutRoutine {

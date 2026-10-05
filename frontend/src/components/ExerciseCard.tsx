@@ -14,7 +14,8 @@ interface ExerciseCardProps {
   lastSession?: ExerciseHistorySummary['lastSession'];
 }
 
-export const ExerciseCard: React.FC<ExerciseCardProps> = ({
+// memo: al teclear en una serie solo se repinta la tarjeta de ese ejercicio
+export const ExerciseCard = React.memo<ExerciseCardProps>(({
   item,
   onReroll,
   onUpdateSet,
@@ -61,6 +62,15 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
                   : '= Consolida'}
               </span>
             )}
+            {item.targetRpe && (
+              <span
+                className="badge-pill badge-goal"
+                style={{ fontSize: '0.65rem' }}
+                title="Esfuerzo al que apuntar en cada serie (escala 1-10)"
+              >
+                RPE objetivo {item.targetRpe}
+              </span>
+            )}
           </div>
           <h3 className="exercise-card__name">{exercise.name}</h3>
         </div>
@@ -69,6 +79,8 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           <img
             src={exercise.gif_url}
             loading="lazy"
+            decoding="async"
+            crossOrigin="anonymous"
             alt=""
             aria-hidden="true"
             className="exercise-card__gif"
@@ -213,7 +225,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
                           completed: true,
                           completedWeightKg: set.completedWeightKg ?? set.suggestedWeightKg,
                           completedReps: set.completedReps ?? set.suggestedReps,
-                          completedRpe: set.completedRpe ?? 8,
+                          completedRpe: set.completedRpe ?? item.targetRpe ?? 8,
                         });
                         onStartRest(restTimerSeconds);
                       }
@@ -229,4 +241,4 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
       )}
     </div>
   );
-};
+});

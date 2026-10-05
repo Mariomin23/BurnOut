@@ -172,3 +172,26 @@ describe('rerollExercise con historial', () => {
     expect(result.sets[0].suggestedWeightKg).toBe(42.5);
   });
 });
+
+describe('series por nivel', () => {
+  const setsOf = async (experience: UserProfile['experience'], goal: UserProfile['goal']) => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateRoutine({ ...profile, experience, goal }, []);
+    return routine.exercises[0].sets.length;
+  };
+
+  it('principiante 2-3, intermedio 3-4, avanzado 4-5 (Volumen usa la cifra alta)', async () => {
+    expect(await setsOf('beginner', 'Mantenerse Activo')).toBe(2);
+    expect(await setsOf('beginner', 'Volumen')).toBe(3);
+    expect(await setsOf('intermediate', 'Perder Peso')).toBe(3);
+    expect(await setsOf('intermediate', 'Volumen')).toBe(4);
+    expect(await setsOf('advanced', 'Mantenerse Activo')).toBe(4);
+    expect(await setsOf('advanced', 'Volumen')).toBe(5);
+  });
+
+  it('el reroll usa las mismas series que la rutina', async () => {
+    const svc = new RoutineService(repo, () => 0);
+    const item = await svc.rerollExercise('Pecho', [], { ...profile, experience: 'advanced' }, []);
+    expect(item.sets).toHaveLength(5);
+  });
+});
