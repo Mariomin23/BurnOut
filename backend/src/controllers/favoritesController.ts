@@ -2,6 +2,10 @@ import { Request, Response } from 'express';
 import { UserModel } from '../models/user.model';
 import { ExerciseModel } from '../models/exercise.model';
 
+/** Tope de favoritos por usuario: el array vive dentro del documento del usuario */
+export const MAX_FAVORITES = 200;
+const EXERCISE_ID_FORMAT = /^[A-Za-z0-9_-]{1,60}$/;
+
 export class FavoritesController {
   /** GET /api/favorites → devuelve array de Exercise completo */
   public getAll = async (req: Request, res: Response): Promise<void> => {
@@ -26,7 +30,24 @@ export class FavoritesController {
   /** POST /api/favorites/:exerciseId → añade al array */
   public add = async (req: Request, res: Response): Promise<void> => {
     const { exerciseId } = req.params;
+    if (!EXERCISE_ID_FORMAT.test(exerciseId)) {
+      res.status(400).json({ error: 'Identificador de ejercicio no válido' });
+      return;
+    }
     try {
+      if (!(await ExerciseModel.exists({ id: exerciseId }))) {
+        res.status(404).json({ error: 'Ese ejercicio no existe en el catálogo' });
+        return;
+      }
+      const current = await UserModel.findById(req.userId).select('favorites');
+      if (!current) {
+        res.status(404).json({ error: 'Usuario no encontrado' });
+        return;
+      }
+      if (current.favorites.length >= MAX_FAVORITES && !current.favorites.includes(exerciseId)) {
+        res.status(400).json({ error: `Has alcanzado el máximo de ${MAX_FAVORITES} favoritos` });
+        return;
+      }
       const user = await UserModel.findByIdAndUpdate(
         req.userId,
         { $addToSet: { favorites: exerciseId } },
