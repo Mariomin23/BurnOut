@@ -91,7 +91,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra de dominadas con un agarre prono, un poco más separado que el ancho de los hombros. Activa el core y lleva los omóplatos hacia abajo y atrás. Mientras te elevas, flexiona un brazo y lleva el codo hacia el costado, manteniendo el otro brazo recto. Continúa subiendo hasta que la barbilla quede por encima de la barra y el brazo flexionado esté completamente doblado. Bájate de nuevo con control, estirando el brazo flexionado y repitiendo el movimiento del otro lado. Alterna los lados en cada repetición.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3293-72BC5Za.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3293-72BC5Za.jpg"
   },
@@ -115,7 +115,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las rodillas flexionadas formando un ángulo de 90 grados. Activa el core y levanta las rodillas hacia el pecho, acercándolas lo más posible a los codos. Baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2355-uWpxD4v.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2355-uWpxD4v.jpg"
   },
@@ -127,7 +127,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las piernas estiradas hacia abajo. Activa el core y levanta las piernas hacia adelante hasta que queden paralelas al suelo. Mantén un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2333-PXTIwgu.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2333-PXTIwgu.jpg"
   },
@@ -463,7 +463,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra de dominadas con un agarre prono, con las manos un poco más separadas que el ancho de los hombros. Activa el core y lleva los omóplatos hacia abajo y atrás. Flexiona las rodillas y llévalas hacia el pecho. Levanta lentamente las piernas, manteniéndolas rectas, hasta que el cuerpo quede paralelo al suelo. Mantén esta posición durante unos segundos, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3297-GaSzzuh.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3297-GaSzzuh.jpg"
   },
@@ -499,7 +499,7 @@
     "difficulty": "intermediate",
     "description": "Coloca la tabla de equilibrio sobre una superficie plana. Sube a la tabla de equilibrio con un pie, asegurándote de que esté centrado. Desplaza lentamente tu peso hacia el pie que está sobre la tabla de equilibrio, manteniendo el core activado. Mantén el equilibrio y la estabilidad mientras sostienes la posición durante el tiempo deseado. Repite el ejercicio con el otro pie.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0020-xAySMB0.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0020-xAySMB0.jpg"
   },
@@ -511,7 +511,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sostén la banda con un agarre supino, con las palmas hacia arriba. Mantén los codos cerca de los costados y flexiona lentamente un brazo hacia el hombro, apretando el bíceps en la parte superior. Baja el brazo de vuelta a la posición inicial y repite con el otro brazo. Continúa alternando los brazos durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0968-3omWx6P.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0968-3omWx6P.jpg"
   },
@@ -523,7 +523,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las piernas rectas y los brazos extendidos por encima de la cabeza, sosteniendo la banda. Activa el abdomen y levanta las piernas y la parte superior del cuerpo del suelo al mismo tiempo, llevando las manos hacia los dedos de los pies. Mientras bajas las piernas y la parte superior del cuerpo de nuevo, cambia la posición de las piernas, cruzando una sobre la otra. Repite el movimiento, alternando la posición de las piernas en cada repetición. Continúa durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0969-ztAa1RK.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0969-ztAa1RK.jpg"
   },
@@ -535,7 +535,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a una barra de dominadas o a un punto de anclaje resistente. Pisa la banda y agarra la barra con las palmas mirando hacia afuera, con las manos un poco más separadas que el ancho de los hombros. Cuélgate con los brazos completamente extendidos, manteniendo el core activado y los hombros abajo y atrás. Sube el cuerpo hacia la barra juntando los omóplatos y llevando los codos hacia abajo, en dirección a las caderas. Continúa subiendo hasta que la barbilla quede por encima de la barra, luego bájate lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0970-r1XNRYB.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0970-r1XNRYB.jpg"
   },
@@ -547,7 +547,7 @@
     "difficulty": "intermediate",
     "description": "Arrodíllate en el suelo y sostén las agarraderas de la banda con ambas manos, con las palmas hacia abajo. Coloca la banda en el suelo frente a ti y posiciona las manos separadas a la altura de los hombros. Activa el core y rueda lentamente la rueda hacia adelante, extendiendo el cuerpo lo más que puedas mientras mantienes el control. Haz una pausa por un momento en el punto más lejano, luego rueda lentamente la rueda de vuelta hacia las rodillas para regresar a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0971-zhF9lW4.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0971-zhF9lW4.jpg"
   },
@@ -559,7 +559,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre un banco con los pies apoyados en el suelo y la espalda presionada contra el banco. Agarra las agarraderas de la banda con un agarre prono, un poco más separadas que el ancho de los hombros. Extiende los brazos por completo, empujando las bandas alejándolas del pecho. Baja lentamente las bandas de vuelta hacia el pecho, manteniendo los codos en un ángulo de 90 grados. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1254-khlHMqs.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1254-khlHMqs.jpg"
   },
@@ -571,7 +571,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura del tobillo. Ponte de pie de espaldas al punto de anclaje con los pies separados a la altura de los hombros. Da un paso atrás para generar tensión en la banda, manteniendo las rodillas ligeramente flexionadas. Flexiona las caderas e inclínate hacia adelante, manteniendo la columna en posición neutral. Extiende la pierna derecha recta hacia atrás, apretando los glúteos en la parte superior. Baja la pierna derecha de vuelta y repite con la pierna izquierda. Continúa alternando las piernas durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0980-wSScovH.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0980-wSScovH.jpg"
   },
@@ -583,7 +583,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las manos detrás de la cabeza y las rodillas flexionadas. Levanta los pies del suelo y lleva la rodilla derecha hacia el pecho mientras simultáneamente giras el torso para llevar el codo izquierdo hacia la rodilla derecha. Estira la pierna derecha mientras llevas la rodilla izquierda hacia el pecho y giras el torso para llevar el codo derecho hacia la rodilla izquierda. Continúa alternando el movimiento de giro, como si estuvieras pedaleando una bicicleta, manteniendo el core activado durante todo el movimiento. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0972-tZkGYZ9.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0972-tZkGYZ9.jpg"
   },
@@ -595,7 +595,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje alto, como una barra de dominadas o una viga resistente. Ponte de pie frente al punto de anclaje y agarra la banda con un agarre supino, con las manos separadas a la altura de los hombros. Da un paso atrás para generar tensión en la banda, manteniendo los pies separados a la altura de las caderas. Activa el core y mantén la espalda recta mientras tiras de la banda hacia el pecho, juntando los omóplatos. Haz una pausa por un momento en la parte inferior del movimiento, luego suelta lentamente la banda de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0974-DptumMx.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0974-DptumMx.jpg"
   },
@@ -607,7 +607,7 @@
     "difficulty": "intermediate",
     "description": "Coloca una banda alrededor de la parte superior de los brazos, justo por encima de los codos. Adopta una posición de flexión de brazos con las manos justo debajo de los hombros y el cuerpo en línea recta desde la cabeza hasta los talones. Flexiona los codos y baja el pecho hacia el suelo, manteniendo los codos cerca de los costados. Empuja con las palmas para extender los brazos y regresar a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0975-ufaxB52.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0975-ufaxB52.jpg"
   },
@@ -619,7 +619,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en un banco o silla con las piernas separadas y los pies apoyados en el suelo. Sostén un extremo de la banda en la mano y pisa el otro extremo con el pie del mismo lado. Inclínate ligeramente hacia adelante y apoya el codo en la parte interna del muslo, justo encima de la rodilla. Con la palma hacia arriba, flexiona lentamente la mano hacia el hombro, manteniendo quieta la parte superior del brazo. Haz una pausa por un momento en la parte superior, luego baja lentamente la mano de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia de lado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0976-kmVVAfu.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0976-kmVVAfu.jpg"
   },
@@ -631,7 +631,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto fijo por encima de ti, como una barra de dominadas o una viga resistente. Siéntate en un banco o silla frente a la banda, con los pies apoyados en el suelo y las rodillas flexionadas. Agarra la banda con un agarre cerrado, con las palmas hacia ti. Mantén la espalda recta y activa el core. Tira de la banda hacia el pecho, juntando los omóplatos. Haz una pausa por un momento en la parte inferior del movimiento, sintiendo la contracción en los dorsales. Suelta lentamente la banda de vuelta a la posición inicial, manteniendo el control durante todo el movimiento. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3117-4LoWllp.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3117-4LoWllp.jpg"
   },
@@ -643,7 +643,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente por encima de tu cabeza. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Agarra la banda con un agarre supino, con las manos un poco más separadas que el ancho de los hombros. Da un paso atrás para generar tensión en la banda, manteniendo los brazos completamente extendidos. Activa el core y junta los omóplatos. Tira de la banda hacia el pecho, guiando el movimiento con los codos. Haz una pausa por un momento en la parte inferior del movimiento, sintiendo la contracción en los dorsales. Suelta lentamente la tensión de la banda y regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3116-ZH68exZ.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3116-ZH68exZ.jpg"
   },
@@ -655,7 +655,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sostén la banda frente a los muslos con las palmas hacia abajo. Mantén los brazos rectos y levanta la banda frente a ti hasta que los brazos queden paralelos al suelo. Haz una pausa por un momento en la parte superior, luego baja lentamente la banda de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0977-sTg7iys.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0977-sTg7iys.jpg"
   },
@@ -667,7 +667,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sostén la banda frente a los muslos con las palmas hacia abajo. Mantén los brazos rectos y levántalos lentamente hacia adelante hasta que queden paralelos al suelo. Haz una pausa por un momento en la parte superior, luego baja lentamente los brazos de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0978-TFA88iB.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0978-TFA88iB.jpg"
   },
@@ -679,7 +679,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las rodillas flexionadas y los pies apoyados en el suelo. Coloca una banda elástica justo por encima de las rodillas. Activa los glúteos y los músculos del core. Presiona los talones contra el suelo y levanta las caderas del suelo, apretando los glúteos en la parte superior. Haz una pausa por un momento en la parte superior, luego baja lentamente las caderas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1408-E4R8Hz1.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1408-E4R8Hz1.jpg"
   },
@@ -691,7 +691,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura de la cintura. Ponte de pie perpendicular al punto de anclaje con los pies separados a la altura de los hombros. Agarra la agarradera de la banda con ambas manos y aléjate del punto de anclaje para generar tensión en la banda. Lleva las manos hacia el pecho, manteniendo los codos flexionados y cerca del cuerpo. Activa el core y mantén una postura estable. Extiende los brazos rectos frente a ti, empujando la banda alejándola del cuerpo. Mantén la posición extendida durante unos segundos, enfocándote en mantener la tensión en el core. Lleva lentamente las manos de vuelta al pecho, resistiendo el tirón de la banda. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0979-9pa4H5m.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0979-9pa4H5m.jpg"
   },
@@ -703,7 +703,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las piernas rectas y los brazos extendidos por encima de la cabeza, sosteniendo la banda. Activa el abdomen y levanta las piernas y la parte superior del cuerpo simultáneamente, llevando las manos hacia los pies. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas y la parte superior del cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0981-KCBKjma.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0981-KCBKjma.jpg"
   },
@@ -715,7 +715,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente por encima de tu cabeza. Arrodíllate y sostén la banda con una mano, con la palma hacia abajo. Extiende el brazo por completo por encima de la cabeza, manteniendo el codo ligeramente flexionado. Activa los dorsales y tira de la banda hacia el costado, llevando el codo hacia las costillas. Haz una pausa por un momento en la parte inferior, luego suelta lentamente la tensión y regresa a la posición inicial. Repite el número de repeticiones deseado, luego cambia de lado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0983-pmnrOp0.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0983-pmnrOp0.jpg"
   },
@@ -727,7 +727,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura de la cintura. Arrodíllate de espaldas al punto de anclaje y sostén la banda con ambas manos, manteniendo los codos flexionados y cerca de los costados. Activa el abdomen y gira lentamente el torso hacia un lado, llevando las manos hacia la cadera opuesta. Haz una pausa por un momento, luego regresa lentamente a la posición inicial. Repite del otro lado. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0985-225x2Vd.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0985-225x2Vd.jpg"
   },
@@ -739,7 +739,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las piernas rectas y una banda elástica enrollada alrededor de los pies. Flexiona las rodillas y llévalas hacia el pecho, manteniendo los pies juntos. Rota lentamente las rodillas hacia afuera, separándolas entre sí, mientras mantienes los pies juntos. Haz una pausa por un momento al final de la rotación, luego regresa lentamente a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0984-vIICElP.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0984-vIICElP.jpg"
   },
@@ -751,7 +751,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las piernas rectas y los pies juntos. Coloca la banda alrededor de los arcos de los pies y sostén los extremos de la banda con las manos. Activando el abdomen, levanta ambas piernas del suelo hasta que queden perpendiculares al suelo. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1002-bbLR7fB.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1002-bbLR7fB.jpg"
   },
@@ -763,7 +763,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca un extremo de la banda bajo el pie. Sostén el otro extremo de la banda con el brazo completamente extendido por encima de la cabeza, con la palma hacia adelante. Manteniendo quieta la parte superior del brazo, flexiona el antebrazo hacia el hombro, apretando el bíceps. Haz una pausa por un momento en la parte superior, luego baja lentamente el antebrazo de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia de brazo.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0986-UNAB8ak.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0986-UNAB8ak.jpg"
   },
@@ -775,7 +775,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de las caderas y coloca una banda elástica alrededor de los tobillos. Extiende una pierna hacia adelante y apoya la parte superior del pie sobre un banco o escalón detrás de ti. Sujétate de un apoyo con una mano para mantener el equilibrio. Flexiona la pierna de apoyo y baja el cuerpo hacia una posición de sentadilla, manteniendo la rodilla alineada con los dedos del pie. Empuja con el talón para regresar a la posición inicial. Repite el número de repeticiones deseado, luego cambia de pierna.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0987-arsYEd3.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0987-arsYEd3.jpg"
   },
@@ -787,7 +787,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje estable a la altura de la cintura. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Sostén la banda con una mano, con la palma hacia adentro, y da un paso atrás para generar tensión en la banda. Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta. Tira de la banda hacia la cintura, juntando los omóplatos. Haz una pausa por un momento en la parte superior del movimiento, luego suelta lentamente la banda de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia de lado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0988-km0sQC0.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0988-km0sQC0.jpg"
   },
@@ -799,7 +799,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura del pecho. Ponte de pie con el costado hacia el punto de anclaje y agarra la banda con una mano. Aléjate del punto de anclaje para generar tensión en la banda. Coloca los pies separados a la altura de los hombros y flexiona ligeramente las rodillas. Lleva la mano que sostiene la banda a través del cuerpo, hacia el hombro opuesto. Manteniendo la tensión en la banda, empuja la mano hacia adelante y alejándola del cuerpo, extendiendo el brazo. Regresa lentamente a la posición inicial y repite el número de repeticiones deseado. Cambia de lado y repite el ejercicio con la otra mano.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0989-c16nYGA.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0989-c16nYGA.jpg"
   },
@@ -811,7 +811,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en un banco o silla con los pies apoyados en el suelo y la espalda recta. Sostén la banda con una mano y extiende el brazo completamente frente a ti. Manteniendo la espalda recta, tira de la banda hacia el cuerpo flexionando el codo y juntando los omóplatos. Al mismo tiempo, gira el torso hacia el lado del brazo que tira. Haz una pausa por un momento en la parte superior, luego suelta lentamente la tensión de la banda y regresa a la posición inicial. Repite el número de repeticiones deseado, luego cambia al otro brazo.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0990-DKBwJrL.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0990-DKBwJrL.jpg"
   },
@@ -823,7 +823,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta una banda elástica a un punto de anclaje resistente a nivel del suelo. Ponte de pie de espaldas al punto de anclaje con los pies separados a la altura de los hombros. Da un paso adelante para generar tensión en la banda, manteniendo las rodillas ligeramente flexionadas. Flexiona las caderas y lleva los glúteos hacia atrás, manteniendo una ligera flexión en las rodillas. Baja el torso hasta que quede paralelo al suelo, sintiendo un estiramiento en los isquiotibiales. Empuja las caderas hacia adelante y aprieta los glúteos para regresar a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0991-VtTbiP3.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0991-VtTbiP3.jpg"
   },
@@ -835,7 +835,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda de forma segura a un punto de anclaje estable. Túmbate sobre tu espalda con las rodillas flexionadas y los pies apoyados en el suelo. Sostén la banda con ambas manos y extiende los brazos rectos hacia el techo. Activando el abdomen, levanta lentamente la parte superior del cuerpo del suelo, curvándote hacia adelante hasta que tu torso forme un ángulo de 45 grados. Haz una pausa por un momento en la parte superior, luego baja lentamente la parte superior del cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0992-zFzbBfL.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0992-zFzbBfL.jpg"
   },
@@ -847,7 +847,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un objeto fijo a la altura del pecho. Ponte de pie con los pies separados a la altura de los hombros y sostén la banda con ambas manos frente a ti. Mantén los brazos rectos y levántalos hacia los lados hasta que queden paralelos al suelo. Junta los omóplatos en la parte superior del movimiento. Baja lentamente los brazos de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0993-sTfvVsG.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0993-sTfvVsG.jpg"
   },
@@ -859,7 +859,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en un banco o silla con los pies apoyados en el suelo. Sostén la banda con un agarre prono, con las palmas hacia abajo, y envuélvela alrededor de los dedos. Apoya los antebrazos sobre los muslos, con las muñecas colgando del borde. Flexiona lentamente las muñecas hacia arriba, apretando los antebrazos. Haz una pausa por un momento en la parte superior, luego baja lentamente las muñecas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0994-Ezpnw9d.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0994-Ezpnw9d.jpg"
   },
@@ -871,7 +871,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo. Coloca una banda elástica alrededor de los muslos, justo por encima de las rodillas. Mantén las rodillas flexionadas formando un ángulo de 90 grados y los pies separados a la altura de los hombros. Activa los glúteos y rota lentamente las rodillas hacia afuera, empujando contra la resistencia de la banda. Haz una pausa por un momento al final del movimiento, luego regresa lentamente a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0996-9gbyYKk.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0996-9gbyYKk.jpg"
   },
@@ -883,7 +883,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en el suelo con las piernas extendidas frente a ti y la espalda recta. Envuelve la banda alrededor de la cintura y sostén los extremos con ambas manos. Activa el abdomen y gira lentamente el torso hacia un lado, manteniendo la espalda recta y los pies en el suelo. Haz una pausa por un momento al final de la rotación, luego regresa lentamente a la posición inicial. Repite el giro hacia el otro lado. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1011-S1JXDAG.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1011-S1JXDAG.jpg"
   },
@@ -895,7 +895,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda bajo los pies. Sostén la banda con las palmas hacia adelante y eleva las manos a la altura de los hombros, con los codos flexionados. Empuja la banda por encima de la cabeza, extendiendo completamente los brazos. Haz una pausa por un momento en la parte superior, luego baja lentamente la banda de vuelta a la altura de los hombros. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0997-peAeMR3.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0997-peAeMR3.jpg"
   },
@@ -907,7 +907,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda bajo los pies, sosteniendo los extremos con las manos. Mantén los brazos rectos y relajados, y deja que la banda cuelgue frente a los muslos. Activa los trapecios encogiendo los hombros hacia arriba, levantando la banda lo más alto posible. Mantén la contracción por un momento, luego baja lentamente los hombros de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1018-trmte8s.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1018-trmte8s.jpg"
   },
@@ -919,7 +919,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sostén la banda con ambas manos, con las palmas hacia abajo. Extiende los brazos hacia los lados, manteniéndolos paralelos al suelo. Flexiona lentamente los codos y lleva las manos hacia los hombros, manteniendo quieta la parte superior de los brazos. Haz una pausa por un momento, luego extiende lentamente los brazos de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0998-obe5LMq.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0998-obe5LMq.jpg"
   },
@@ -931,7 +931,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de las caderas y coloca la banda alrededor de la base de los dedos del pie izquierdo. Sujétate de un objeto estable para mantener el equilibrio si es necesario. Levanta lentamente el talón izquierdo del suelo, llevando el peso del cuerpo hacia la punta del pie. Haz una pausa por un momento en la parte superior, luego baja lentamente el talón izquierdo de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia a la pierna derecha.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0999-9JprnPh.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0999-9JprnPh.jpg"
   },
@@ -943,7 +943,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de las caderas y coloca la banda alrededor de la base de los dedos del pie. Sujétate de un objeto estable para mantener el equilibrio. Levanta lentamente el talón del suelo, llevando el peso del cuerpo hacia la punta del pie. Haz una pausa por un momento en la parte superior, luego baja lentamente el talón de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia a la otra pierna.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1000-QsSQWbf.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1000-QsSQWbf.jpg"
   },
@@ -955,7 +955,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de las caderas y coloca una banda elástica alrededor de los tobillos. Da un paso grande hacia adelante con el pie derecho y un paso más pequeño hacia atrás con el pie izquierdo. Flexiona las rodillas y baja el cuerpo hasta que el muslo derecho quede paralelo al suelo, manteniendo la rodilla izquierda ligeramente por encima del suelo. Empuja con el talón derecho para regresar a la posición inicial. Repite del otro lado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1001-y8bYM8w.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1001-y8bYM8w.jpg"
   },
@@ -967,7 +967,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros, con la banda colocada justo por encima de las rodillas. Manteniendo el pecho arriba y el core activado, lleva las caderas hacia atrás y flexiona las rodillas para bajar a una posición de sentadilla. Asegúrate de que las rodillas se alineen con los dedos de los pies y de que el peso recaiga en los talones. Haz una pausa por un momento en la parte inferior, luego empuja con los talones para regresar a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1004-TUZLh71.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1004-TUZLh71.jpg"
   },
@@ -979,7 +979,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura de la cintura. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Sostén las agarraderas de la banda con las palmas mirándose entre sí y los brazos extendidos frente a ti. Flexiona las rodillas y baja a una posición de sentadilla, manteniendo la espalda recta y el pecho elevado. Desde la posición de sentadilla, tira de las agarraderas de la banda hacia el cuerpo, juntando los omóplatos. Haz una pausa por un momento en la parte superior, luego suelta lentamente la tensión y regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1003-w1NOByi.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1003-w1NOByi.jpg"
   },
@@ -991,7 +991,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje resistente a la altura de la cintura. Ponte de pie de espaldas al punto de anclaje con los pies separados a la altura de los hombros. Sostén la banda con ambas manos y llévala hacia el pecho, manteniendo los codos flexionados y cerca del cuerpo. Activa el abdomen y flexiona lentamente el torso hacia adelante, llevando el pecho hacia las rodillas. Haz una pausa por un momento en la parte más alta del movimiento, luego regresa lentamente a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1005-Kzg30R7.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1005-Kzg30R7.jpg"
   },
@@ -1003,7 +1003,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda bajo los pies. Sostén las agarraderas de la banda con las palmas mirándose entre sí y los brazos extendidos frente a ti. Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta. Tira de la banda hacia el pecho, juntando los omóplatos. Haz una pausa por un momento en la parte superior, luego suelta lentamente la tensión y regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1022-tc5dYrf.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1022-tc5dYrf.jpg"
   },
@@ -1015,7 +1015,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda alrededor de la parte superior de la espalda, cruzándola frente al pecho. Sujeta los extremos de la banda con las manos, manteniendo los codos flexionados y cerca de los costados. Activa el abdomen y gira el torso hacia un lado, llevando el codo hacia la rodilla opuesta. Haz una pausa breve y luego vuelve a la posición inicial. Repite del otro lado. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1007-euq4pwp.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1007-euq4pwp.jpg"
   },
@@ -1027,7 +1027,7 @@
     "difficulty": "intermediate",
     "description": "Coloca una banda alrededor de los muslos, justo por encima de las rodillas. Ponte de pie frente a un escalón o plataforma con los pies separados a la altura de las caderas. Sube a la plataforma con el pie derecho, empujando con el talón. Extiende la pierna izquierda hacia atrás, manteniéndola recta. Baja el pie izquierdo de nuevo hasta el suelo. Repite subiendo a la plataforma con el pie izquierdo. Continúa alternando las piernas durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1008-d5bTEPV.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1008-d5bTEPV.jpg"
   },
@@ -1039,7 +1039,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda alrededor de los tobillos. Sujeta la banda con ambas manos frente a los muslos, con las palmas mirando hacia el cuerpo. Manteniendo la espalda recta y el core activado, flexiona las caderas y baja lentamente la parte superior del cuerpo hacia el suelo. Mientras bajas, empuja las caderas hacia atrás y deja que las rodillas se flexionen ligeramente. Baja la banda hacia el suelo, sintiendo un estiramiento en los isquiotibiales. Haz una pausa breve en la posición baja, luego activa los glúteos y los isquiotibiales para levantar la parte superior del cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1009-kuMiR2T.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1009-kuMiR2T.jpg"
   },
@@ -1051,7 +1051,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda alrededor de la parte superior de las piernas. Sujeta la banda con ambas manos frente a los muslos, con las palmas mirando hacia el cuerpo. Manteniendo la espalda recta y las rodillas ligeramente flexionadas, flexiona las caderas y baja la banda hacia el suelo. Siente el estiramiento en los isquiotibiales mientras bajas la banda. Activa los glúteos y los isquiotibiales para levantar el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1023-lHeUULr.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1023-lHeUULr.jpg"
   },
@@ -1063,7 +1063,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda alrededor de los pies. Sujeta la banda con ambas manos, con las palmas mirando hacia el cuerpo, y mantén los brazos rectos. Activa el core y mantén una ligera flexión en las rodillas. Inclínate lentamente hacia delante desde las caderas, manteniendo la espalda recta y el pecho elevado. Baja la banda hacia el suelo manteniendo las piernas rectas. Haz una pausa breve en la posición baja y luego contrae los glúteos y los isquiotibiales para volver a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1010-KUaoUV8.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1010-KUaoUV8.jpg"
   },
@@ -1075,7 +1075,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca la banda bajo los pies. Sujeta las asas de la banda a la altura de los hombros con las palmas mirando hacia delante. Activa el core y empuja la banda por encima de la cabeza, extendiendo completamente los brazos. Mientras empujas, gira el torso hacia un lado, manteniendo las caderas estables. Haz una pausa breve en la parte alta y luego vuelve a la posición inicial. Repite el empuje y el giro hacia el lado opuesto. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1012-u4bAmKp.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1012-u4bAmKp.jpg"
   },
@@ -1087,7 +1087,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y coloca una banda elástica bajo ambos pies. Sujeta los extremos de la banda con las manos para mantener el equilibrio. Levanta los talones del suelo lo más alto posible, usando las pantorrillas. Haz una pausa breve en la parte alta y luego baja lentamente los talones de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1369-jl6uxZV.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1369-jl6uxZV.jpg"
   },
@@ -1099,7 +1099,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda a un punto de anclaje alto, como una barra de dominadas o una viga resistente. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Agarra la banda con un agarre supino, con las manos un poco más separadas que el ancho de los hombros. Extiende completamente los brazos por encima de la cabeza, manteniendo los codos ligeramente flexionados. Activa los dorsales y tira de la banda hacia abajo en dirección al pecho, juntando los omóplatos. Haz una pausa breve en la parte baja del movimiento, luego libera lentamente la tensión y vuelve a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1013-k6tUeqS.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1013-k6tUeqS.jpg"
   },
@@ -1111,7 +1111,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate sobre tu espalda con las piernas rectas y los brazos extendidos por encima de la cabeza, sosteniendo la banda. Activando el abdomen, levanta las piernas y la parte superior del cuerpo del suelo al mismo tiempo, llevando las manos hacia los dedos de los pies. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas y la parte superior del cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1014-H6ETwO9.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1014-H6ETwO9.jpg"
   },
@@ -1123,7 +1123,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y enrolla la banda alrededor de un objeto firme a la altura del pecho. Sujeta la banda con ambas manos y aléjate del punto de anclaje, creando tensión en la banda. Colócate perpendicular al punto de anclaje, con el costado mirando hacia la banda. Extiende los brazos rectos hacia delante, manteniendo las manos a la altura del pecho. Activa el core y empuja la banda alejándola del pecho, extendiendo completamente los brazos. Mantén la posición durante unos segundos y luego lleva lentamente la banda de vuelta hacia el pecho. Repite el número de repeticiones deseado, luego cambia de lado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1015-G7PXMlT.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1015-G7PXMlT.jpg"
   },
@@ -1135,7 +1135,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en un banco o silla con los pies apoyados en el suelo. Sujeta la banda con ambas manos, con las palmas hacia arriba, y apoya los antebrazos sobre los muslos. Flexiona lentamente las muñecas hacia arriba, apretando los antebrazos. Haz una pausa por un momento en la parte superior, luego baja lentamente las muñecas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1016-vUTfFHw.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1016-vUTfFHw.jpg"
   },
@@ -1147,7 +1147,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sujeta la banda frente a los muslos con las palmas mirando hacia adentro. Mantén los brazos rectos y levántalos hacia arriba y hacia los lados, formando una 'Y' con el cuerpo. Junta los omóplatos en la parte superior del movimiento. Baja lentamente los brazos de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1017-aHDy5O5.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1017-aHDy5O5.jpg"
   },
@@ -2935,7 +2935,7 @@
     "difficulty": "intermediate",
     "description": "Colócate debajo de una barra o una superficie horizontal resistente que esté a la altura del pecho. Sujeta la barra o la superficie con agarre prono, un poco más separado que el ancho de los hombros. Cuélgate con los brazos completamente extendidos y el cuerpo recto. Lleva el pecho hacia la barra o la superficie juntando los omóplatos y flexionando los codos. Continúa tirando hasta que la barbilla quede por encima de la barra o la superficie. Baja de nuevo a la posición inicial con control. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3019-mExgrF9.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3019-mExgrF9.jpg"
   },
@@ -2971,7 +2971,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con las palmas mirando hacia ti y las manos separadas a la altura de los hombros. Activa el core y tira de tu cuerpo hacia la barra, enfocándote en usar los bíceps para levantar el cuerpo. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0139-50BETrz.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0139-50BETrz.jpg"
   },
@@ -2983,7 +2983,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con las palmas mirando hacia afuera y las manos separadas a la altura de los hombros. Activa el core y tira de tu cuerpo hacia arriba flexionando los codos, llevando el pecho hacia la barra. Haz una pausa en la parte más alta del movimiento, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0140-guT8YnS.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0140-guT8YnS.jpg"
   },
@@ -5143,7 +5143,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en la silla romana con la espalda apoyada en el respaldo y los antebrazos apoyados en las almohadillas. Mantén la parte superior del cuerpo estable y la espalda recta. Activa el abdomen y levanta las piernas frente a ti, manteniéndolas rectas. Continúa levantando hasta que las piernas estén paralelas al suelo o tan alto como puedas llegar cómodamente. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2963-weoDEpH.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2963-weoDEpH.jpg"
   },
@@ -5179,7 +5179,7 @@
     "difficulty": "intermediate",
     "description": "Colócate en las barras paralelas con los brazos completamente extendidos y el cuerpo recto. Baja el cuerpo flexionando los codos hasta que los hombros queden por debajo de los codos. Empújate de vuelta hacia arriba a la posición inicial extendiendo los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0251-9WTm7dq.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0251-9WTm7dq.jpg"
   },
@@ -5191,7 +5191,7 @@
     "difficulty": "intermediate",
     "description": "Ajusta las barras de fondos a una altura que te permita agarrarlas cómodamente. Ponte de pie entre las barras y coloca las manos en cada barra, un poco más separadas que el ancho de los hombros. Salta y estira los brazos, sosteniendo el peso de tu cuerpo sobre las barras. Flexiona las rodillas y cruza los tobillos detrás de ti. Baja el cuerpo flexionando los codos, manteniendo el pecho elevado y los hombros bajos. Continúa bajando hasta que los hombros queden por debajo de los codos o hasta que sientas un estiramiento en el pecho. Empuja con las palmas y extiende los codos para subir el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1430-XgWyAiA.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1430-XgWyAiA.jpg"
   },
@@ -5203,7 +5203,7 @@
     "difficulty": "intermediate",
     "description": "Agarra las barras paralelas con las palmas hacia abajo y los brazos completamente extendidos. Flexiona las rodillas y cruza los tobillos. Baja el cuerpo flexionando los brazos hasta que los hombros queden por debajo de los codos. Empújate de vuelta hacia arriba a la posición inicial extendiendo los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2462-LQFOrMn.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2462-LQFOrMn.jpg"
   },
@@ -5239,7 +5239,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con las palmas mirando hacia ti y las manos separadas a la altura de los hombros. Activa el core y tira de tu cuerpo hacia arriba, hacia la barra, guiando con el pecho. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1326-T2mxWqc.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1326-T2mxWqc.jpg"
   },
@@ -5251,7 +5251,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con un agarre paralelo estrecho, con las palmas hacia ti. Activa los músculos de la espalda y tira de tu cuerpo hacia arriba, hacia la barra, manteniendo los codos cerca del cuerpo. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0253-G70mEAJ.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0253-G70mEAJ.jpg"
   },
@@ -5299,7 +5299,7 @@
     "difficulty": "intermediate",
     "description": "Agarra la barra de dominadas con las palmas hacia ti y las manos separadas a la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y los pies fuera del suelo. Activa los músculos de la espalda y tira de tu cuerpo hacia arriba, hacia la barra, manteniendo los codos cerca del cuerpo. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1327-VnfUNW7.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1327-VnfUNW7.jpg"
   },
@@ -8971,7 +8971,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en el borde de un banco o silla con las manos sujetando el borde junto a las caderas. Desliza las caderas hacia adelante, fuera del banco, y estira las piernas, manteniendo los talones en el suelo. Flexiona los codos y baja el cuerpo hacia el suelo, manteniendo la espalda cerca del banco. Haz una pausa por un momento en la posición más baja, luego empuja con las manos para enderezar los brazos y levantar el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3287-LkoAWAE.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3287-LkoAWAE.jpg"
   },
@@ -9571,7 +9571,7 @@
     "difficulty": "intermediate",
     "description": "Comienza sujetando un poste vertical con ambas manos, palmas una frente a la otra, y los brazos completamente extendidos. Activa el core y levanta las piernas del suelo, manteniéndolas rectas. Usando la fuerza del core y de la parte superior del cuerpo, levanta las piernas hasta que queden paralelas al suelo. Mantén esta posición todo el tiempo que puedas, conservando una línea corporal recta. Baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3303-pQ0Mx1Z.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3303-pQ0Mx1Z.jpg"
   },
@@ -9691,7 +9691,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgado de una barra de dominadas con agarre prono, manos separadas a la altura de los hombros. Activa el core y lleva los omóplatos hacia abajo y atrás. Flexiona las rodillas y llévalas hacia el pecho. Al mismo tiempo, levanta las piernas y extiéndelas rectas frente a ti, manteniendo el cuerpo paralelo al suelo. Mantén esta posición todo el tiempo que puedas, intentando lograr una posición completa de palanca frontal. Para soltar, baja lentamente las piernas y regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3296-PkCN2lv.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3296-PkCN2lv.jpg"
   },
@@ -9703,7 +9703,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con agarre prono, palmas hacia afuera. Activa el core y lleva los omóplatos hacia abajo y atrás. Manteniendo el cuerpo recto, levanta las piernas hasta que queden paralelas al suelo. Mantén esta posición todo el tiempo que puedas, intentando llegar a 10-20 segundos. Baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3295-hbY9wqG.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3295-hbY9wqG.jpg"
   },
@@ -9763,7 +9763,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie frente a una barra alta con los pies separados a la altura de los hombros. Estira los brazos hacia arriba y agarra la barra con agarre prono, ligeramente más ancho que la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo recto. Activa los dorsales y los bíceps para llevar el pecho hacia la barra, guiando con el esternón. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0466-IL0JUxR.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0466-IL0JUxR.jpg"
   },
@@ -9799,7 +9799,7 @@
     "difficulty": "intermediate",
     "description": "Ajusta la máquina de extensión de glúteos e isquiotibiales para que se adapte a tu cuerpo. Colócate boca abajo en la máquina con los tobillos asegurados. Coloca las manos sobre el pecho o crúzalas sobre el pecho. Activa los isquiotibiales y los glúteos para levantar la parte superior del cuerpo hacia el techo. Continúa levantando hasta que el cuerpo forme una línea recta desde la cabeza hasta los talones. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3193-Vvwjz6N.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3193-Vvwjz6N.jpg"
   },
@@ -9811,7 +9811,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y las rodillas ligeramente flexionadas. Sujeta una barra de dominadas con agarre prono, ligeramente más ancho que la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y las palmas hacia afuera. Activa el core y tira del cuerpo hacia la barra, llevando la barbilla por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0467-bmwlYvD.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0467-bmwlYvD.jpg"
   },
@@ -9926,7 +9926,7 @@
   {
     "id": "3302",
     "name": "handstand",
-    "target_muscle": "Tríceps",
+    "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Busca un espacio abierto con suficiente espacio para hacer un pino. Coloca las manos en el suelo separadas a la altura de los hombros, con los dedos apuntando hacia adelante. Lanza las piernas hacia la pared, usando el core y los hombros para mantener el equilibrio. Una vez en posición de pino, activa los tríceps para sostener el peso corporal. Mantén el pino el mayor tiempo posible mientras conserves el equilibrio. Para bajar, lleva lentamente las piernas de vuelta al suelo. Repite el número de repeticiones deseado.",
@@ -9938,7 +9938,7 @@
   {
     "id": "0471",
     "name": "handstand push-up",
-    "target_muscle": "Tríceps",
+    "target_muscle": "Hombros",
     "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Busca una pared y colócate de espaldas a ella, de pie a unos pasos de distancia. Coloca las manos en el suelo separadas a la altura de los hombros y lanza los pies hacia la pared, llegando a una posición de pino. Dobla los codos y baja la cabeza hacia el suelo, manteniendo el cuerpo en línea recta. Empuja con las manos y extiende los brazos para volver a la posición inicial. Repite el número de repeticiones deseado.",
@@ -9955,7 +9955,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las piernas flexionando las caderas y las rodillas hasta que los muslos queden paralelos al suelo. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1764-VEcJRo2.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1764-VEcJRo2.jpg"
   },
@@ -9967,7 +9967,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las piernas frente a ti, manteniéndolas rectas. Continúa levantando hasta que las piernas estén paralelas al suelo o tan alto como puedas llegar cómodamente. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0472-I3tsCnC.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0472-I3tsCnC.jpg"
   },
@@ -9979,7 +9979,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las rodillas hacia el pecho, girando el torso hacia un lado mientras lo haces. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite hacia el otro lado, girando el torso en la dirección opuesta. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1761-BaE7O6U.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1761-BaE7O6U.jpg"
   },
@@ -9991,7 +9991,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las piernas hacia la barra, manteniéndolas rectas. Continúa levantando hasta que el cuerpo forme una 'V', con las piernas paralelas al suelo. Mantén la posición por un momento, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0473-nuBF9MO.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0473-nuBF9MO.jpg"
   },
@@ -10003,7 +10003,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las piernas hacia adelante hasta que queden paralelas al suelo. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0474-pj0X0tF.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0474-pj0X0tF.jpg"
   },
@@ -10015,7 +10015,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y levanta las piernas frente a ti, manteniéndolas rectas. Continúa levantando hasta que las piernas estén paralelas al suelo o tan alto como puedas llegar cómodamente. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0475-4Ml7QFO.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0475-4Ml7QFO.jpg"
   },
@@ -10027,7 +10027,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las piernas rectas. Activa el core y levanta las piernas hacia el pecho, manteniéndolas rectas. Cuando las piernas queden paralelas al suelo, gira las caderas hacia un lado, llevando las piernas hacia ese lado. Haz una pausa breve y luego vuelve a la posición inicial. Repite el movimiento, pero esta vez gira las caderas hacia el lado opuesto. Continúa alternando lados durante el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0476-Q6bvyen.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0476-Q6bvyen.jpg"
   },
@@ -10111,7 +10111,7 @@
     "difficulty": "intermediate",
     "description": "Colócate entre dos barras paralelas con los brazos completamente extendidos y el cuerpo suspendido en el aire. Flexiona las rodillas y cruza los tobillos. Baja el cuerpo flexionando los codos hasta que los brazos queden paralelos al suelo. Haz una pausa breve, luego empújate de nuevo hacia arriba a la posición inicial estirando los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3289-05Cf2v8.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3289-05Cf2v8.jpg"
   },
@@ -10267,7 +10267,7 @@
     "difficulty": "intermediate",
     "description": "Ajusta la máquina de cable para que las correas de tobillo estén en el ajuste más bajo. Túmbate boca abajo en el banco con las piernas extendidas y las correas de tobillo sujetas a los pies. Sujétate de las agarraderas del banco para mantener la estabilidad. Dobla las rodillas y curva las piernas hacia los glúteos, contrayendo los isquiotibiales. Haz una pausa breve en la parte superior del movimiento, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2400-0rHfvy9.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2400-0rHfvy9.jpg"
   },
@@ -10279,7 +10279,7 @@
     "difficulty": "intermediate",
     "description": "Coloca una barra a la altura de la cintura o usa un entrenador de suspensión. Ponte de pie frente a la barra o al entrenador de suspensión, con los pies separados a la altura de los hombros. Agarra la barra o las asas con agarre prono, ligeramente más ancho que la altura de los hombros. Inclínate hacia atrás, manteniendo el cuerpo recto y los talones en el suelo. Tira del pecho hacia la barra o las asas, apretando los omóplatos entre sí. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0499-bZGHsAZ.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0499-bZGHsAZ.jpg"
   },
@@ -10291,7 +10291,7 @@
     "difficulty": "intermediate",
     "description": "Coloca una barra a la altura de la cintura y túmbate debajo de ella. Agarra la barra con agarre prono, ligeramente más ancho que la altura de los hombros. Coloca el cuerpo de manera que los talones queden en el suelo y el cuerpo esté recto. Tira del pecho hacia arriba en dirección a la barra apretando los omóplatos entre sí. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2300-VPPtusI.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2300-VPPtusI.jpg"
   },
@@ -10303,7 +10303,7 @@
     "difficulty": "intermediate",
     "description": "Coloca un banco a una altura que permita que el cuerpo cuelgue libremente debajo de él. Túmbate boca arriba en el suelo con la cabeza hacia el banco. Estira los brazos hacia arriba y agarra el banco con agarre prono, ligeramente más ancho que la altura de los hombros. Coloca el cuerpo de manera que los talones queden en el suelo y los brazos completamente extendidos. Activa el core y aprieta los omóplatos entre sí mientras tiras del pecho hacia el banco. Haz una pausa breve en la parte superior del movimiento, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2298-Mxa7Cr8.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2298-Mxa7Cr8.jpg"
   },
@@ -10315,7 +10315,7 @@
     "difficulty": "intermediate",
     "description": "Coloca una barra a la altura de la cintura en una máquina Smith o usa un entrenador de suspensión. Ponte de pie frente a la barra o al entrenador de suspensión y agárrala con agarre prono, manos separadas a la altura de los hombros. Camina con los pies hacia adelante, inclinándote hacia atrás hasta que el cuerpo quede en un ligero ángulo. Mantén el cuerpo recto y tira del pecho hacia la barra o las asas, apretando los omóplatos entre sí. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0497-uX3sUBz.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0497-uX3sUBz.jpg"
   },
@@ -10327,7 +10327,7 @@
     "difficulty": "intermediate",
     "description": "Coloca un entrenador de suspensión o correas a la altura del pecho. Ponte de pie frente al punto de anclaje y agarra las asas con agarre prono. Camina con los pies hacia adelante, inclinándote hacia atrás hasta que el cuerpo quede en ángulo. Mantén el cuerpo recto y activa el core. Tira del pecho hacia las asas, apretando los omóplatos entre sí. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0498-jdiExfW.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0498-jdiExfW.jpg"
   },
@@ -10963,7 +10963,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra de dominadas con un agarre prono, con las manos un poco más separadas que el ancho de los hombros. Activa el core y usa un movimiento de balanceo para generar impulso. Mientras te balanceas hacia adelante, tira del pecho hacia la barra, usando los dorsales y los bíceps para iniciar el movimiento. Continúa el movimiento ascendente hasta que el pecho llegue a la barra, luego pasa a una posición de fondos empujando hacia abajo en la barra y extendiendo los brazos. Bájate de vuelta a la posición inicial flexionando los brazos y controlando el descenso. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0558-pM07UxU.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0558-pM07UxU.jpg"
   },
@@ -11035,7 +11035,7 @@
     "difficulty": "intermediate",
     "description": "Colócate entre dos barras paralelas con los brazos extendidos sosteniendo el peso de tu cuerpo. Baja el cuerpo flexionando los codos hasta que los brazos queden paralelos al suelo. Haz una pausa breve, luego empújate de nuevo hacia arriba a la posición inicial estirando los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3288-rWoBmi5.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3288-rWoBmi5.jpg"
   },
@@ -11047,7 +11047,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la barra de dominadas con un agarre prono, un poco más ancho que la altura de los hombros. Cuélgate con los brazos completamente extendidos y el cuerpo recto. Activa los dorsales y los bíceps para llevar el cuerpo hacia arriba en dirección a la barra, manteniendo los codos cerca del cuerpo. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3418-d1GgzTU.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3418-d1GgzTU.jpg"
   },
@@ -12235,7 +12235,7 @@
     "difficulty": "intermediate",
     "description": "Agarra la barra de dominadas con un agarre supino (las palmas hacia ti) y las manos un poco más separadas que la anchura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y los pies fuera del suelo. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra, llevando el pecho por delante. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte alta y luego baja lentamente tu cuerpo, con control, hasta la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0627-T8UpLkb.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0627-T8UpLkb.jpg"
   },
@@ -12295,7 +12295,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra de dominadas con las palmas hacia afuera y los brazos completamente extendidos. Activa el core y tira de tu cuerpo hacia arriba, hacia la barra, guiando con el pecho. Al llegar a la parte alta del movimiento, cambia el agarre de modo que las palmas queden hacia ti. Sigue tirando hacia arriba hasta que el pecho quede por encima de la barra y los brazos estén completamente flexionados. Invierte el movimiento bajando lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0631-yJUHKTn.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0631-yJUHKTn.jpg"
   },
@@ -12307,7 +12307,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra vertical con las palmas hacia afuera y los brazos completamente extendidos. Activa el core y tira de tu cuerpo hacia arriba, hacia la barra, guiando con el pecho. Al subir tu cuerpo, inclínate ligeramente hacia atrás y lleva los codos hacia los costados. Sigue tirando hasta que el pecho llegue a la barra y los codos estén completamente flexionados. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1401-Af0EW2I.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1401-Af0EW2I.jpg"
   },
@@ -12415,7 +12415,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie frente a una barra de dominadas con los pies separados a la altura de los hombros. Estírate y agarra la barra con un agarre supino, con una mano sujetando la barra y la otra sosteniendo la muñeca como apoyo. Cuélgate de la barra con el brazo completamente extendido, manteniendo el cuerpo recto y el core activado. Tira de tu cuerpo hacia la barra flexionando el codo y contrayendo los músculos de la espalda. Continúa subiendo hasta que la barbilla quede por encima de la barra, luego bájate lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado, luego cambia de brazo y repite.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0638-HjdqmZa.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0638-HjdqmZa.jpg"
   },
@@ -12427,7 +12427,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie de espaldas a un banco o silla, con los pies separados a la altura de los hombros. Coloca una mano en el banco o silla detrás de ti, con los dedos apuntando hacia tu cuerpo. Extiende las piernas hacia adelante, manteniendo los talones en el suelo. Flexiona los codos y baja el cuerpo hacia el suelo, manteniendo la espalda cerca del banco o silla. Haz una pausa por un momento en la parte baja y luego empuja con las palmas para estirar los brazos y volver a la posición inicial. Repite el número de repeticiones deseado, luego cambia de lado y repite con el otro brazo.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0639-FAoIFMw.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0639-FAoIFMw.jpg"
   },
@@ -12566,8 +12566,8 @@
   {
     "id": "3662",
     "name": "pike-to-cobra push-up",
-    "target_muscle": "Glúteos",
-    "split_category": "tren_inferior",
+    "target_muscle": "Hombros",
+    "split_category": "tren_superior",
     "difficulty": "intermediate",
     "description": "Comienza en posición de flexión con las manos un poco más separadas que la anchura de los hombros y los pies juntos. Activa el core y eleva las caderas hacia el techo, formando una V invertida con tu cuerpo. Baja la parte superior del cuerpo hacia el suelo flexionando los codos, manteniéndolos cerca del cuerpo. Al bajar, desplaza el peso hacia adelante y haz la transición a una postura de cobra estirando los brazos y elevando el pecho. Invierte el movimiento flexionando los codos y bajando el pecho de nuevo hacia el suelo. Empuja con las manos para volver a la posición de V invertida. Continúa el movimiento bajando las caderas de nuevo hacia el suelo, volviendo a la posición inicial de flexión. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
@@ -12691,7 +12691,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con un agarre neutro (las palmas enfrentadas) y los brazos completamente extendidos. Activa el core y junta los omóplatos. Tira de tu cuerpo hacia la barra flexionando los codos y llevándolos hacia las caderas. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte alta y luego baja lentamente tu cuerpo, con control, hasta la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0651-0V2YQjW.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0651-0V2YQjW.jpg"
   },
@@ -12715,7 +12715,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con las palmas hacia afuera y los brazos completamente extendidos. Activa el core y junta los omóplatos. Tira de tu cuerpo hacia la barra flexionando los codos y llevando el pecho hacia la barra. Haz una pausa en la parte alta del movimiento y luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0652-lBDjFxJ.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0652-lBDjFxJ.jpg"
   },
@@ -12979,7 +12979,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la barra de dominadas con un agarre prono, un poco más ancho que la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo recto. Activa los músculos de la espalda y tira de tu cuerpo hacia arriba, hacia la barra, manteniendo los codos cerca del cuerpo. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0670-CbFSYC1.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0670-CbFSYC1.jpg"
   },
@@ -13003,7 +13003,7 @@
     "difficulty": "intermediate",
     "description": "Comienza arrodillándote en el suelo con las rodillas separadas a la altura de las caderas y los pies flexionados. Envuelve la banda elástica alrededor de los muslos, justo por encima de las rodillas. Coloca las manos en las caderas o extiéndelas frente a ti para mantener el equilibrio. Activa los glúteos y los músculos del core. Empuja las caderas hacia adelante y aprieta los glúteos mientras levantas las rodillas del suelo, extendiendo las caderas hasta que los muslos queden paralelos al suelo. Mantén la posición por un momento y luego baja lentamente las rodillas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3236-Pjbc0Kt.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3236-Pjbc0Kt.jpg"
   },
@@ -13015,7 +13015,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la banda elástica a un punto de anclaje firme y asegúrala alrededor de tu tobillo. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Manteniendo el core activado y la parte superior del cuerpo estable, extiende la pierna recta frente a ti. Haz una pausa por un momento en la parte alta y luego vuelve lentamente la pierna a la posición inicial. Repite el número de repeticiones deseado, luego cambia de pierna.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3007-Y1MsI1l.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3007-Y1MsI1l.jpg"
   },
@@ -13027,7 +13027,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo. Sostén la banda elástica con un agarre supino, con las palmas hacia arriba y los brazos extendidos a los lados del cuerpo. Manteniendo la parte superior de los brazos inmóvil, exhala y flexiona la banda elástica hacia los hombros. Haz una pausa breve en la parte alta, apretando los bíceps. Inhala y baja lentamente la banda elástica de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3123-XFc3vpY.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3123-XFc3vpY.jpg"
   },
@@ -13039,7 +13039,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo. Sostén las asas de la banda elástica en cada mano, con las palmas hacia abajo y los codos flexionados en un ángulo de 90 grados. Extiende los brazos hacia adelante, alejando la banda elástica de tu pecho. Haz una pausa por un momento al final del movimiento, luego regresa lentamente a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3124-4x5Okof.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3124-4x5Okof.jpg"
   },
@@ -13051,7 +13051,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo. Envuelve la banda elástica alrededor de los muslos, justo por encima de las rodillas. Coloca las manos en los lados de la silla o el banco para mayor apoyo. Activa los abductores (los músculos externos del muslo) y empuja lentamente las rodillas hacia afuera, contra la resistencia de la banda. Haz una pausa al final del movimiento y luego junta lentamente las rodillas de nuevo. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3006-0xDpB4L.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3006-0xDpB4L.jpg"
   },
@@ -13063,7 +13063,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo. Sostén la banda elástica con ambas manos, con las palmas hacia adelante, y elévala hasta la altura de los hombros. Empuja la banda por encima de la cabeza, extendiendo completamente los brazos. Haz una pausa por un momento en la parte alta y luego baja lentamente la banda hasta la altura de los hombros. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3122-S93zLTG.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3122-S93zLTG.jpg"
   },
@@ -13075,7 +13075,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en el suelo con las piernas extendidas y enrolla la banda elástica alrededor de los pies. Sostén los extremos de la banda elástica con las manos, con las palmas enfrentadas. Mantén la espalda recta e inclínate ligeramente hacia atrás, activando el core. Tira de la banda elástica hacia el pecho, juntando las escápulas. Haz una pausa por un momento en la parte superior, luego suelta lentamente la tensión y regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3144-Nu7jqFE.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3144-Nu7jqFE.jpg"
   },
@@ -13099,7 +13099,7 @@
     "difficulty": "intermediate",
     "description": "Colócate entre dos barras paralelas con los brazos completamente extendidos y el cuerpo recto. Baja el cuerpo flexionando los codos hasta que los brazos queden paralelos al suelo. Haz una pausa breve, luego empújate de nuevo hacia arriba a la posición inicial estirando los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0672-NZ5Qqkz.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0672-NZ5Qqkz.jpg"
   },
@@ -13123,7 +13123,7 @@
     "difficulty": "intermediate",
     "description": "Agarra la barra de dominadas con un agarre supino, con las manos separadas a la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo recto. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra, llevando el pecho por delante. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0674-YAk5dIw.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0674-YAk5dIw.jpg"
   },
@@ -13171,7 +13171,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de las anillas con los brazos completamente extendidos y el cuerpo recto. Baja el cuerpo flexionando los codos hasta que los hombros queden por debajo de los codos. Empújate de vuelta hacia arriba a la posición inicial extendiendo los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0677-ezTvXcr.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0677-ezTvXcr.jpg"
   },
@@ -13195,7 +13195,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie frente a una barra de dominadas con los pies separados a la altura de los hombros. Estira los brazos hacia arriba y agarra la barra con agarre prono, ligeramente más ancho que la altura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo recto. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra, llevando el pecho por delante. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0678-cQ19bBP.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0678-cQ19bBP.jpg"
   },
@@ -13207,7 +13207,7 @@
     "difficulty": "intermediate",
     "description": "Comienza sentándote en el suelo con las piernas extendidas frente a ti. Coloca el rodillo perpendicular a tu cuerpo, justo debajo de los glúteos. Rueda lentamente el cuerpo hacia atrás, dejando que el rodillo se desplace hacia arriba por tu espalda. Continúa rodando hasta que el rodillo llegue a la parte superior de tu espalda. Haz una pausa por un momento y luego rueda lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2208-isofgzg.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2208-isofgzg.jpg"
   },
@@ -13219,7 +13219,7 @@
     "difficulty": "intermediate",
     "description": "Comienza en posición de plancha con los antebrazos sobre el rodillo y el cuerpo en línea recta. Activa el core y rueda lentamente el rodillo hacia adelante, extendiendo el cuerpo tanto como puedas mientras mantienes el control. Haz una pausa por un momento en el punto más lejano y luego rueda lentamente el rodillo de vuelta hacia tu posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2204-XeMvLgE.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2204-XeMvLgE.jpg"
   },
@@ -13231,7 +13231,7 @@
     "difficulty": "intermediate",
     "description": "Comienza arrodillándote en el suelo con el rodillo colocado debajo de las caderas. Coloca las manos sobre el rodillo para mayor apoyo. Rueda lentamente el rodillo hacia adelante, extendiendo las caderas y estirando los glúteos. Mantén el estiramiento durante unos segundos, luego regresa a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2205-0L2KwtI.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2205-0L2KwtI.jpg"
   },
@@ -13243,7 +13243,7 @@
     "difficulty": "intermediate",
     "description": "Comienza sentándote en el suelo con las piernas extendidas frente a ti. Coloca el rodillo debajo de los glúteos, justo por encima de las rodillas. Inclínate hacia atrás y coloca las manos en el suelo detrás de ti para apoyarte. Activa los glúteos y rueda lentamente el rodillo hacia adelante, flexionando las rodillas y llevándolas hacia el pecho. Haz una pausa al final del movimiento, sintiendo un estiramiento en los glúteos. Rueda lentamente el rodillo de vuelta a la posición inicial, extendiendo las piernas. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2202-oMypNrz.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2202-oMypNrz.jpg"
   },
@@ -13255,7 +13255,7 @@
     "difficulty": "intermediate",
     "description": "Túmbate boca arriba con los brazos extendidos rectos por encima de la cabeza y las piernas rectas frente a ti. Coloca el rodillo entre los pies y sujétalo con los dedos de los pies. Activando el abdomen, levanta las piernas del suelo y flexiona las rodillas hacia el pecho, rodando el rodillo hacia tu cuerpo. Haz una pausa por un momento en la parte alta y luego baja lentamente las piernas de vuelta a la posición inicial, rodando el rodillo alejándolo de tu cuerpo. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2206-SKXQAx3.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2206-SKXQAx3.jpg"
   },
@@ -13267,7 +13267,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate sobre una superficie plana con las piernas extendidas frente a ti. Sostén el rodillo con ambas manos, con las palmas hacia abajo, y colócalo sobre tus muslos. Inclínate ligeramente hacia delante y aleja el rodillo de tu cuerpo, extendiendo los brazos rectos frente a ti. Haz una pausa por un momento, luego rueda el rodillo lentamente de vuelta hacia tu cuerpo, doblando los brazos y trayéndolo de nuevo hacia los muslos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2203-8coXSYU.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2203-8coXSYU.jpg"
   },
@@ -13279,7 +13279,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate sobre una superficie plana con las piernas extendidas frente a ti. Sostén el rodillo con ambas manos, con las palmas hacia abajo, y colócalo sobre tus muslos. Inclínate ligeramente hacia atrás y contrae los músculos del core. Eleva el rodillo hasta la altura de los hombros, manteniendo los brazos rectos. Baja lentamente el rodillo de nuevo hacia los muslos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2209-CjETvlw.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2209-CjETvlw.jpg"
   },
@@ -13291,7 +13291,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y sujeta el rodillo con ambas manos frente al cuerpo. Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta. Extiende los brazos hacia delante y rueda el rodillo hacia los pies, sintiendo un estiramiento en los dorsales. Mantén el estiramiento durante unos segundos, luego rueda el rodillo lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2207-c3Pfhti.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2207-c3Pfhti.jpg"
   },
@@ -13327,7 +13327,7 @@
     "difficulty": "intermediate",
     "description": "Comienza de pie con los pies separados a la altura de la cadera. Activa el core y mantén la parte superior del cuerpo relajada. Comienza a trotar en el lugar, levantando las rodillas hacia el pecho y aterrizando suavemente sobre la punta de los pies. Mantén un ritmo constante y continúa trotando durante la duración o distancia deseada. Recuerda respirar profundamente y mantener una buena postura durante todo el ejercicio.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0684-y5p0H8a.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0684-y5p0H8a.jpg"
   },
@@ -13363,7 +13363,7 @@
     "difficulty": "intermediate",
     "description": "Comienza de pie con los pies separados a la altura de los hombros y los brazos extendidos frente a ti. Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta. Baja el cuerpo doblando los codos y retrayendo las escápulas, como si intentaras apretar un lápiz entre ellas. Haz una pausa por un momento en la posición baja, luego empuja con las manos para extender los codos y volver a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3012-7xeukSt.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3012-7xeukSt.jpg"
   },
@@ -13387,7 +13387,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra de dominadas con las palmas hacia afuera y los brazos completamente extendidos. Retrae las escápulas llevándolas hacia abajo y atrás. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra, enfocándote en juntar las escápulas. Haz una pausa breve en la parte superior del movimiento, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0688-uTBt1HV.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0688-uTBt1HV.jpg"
   },
@@ -13555,7 +13555,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta la barra de dominadas con un agarre a la altura de los hombros, con las palmas mirando hacia fuera. Cuélgate libremente con los brazos completamente extendidos. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra hasta que la barbilla quede por encima de ella. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1763-YtgD7Xq.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1763-YtgD7Xq.jpg"
   },
@@ -13615,7 +13615,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie entre dos barras paralelas con los pies separados a la altura de los hombros. Coloca las manos sobre las barras y levanta el cuerpo del suelo, apoyando tu peso en los brazos. Contrae el abdomen y levanta lentamente las piernas hacia el lado, manteniéndolas rectas. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0709-jTkSc6o.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0709-jTkSc6o.jpg"
   },
@@ -13711,7 +13711,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie con los pies separados a la altura de los hombros y las rodillas ligeramente flexionadas. Sujeta una barra de dominadas con un agarre prono, con las manos un poco más separadas que el ancho de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo relajado. Levántate doblando los codos y llevando la barbilla hacia la barra, manteniendo el cuerpo recto. Una vez que la barbilla esté por encima de la barra, bájate de nuevo a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0720-isAAZWA.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0720-isAAZWA.jpg"
   },
@@ -13867,7 +13867,7 @@
     "difficulty": "intermediate",
     "description": "Comienza colgándote de una barra con los brazos completamente extendidos y el cuerpo relajado. Activa el core y levanta las piernas, llevando las rodillas hacia el pecho. Continúa levantando las piernas por encima de la cabeza, permitiendo que el cuerpo pase entre los brazos. Una vez que las piernas estén completamente extendidas por encima de la cabeza, comienza a bajarlas de nuevo hacia la posición inicial. Mientras bajas las piernas, permite que el cuerpo pase de nuevo entre los brazos hasta quedar colgado con los brazos completamente extendidos otra vez. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3304-MSfvriJ.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3304-MSfvriJ.jpg"
   },
@@ -14983,7 +14983,7 @@
     "difficulty": "intermediate",
     "description": "Sujeta un entrenador de suspensión a un punto de anclaje alto y ajusta las correas a la altura de la cintura. Ponte de pie de espaldas al punto de anclaje y sostén las asas con los brazos extendidos frente a ti. Inclínate hacia adelante desde la cintura, manteniendo el cuerpo recto y el core activado. Baja el cuerpo todo lo que puedas mientras mantienes el control y la tensión en el abdomen. Haz una pausa de un momento en la parte baja, luego eleva lentamente el cuerpo de nuevo a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0805-X3TCNEU.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0805-X3TCNEU.jpg"
   },
@@ -14995,7 +14995,7 @@
     "difficulty": "intermediate",
     "description": "Busca un entrenador de suspensión y ajústalo a una altura adecuada. Ponte de pie de espaldas al punto de anclaje y sostén las asas con un agarre prono. Camina hacia adelante con los pies, inclinando el cuerpo hacia adelante hasta que tu peso quede sostenido por el entrenador de suspensión. Mantén el cuerpo recto desde la cabeza hasta los talones, activa el core y baja el pecho hacia las asas. Empuja con el pecho y los brazos para volver a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0806-IaGQCrC.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0806-IaGQCrC.jpg"
   },
@@ -15007,7 +15007,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con los brazos completamente extendidos y las palmas mirando hacia afuera. Activa el core y sube las rodillas hacia el pecho, curvando la pelvis hacia la caja torácica. Haz una pausa de un momento en la parte superior, luego baja lentamente las rodillas de nuevo a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0807-R1WYG5D.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0807-R1WYG5D.jpg"
   },
@@ -15019,7 +15019,7 @@
     "difficulty": "intermediate",
     "description": "Coloca un entrenador de suspensión a una altura adecuada. Ponte de pie frente al punto de anclaje con los pies separados a la altura de los hombros. Sostén las asas con un agarre prono, con las palmas mirándose entre sí. Inclínate hacia atrás, manteniendo el cuerpo recto y los talones en el suelo. Tira del pecho hacia las asas, apretando los omóplatos entre sí. Haz una pausa breve en la parte más alta, luego baja lentamente de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0808-4OaumBr.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0808-4OaumBr.jpg"
   },
@@ -15031,7 +15031,7 @@
     "difficulty": "intermediate",
     "description": "Ponte de pie de espaldas a un entrenador de suspensión con los pies separados a la altura de los hombros. Extiende una pierna hacia adelante y coloca el empeine del pie en el soporte para pie del entrenador de suspensión. Flexiona la pierna de apoyo y baja el cuerpo a una posición de zancada, manteniendo el pecho elevado y la rodilla alineada con la punta del pie. Empuja con el talón para regresar a la posición inicial. Repite el número de repeticiones deseado, luego cambia de pierna.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0809-QpXqiq8.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0809-QpXqiq8.jpg"
   },
@@ -15103,7 +15103,7 @@
     "difficulty": "intermediate",
     "description": "Siéntate en el borde de un banco o silla con las manos sujetando el borde, los dedos apuntando hacia adelante. Desliza los glúteos fuera del banco, sosteniendo tu peso con las manos. Flexiona los codos y baja el cuerpo hacia el suelo, manteniendo la espalda cerca del banco. Haz una pausa por un momento en la parte inferior, luego empuja tu cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0814-X6C6i5Y.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0814-X6C6i5Y.jpg"
   },
@@ -15283,7 +15283,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de las barras paralelas con los brazos completamente extendidos y el cuerpo recto. Activa el core y levanta las piernas frente a ti, manteniéndolas rectas. Continúa levantando hasta que las piernas queden paralelas al suelo o un poco más arriba. Haz una pausa por un momento en la parte superior, luego baja lentamente las piernas de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0826-ZNgOYQU.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0826-ZNgOYQU.jpg"
   },
@@ -15787,7 +15787,7 @@
     "difficulty": "intermediate",
     "description": "Comienza en posición de plancha con las manos sobre el rodillo y el cuerpo recto. Activa el core y comienza a hacer rodar el rodillo hacia adelante extendiendo los brazos. Continúa rodando hasta que tu cuerpo quede completamente extendido y los brazos por encima de la cabeza. Invierte el movimiento tirando del rodillo de vuelta hacia tu cuerpo, usando el core y los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3637-km2Ljzj.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3637-km2Ljzj.jpg"
   },
@@ -15799,7 +15799,7 @@
     "difficulty": "intermediate",
     "description": "Cuélgate de una barra de dominadas con las palmas mirando hacia afuera y las manos más separadas que la anchura de los hombros. Activa el core y junta los omóplatos. Tira de tu cuerpo hacia arriba en dirección a la barra hasta que tu barbilla quede por encima de la barra. Baja el cuerpo de nuevo a la posición inicial con control. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1429-Qqi7bko.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1429-Qqi7bko.jpg"
   },
@@ -15811,7 +15811,7 @@
     "difficulty": "intermediate",
     "description": "Agarra la barra de dominadas con un agarre prono amplio, las manos un poco más separadas que la anchura de los hombros. Cuélgate de la barra con los brazos completamente extendidos y el cuerpo recto. Activa los músculos de la espalda y tira de tu cuerpo hacia la barra, llevando el pecho por delante. Continúa subiendo hasta que la barbilla quede por encima de la barra. Haz una pausa por un momento en la parte superior, luego baja lentamente el cuerpo de vuelta a la posición inicial. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1367-OYFhXVD.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1367-OYFhXVD.jpg"
   },
@@ -15835,7 +15835,7 @@
     "difficulty": "intermediate",
     "description": "Colócate sobre las barras paralelas con los brazos completamente extendidos y el cuerpo suspendido en el aire. Inclínate ligeramente hacia adelante y baja el cuerpo flexionando los codos hasta que el pecho quede justo por encima de las barras. Haz una pausa breve, luego empújate de nuevo hacia arriba a la posición inicial estirando los brazos. Repite el número de repeticiones deseado.",
     "weight_factor": 0,
-    "equipment": "none",
+    "equipment": "gym",
     "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2363-O2K9Vb5.gif",
     "image_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2363-O2K9Vb5.jpg"
   },

@@ -1,6 +1,7 @@
 import * as https from 'https';
 import * as fs from 'fs';
 import * as path from 'path';
+import { needsApparatus, TARGET_OVERRIDES } from '../data/equipmentRules';
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main';
 const EXERCISES_URL = `${GITHUB_RAW_BASE}/data/exercises.json`;
@@ -71,7 +72,8 @@ const TARGET_MUSCLE_MAP: Record<string, string> = {
   abductors: 'Glúteos',
 };
 
-// Equipment values that map to 'none' (no gym required)
+// Equipment values with no external load in kg (weight_factor 0). Whether the
+// exercise counts as "Sin material" is decided by equipmentRules.needsApparatus.
 const BODYWEIGHT_EQUIPMENT = new Set([
   'body weight',
   'band',
@@ -81,15 +83,16 @@ const BODYWEIGHT_EQUIPMENT = new Set([
 
 function mapExercise(ex: GithubExercise) {
   const isBodyweight = BODYWEIGHT_EQUIPMENT.has(ex.equipment);
+  const override = TARGET_OVERRIDES[ex.name];
   return {
     id: ex.id,
     name: ex.name,
-    target_muscle: TARGET_MUSCLE_MAP[ex.target] ?? ex.target,
-    split_category: SPLIT_MAP[ex.body_part] ?? 'ambos',
+    target_muscle: override?.target_muscle ?? TARGET_MUSCLE_MAP[ex.target] ?? ex.target,
+    split_category: override?.split_category ?? SPLIT_MAP[ex.body_part] ?? 'ambos',
     difficulty: 'intermediate',
     description: ex.instructions?.['es'] ?? ex.instructions?.['en'] ?? '',
     weight_factor: isBodyweight ? 0 : (WEIGHT_FACTOR_MAP[ex.body_part] ?? 0),
-    equipment: isBodyweight ? 'none' : 'gym',
+    equipment: isBodyweight && !needsApparatus(ex.name) ? 'none' : 'gym',
     gif_url: `${GITHUB_RAW_BASE}/${ex.gif_url}`,
     image_url: `${GITHUB_RAW_BASE}/${ex.image}`,
   };

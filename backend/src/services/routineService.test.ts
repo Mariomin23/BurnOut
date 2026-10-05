@@ -94,11 +94,23 @@ describe('filtro por material (equipment)', () => {
     }
   });
 
-  it('con equipment gym se usa el catálogo completo', async () => {
+  it('con equipment gym la rutina solo contiene ejercicios de gimnasio', async () => {
+    // rng 0, 0.5 y 0.99 recorren distintos barajados y ramas (bíceps/tríceps)
+    for (const r of [0, 0.5, 0.99]) {
+      const svc = new RoutineService(mixedRepo, () => r);
+      const routine = await svc.generateRoutine({ ...profile, equipment: 'gym' });
+      expect(routine.exercises.length).toBeGreaterThan(0);
+      for (const item of routine.exercises) {
+        expect(item.exercise.equipment).toBe('gym');
+      }
+    }
+  });
+
+  it('el reroll con equipment gym nunca devuelve ejercicios sin material', async () => {
     const svc = new RoutineService(mixedRepo, () => 0);
-    const routine = await svc.generateRoutine({ ...profile, equipment: 'gym' });
-    const equipments = routine.exercises.map(e => e.exercise.equipment);
-    expect(equipments).toContain('gym');
+    // Bíceps solo existe sin material en este catálogo: debe ampliar la búsqueda dentro de gym
+    const result = await svc.rerollExercise('Bíceps', [], { ...profile, equipment: 'gym' });
+    expect(result.exercise.equipment).toBe('gym');
   });
 
   it('el reroll con equipment none nunca devuelve ejercicios de gimnasio', async () => {
@@ -193,5 +205,22 @@ describe('series por nivel', () => {
     const svc = new RoutineService(repo, () => 0);
     const item = await svc.rerollExercise('Pecho', [], { ...profile, experience: 'advanced' }, []);
     expect(item.sets).toHaveLength(5);
+  });
+});
+
+describe('perfil por objetivo', () => {
+  const first = async (goal: UserProfile['goal']) => {
+    const svc = new RoutineService(repo, () => 0);
+    const routine = await svc.generateRoutine({ ...profile, goal }, []);
+    return routine.exercises[0];
+  };
+
+  it('hipertrofia, salud y definir difieren en series, reps y descanso', async () => {
+    const [hipertrofia, salud, definir] = await Promise.all([
+      first('Volumen'), first('Mantenerse Activo'), first('Perder Peso'),
+    ]);
+    expect([hipertrofia.sets.length, hipertrofia.sets[0].suggestedReps, hipertrofia.restTimerSeconds]).toEqual([4, 8, 120]);
+    expect([salud.sets.length, salud.sets[0].suggestedReps, salud.restTimerSeconds]).toEqual([3, 10, 90]);
+    expect([definir.sets.length, definir.sets[0].suggestedReps, definir.restTimerSeconds]).toEqual([3, 12, 60]);
   });
 });

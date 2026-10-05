@@ -13,6 +13,13 @@ interface UserProfileFormProps {
   isLoggedIn?: boolean;
 }
 
+/** Qué cambia en la rutina con cada objetivo (los valores los fija el backend) */
+const GOAL_HINT: Record<UserProfile['goal'], string> = {
+  'Volumen': 'Hipertrofia: 8-12 reps con carga alta, descansos de 2 min y una serie más por ejercicio.',
+  'Mantenerse Activo': 'Salud: 10-12 reps con carga moderada, lejos del fallo, y descansos de 90 s.',
+  'Perder Peso': 'Definir: 12-15 reps con descansos cortos de 60 s para mantener el pulso alto.',
+};
+
 export const UserProfileForm: React.FC<UserProfileFormProps> = ({
   onSubmit,
   isLoading,
@@ -168,6 +175,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
             Salud
           </div>
         </div>
+        <p className="goal-hint">{GOAL_HINT[goal]}</p>
       </div>
 
       <div className="input-group">

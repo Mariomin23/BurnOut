@@ -107,6 +107,14 @@ describe('prescribe — primera sesión', () => {
       .toEqual({ suggestedWeightKg: 50, suggestedReps: 12, targetRpe: 8 });
   });
 
+  it('salud usa el 60% a RPE 7: los tres objetivos dan cargas y esfuerzos distintos', () => {
+    expect(svc.prescribe(barbell, 'Mantenerse Activo', undefined, lifter))
+      .toEqual({ suggestedWeightKg: 47.5, suggestedReps: 10, targetRpe: 7 });
+    const loads = (['Volumen', 'Mantenerse Activo', 'Perder Peso'] as const)
+      .map(goal => svc.prescribe(barbell, goal, undefined, lifter).suggestedWeightKg);
+    expect(new Set(loads).size).toBe(3);
+  });
+
   it('suelo de 2.5 kg en cargas muy bajas', () => {
     const light: LifterProfile = { weightKg: 45, age: 60, experience: 'beginner', sex: 'masculino' };
     expect(svc.prescribe(curl, 'Volumen', undefined, light).suggestedWeightKg).toBe(2.5);

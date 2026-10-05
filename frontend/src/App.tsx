@@ -16,7 +16,7 @@ import { computeGamification } from './lib/gamification';
 import { summarizeHistory } from './lib/history';
 import { fireAlert, showServerWaking, hideServerWaking } from './lib/alert';
 import { wakeServer } from './lib/api';
-import type { UserProfile } from './types';
+import { GOAL_DISPLAY, type UserProfile } from './types';
 
 // Vistas secundarias: fuera del bundle inicial, se descargan al entrar
 const HistoryView = lazy(() => import('./components/HistoryView').then(m => ({ default: m.HistoryView })));
@@ -368,7 +368,7 @@ function App() {
                 <span className="badge-pill badge-split" style={{ marginRight: '0.5rem' }}>
                   {activeRoutine.split}
                 </span>
-                <span className="badge-pill badge-goal">{activeRoutine.goal}</span>
+                <span className="badge-pill badge-goal">{GOAL_DISPLAY[activeRoutine.goal] ?? activeRoutine.goal}</span>
               </div>
               <div className="workout-stats-bar__progress-label">
                 Progreso: {progressRatio}%

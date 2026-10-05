@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import type { Exercise } from '../types';
 import exercisesData from './exercises.json';
+import { needsApparatus, TARGET_OVERRIDES } from './equipmentRules';
 
 const exercises = exercisesData as Exercise[];
 
@@ -68,7 +69,7 @@ describe('exercises.json — invariantes de la biblioteca', () => {
           e =>
             e.split_category === category &&
             e.target_muscle === muscle &&
-            (equipment === 'gym' || e.equipment === 'none')
+            e.equipment === equipment
         );
         expect(
           pool.length,
@@ -81,12 +82,42 @@ describe('exercises.json — invariantes de la biblioteca', () => {
         e =>
           e.split_category === 'ambos' &&
           e.target_muscle !== 'Core' &&
-          (equipment === 'gym' || e.equipment === 'none')
+          e.equipment === equipment
       );
       expect(
         extras.length,
         `ambos extra equipment=${equipment}`
       ).toBeGreaterThanOrEqual(1);
+    }
+  });
+
+  it('ningún ejercicio "sin material" necesita un aparato', () => {
+    const wrong = exercises.filter(e => e.equipment === 'none' && needsApparatus(e.name)).map(e => e.name);
+    expect(wrong).toEqual([]);
+  });
+
+  it('las correcciones de músculo objetivo están aplicadas', () => {
+    for (const [name, expected] of Object.entries(TARGET_OVERRIDES)) {
+      for (const e of exercises.filter(x => x.name === name)) {
+        expect(e.target_muscle, name).toBe(expected.target_muscle);
+        expect(e.split_category, name).toBe(expected.split_category);
+      }
+    }
+  });
+});
+
+describe('needsApparatus', () => {
+  it('detecta barras, paralelas, anillas, gomas y máquinas', () => {
+    for (const name of ['pull-up', 'archer pull up', 'chin-up', 'chest dip', 'ring dips', 'band shoulder press',
+      'hanging leg raise', 'front lever', 'suspended row', 'inverted row', 'roller body saw', 'run (equipment)']) {
+      expect(needsApparatus(name), name).toBe(true);
+    }
+  });
+
+  it('suelo, pared, banco, escalón o toalla no cuentan como aparato', () => {
+    for (const name of ['push-up', 'bench dip (knees bent)', 'triceps dips floor', 'push-up (wall)',
+      'one arm towel row', 'standing calf raise (on a staircase)', 'burpee', 'full planche']) {
+      expect(needsApparatus(name), name).toBe(false);
     }
   });
 });

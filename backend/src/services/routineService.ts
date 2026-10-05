@@ -8,7 +8,7 @@ import {
   UserProfile,
   ExerciseHistorySummary,
 } from '../types';
-import { ProgressionService } from './progressionService';
+import { ProgressionService, GOAL_PROFILE } from './progressionService';
 
 export class RoutineService {
   private progressionService = new ProgressionService();
@@ -137,7 +137,7 @@ export class RoutineService {
   ): WorkoutExercise[] {
     const goal = profile.goal;
     const numSets = this.setsFor(profile);
-    const restTimerSeconds = goal === 'Perder Peso' ? 60 : goal === 'Volumen' ? 120 : 90;
+    const restTimerSeconds = GOAL_PROFILE[goal].restSeconds;
 
     return exercises.map(exercise => {
       const prescription = this.progressionService.prescribe(
@@ -260,7 +260,7 @@ export class RoutineService {
       : allExercises[0];
 
     const numSets = this.setsFor(profile);
-    const restTimerSeconds = profile.goal === 'Perder Peso' ? 60 : profile.goal === 'Volumen' ? 120 : 90;
+    const restTimerSeconds = GOAL_PROFILE[profile.goal].restSeconds;
 
     const historyMap = new Map(history.map(h => [h.exerciseId, h.lastSession]));
     const prescription = this.progressionService.prescribe(
@@ -286,19 +286,16 @@ export class RoutineService {
 
   /**
    * Volumen por nivel: principiante 2-3 series, intermedio 3-4, avanzado 4-5.
-   * Dentro del nivel, el objetivo Volumen usa la cifra alta.
+   * Dentro del nivel, el objetivo Volumen (hipertrofia) usa la cifra alta.
    */
   private setsFor(profile: UserProfile): number {
     const base = profile.experience === 'beginner' ? 2 : profile.experience === 'advanced' ? 4 : 3;
-    return profile.goal === 'Volumen' ? base + 1 : base;
+    return base + GOAL_PROFILE[profile.goal].extraSets;
   }
 
-  /** 'gym' permite todo el catálogo; 'none' restringe a ejercicios sin material. */
+  /** Separación estricta: cada opción de material solo ve sus propios ejercicios. */
   private filterByEquipment(exercises: Exercise[], equipment: UserProfile['equipment']): Exercise[] {
-    if (equipment === 'none') {
-      return exercises.filter(e => e.equipment === 'none');
-    }
-    return exercises;
+    return exercises.filter(e => e.equipment === equipment);
   }
 
   private shuffle<T>(array: T[]): T[] {

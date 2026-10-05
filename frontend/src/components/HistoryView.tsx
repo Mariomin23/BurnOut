@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import type { WorkoutLog } from '../types';
+import { GOAL_DISPLAY, type WorkoutLog } from '../types';
 import type { GamificationState } from '../lib/gamification';
 import { listTrackedExercises, buildProgressSeries, workoutMuscles } from '../lib/progress';
 import { ProgressChart } from './ProgressChart';
@@ -87,7 +87,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({ history, gamification,
             </div>
             <div className="history-entry__badges">
               <span className="badge-pill badge-split" style={{ fontSize: '0.65rem' }}>{log.split}</span>
-              <span className="badge-pill badge-goal" style={{ fontSize: '0.65rem' }}>{log.goal}</span>
+              <span className="badge-pill badge-goal" style={{ fontSize: '0.65rem' }}>{GOAL_DISPLAY[log.goal] ?? log.goal}</span>
               {workoutMuscles(log).map(muscle => (
                 <span key={muscle} className="badge-pill history-entry__muscle" style={{ fontSize: '0.65rem' }}>
                   {muscle}

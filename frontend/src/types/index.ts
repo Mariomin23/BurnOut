@@ -94,3 +94,10 @@ export interface ExerciseHistorySummary {
     sets: ExerciseSetLog[];
   };
 }
+
+/** Nombre que ve el usuario para cada objetivo (los valores internos se conservan por el historial guardado) */
+export const GOAL_DISPLAY: Record<UserProfile['goal'], string> = {
+  'Volumen': 'Hipertrofia',
+  'Mantenerse Activo': 'Salud',
+  'Perder Peso': 'Definir',
+};

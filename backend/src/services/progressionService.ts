@@ -1,9 +1,33 @@
 import { Exercise, ExerciseHistorySummary, GoalLabel, ProgressionDirection, UserProfile } from '../types';
 
+export interface GoalProfile {
+  reps: { min: number; max: number };
+  /** % del 1RM ajustado para la carga de la primera sesión */
+  intensity: number;
+  /** RPE de trabajo: más bajo cuanto más lejos del fallo se quiere entrenar */
+  targetRpe: number;
+  restSeconds: number;
+  /** Series extra sobre la base del nivel */
+  extraSets: number;
+}
+
+/**
+ * Los tres objetivos de la app (en la interfaz: Hipertrofia, Salud y Definir).
+ * Cada uno cambia reps, carga, esfuerzo, descanso y volumen:
+ * - Hipertrofia: cargas altas, pocas reps, descanso largo y una serie más.
+ * - Salud: carga moderada lejos del fallo, descanso medio.
+ * - Definir: muchas reps con descanso corto para mantener el pulso alto.
+ */
+export const GOAL_PROFILE: Record<GoalLabel, GoalProfile> = {
+  'Volumen': { reps: { min: 8, max: 12 }, intensity: 0.7, targetRpe: 8, restSeconds: 120, extraSets: 1 },
+  'Mantenerse Activo': { reps: { min: 10, max: 12 }, intensity: 0.6, targetRpe: 7, restSeconds: 90, extraSets: 0 },
+  'Perder Peso': { reps: { min: 12, max: 15 }, intensity: 0.65, targetRpe: 8, restSeconds: 60, extraSets: 0 },
+};
+
 export const GOAL_REP_RANGE: Record<GoalLabel, { min: number; max: number }> = {
-  'Perder Peso': { min: 12, max: 15 },
-  'Volumen': { min: 8, max: 12 },
-  'Mantenerse Activo': { min: 10, max: 12 },
+  'Perder Peso': GOAL_PROFILE['Perder Peso'].reps,
+  'Volumen': GOAL_PROFILE['Volumen'].reps,
+  'Mantenerse Activo': GOAL_PROFILE['Mantenerse Activo'].reps,
 };
 
 export interface Prescription {
@@ -59,15 +83,9 @@ function ageModifier(age: number): number {
   return 1.0;
 }
 
-// Paso 3: % del 1RM ajustado. La tabla da 70% para 8-12 reps (y 85% para 3-5),
-// que equivale a la carga del tope del rango según Epley; 12-15 reps sigue esa
-// misma regla → 65%.
-const GOAL_INTENSITY: Record<GoalLabel, number> = {
-  'Volumen': 0.7,
-  'Mantenerse Activo': 0.7,
-  'Perder Peso': 0.65,
-};
-const WORKING_RPE = 8;
+// Paso 3: % del 1RM ajustado → GOAL_PROFILE.intensity. La tabla da 70% para
+// 8-12 reps (y 85% para 3-5), que equivale a la carga del tope del rango según
+// Epley; 12-15 reps sigue esa misma regla → 65%. Salud baja al 60% a RPE 7.
 
 // --- Autorregulación con la última sesión -----------------------------------
 /** Epley deja de ser fiable con muchas reps: se acota el total reps + reserva */
@@ -92,9 +110,9 @@ export function estimateOneRepMaxFromSets(sets: ExerciseHistorySummary['lastSess
   return best;
 }
 
-/** Peso con el que ese 1RM da `reps` repeticiones al RPE de trabajo. */
-function weightForReps(oneRepMaxKg: number, reps: number): number {
-  return oneRepMaxKg / (1 + (reps + (10 - WORKING_RPE)) / 30);
+/** Peso con el que ese 1RM da `reps` repeticiones al RPE de trabajo del objetivo. */
+function weightForReps(oneRepMaxKg: number, reps: number, targetRpe: number): number {
+  return oneRepMaxKg / (1 + (reps + (10 - targetRpe)) / 30);
 }
 
 // Regla especial de autocargas: ejercicios donde se levanta todo el cuerpo y no
@@ -184,7 +202,10 @@ export class ProgressionService {
     // de objetivo) se salta directamente al peso que le corresponde.
     const realOneRepMax = estimateOneRepMaxFromSets(lastSession.sets);
     const calibrated = realOneRepMax === null ? null
-      : this.round(Math.min(weightForReps(realOneRepMax, range.min), refWeight * MAX_CALIBRATION_JUMP));
+      : this.round(Math.min(
+          weightForReps(realOneRepMax, range.min, GOAL_PROFILE[goal].targetRpe),
+          refWeight * MAX_CALIBRATION_JUMP
+        ));
     const tolerance = Math.max(increment, refWeight * CALIBRATION_TOLERANCE);
     const offTarget = calibrated !== null && Math.abs(calibrated - refWeight) > tolerance;
 
@@ -240,9 +261,9 @@ export class ProgressionService {
       return { suggestedWeightKg: 0, suggestedReps: range.min };
     }
     return {
-      suggestedWeightKg: this.roundDown(oneRepMax * GOAL_INTENSITY[goal]),
+      suggestedWeightKg: this.roundDown(oneRepMax * GOAL_PROFILE[goal].intensity),
       suggestedReps: range.min,
-      targetRpe: WORKING_RPE,
+      targetRpe: GOAL_PROFILE[goal].targetRpe,
     };
   }
 
