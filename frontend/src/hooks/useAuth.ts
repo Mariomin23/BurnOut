@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { API_ROOT } from '../lib/api';
+import { API_ROOT, UNAUTHORIZED_EVENT } from '../lib/api';
 import { fireAlert } from '../lib/alert';
 
 const AUTH_KEY = 'fit_poke_auth_v1';
@@ -75,9 +75,26 @@ export function useAuth() {
       }
     }, 60_000);
 
+    // El servidor ha rechazado el token (caducado o revocado desde otro dispositivo).
+    // Varias peticiones pueden fallar a la vez: solo se avisa una.
+    let expiredHandled = false;
+    const onUnauthorized = () => {
+      if (expiredHandled) return;
+      expiredHandled = true;
+      logout();
+      fireAlert({
+        title: 'Sesión caducada',
+        text: 'Tu sesión ya no es válida. Vuelve a iniciar sesión.',
+        icon: 'info',
+        confirmButtonText: 'Entendido',
+      });
+    };
+    window.addEventListener(UNAUTHORIZED_EVENT, onUnauthorized);
+
     return () => {
       if (idleTimerRef.current) clearInterval(idleTimerRef.current);
       events.forEach(e => window.removeEventListener(e, stampActivity));
+      window.removeEventListener(UNAUTHORIZED_EVENT, onUnauthorized);
     };
   }, [auth, logout]);
 
@@ -112,6 +129,23 @@ export function useAuth() {
     }
   }, []);
 
+  /** Revoca el token en el servidor: cierra la sesión en todos los dispositivos. */
+  const logoutEverywhere = useCallback(async (): Promise<boolean> => {
+    if (!auth) return false;
+    try {
+      const response = await fetch(`${API_ROOT}/auth/logout-all`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${auth.token}` },
+      });
+      // 401: el token ya no valía, la sesión local sobra igualmente
+      if (!response.ok && response.status !== 401) return false;
+      logout();
+      return true;
+    } catch {
+      return false;
+    }
+  }, [auth, logout]);
+
   const login = useCallback((email: string, password: string) => authenticate('login', email, password), [authenticate]);
   const register = useCallback((email: string, password: string) => authenticate('register', email, password), [authenticate]);
 
@@ -124,5 +158,6 @@ export function useAuth() {
     login,
     register,
     logout,
+    logoutEverywhere,
   };
 }

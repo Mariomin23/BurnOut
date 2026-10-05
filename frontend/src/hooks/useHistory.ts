@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ExerciseHistorySummary, WorkoutLog, WorkoutRoutine } from '../types';
 import { HISTORY_KEY, appendToHistory, buildWorkoutLog, mergeHistories, summarizeHistory } from '../lib/history';
-import { API_ROOT } from '../lib/api';
+import { API_ROOT, authFetch } from '../lib/api';
 
 export function useHistory(token: string | null = null) {
   const [history, setHistory] = useState<WorkoutLog[]>(() => {
@@ -32,7 +32,7 @@ export function useHistory(token: string | null = null) {
     let cancelled = false;
     (async () => {
       try {
-        const response = await fetch(`${API_ROOT}/history`, {
+        const response = await authFetch(`${API_ROOT}/history`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!response.ok) return;
@@ -53,7 +53,7 @@ export function useHistory(token: string | null = null) {
   // Tras la fusión inicial, cada cambio del historial se sube al servidor
   useEffect(() => {
     if (!token || !serverSyncedRef.current) return;
-    fetch(`${API_ROOT}/history`, {
+    authFetch(`${API_ROOT}/history`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       body: JSON.stringify({ logs: history }),

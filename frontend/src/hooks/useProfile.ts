@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { API_ROOT } from '../lib/api';
+import { API_ROOT, authFetch } from '../lib/api';
 import { fileToAvatarDataUrl, validateImageFile } from '../lib/image';
 
 export function useProfile(token: string | null) {
@@ -15,7 +15,7 @@ export function useProfile(token: string | null) {
     let cancelled = false;
     (async () => {
       try {
-        const res = await fetch(`${API_ROOT}/profile/me`, {
+        const res = await authFetch(`${API_ROOT}/profile/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) return;
@@ -41,7 +41,7 @@ export function useProfile(token: string | null) {
     setAvatarError(null);
     try {
       const dataUrl = await fileToAvatarDataUrl(file);
-      const res = await fetch(`${API_ROOT}/profile/avatar`, {
+      const res = await authFetch(`${API_ROOT}/profile/avatar`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ avatarUrl: dataUrl }),
@@ -64,7 +64,7 @@ export function useProfile(token: string | null) {
     setAvatarLoading(true);
     setAvatarError(null);
     try {
-      const res = await fetch(`${API_ROOT}/profile/avatar`, {
+      const res = await authFetch(`${API_ROOT}/profile/avatar`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

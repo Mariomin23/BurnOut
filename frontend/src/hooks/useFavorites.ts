@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { API_ROOT } from '../lib/api';
+import { API_ROOT, authFetch } from '../lib/api';
 import type { Exercise } from '../types';
 
 export function useFavorites(token: string | null) {
@@ -13,7 +13,7 @@ export function useFavorites(token: string | null) {
       return;
     }
     try {
-      const res = await fetch(`${API_ROOT}/favorites`, {
+      const res = await authFetch(`${API_ROOT}/favorites`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) return;
@@ -42,7 +42,7 @@ export function useFavorites(token: string | null) {
     });
 
     try {
-      await fetch(`${API_ROOT}/favorites/${exerciseId}`, {
+      await authFetch(`${API_ROOT}/favorites/${exerciseId}`, {
         method,
         headers: { Authorization: `Bearer ${token}` },
       });

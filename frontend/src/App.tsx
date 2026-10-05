@@ -26,7 +26,21 @@ const AdminPanel = lazy(() => import('./components/AdminPanel').then(m => ({ def
 function App() {
   const [view, setView] = useState<'home' | 'history' | 'client' | 'admin'>('home');
   const [forceAuthOpen, setForceAuthOpen] = useState(false);
-  const { token, email, role, authLoading, authError, login, register, logout } = useAuth();
+  const { token, email, role, authLoading, authError, login, register, logout, logoutEverywhere } = useAuth();
+
+  const onLogoutEverywhere = async () => {
+    const ok = await logoutEverywhere();
+    if (ok) {
+      setView('home');
+      return;
+    }
+    fireAlert({
+      title: 'No se pudo cerrar la sesión',
+      text: 'Comprueba tu conexión e inténtalo de nuevo.',
+      icon: 'error',
+      confirmButtonText: 'Entendido',
+    });
+  };
   const {
     history,
     profile,
@@ -335,6 +349,7 @@ function App() {
           avatarError={avatarError}
           onUploadAvatar={uploadAvatar}
           onRemoveAvatar={removeAvatar}
+          onLogoutEverywhere={onLogoutEverywhere}
         />
       )}
 

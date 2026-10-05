@@ -8,6 +8,8 @@ export interface UserDoc {
   favorites: string[];
   /** Foto de perfil como data URL (imagen ya redimensionada en el cliente) */
   avatarUrl?: string;
+  /** Se incrementa para invalidar todos los tokens emitidos hasta ese momento */
+  tokenVersion: number;
   createdAt: Date;
 }
 
@@ -18,6 +20,7 @@ const userSchema = new Schema<UserDoc>(
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     favorites: { type: [String], default: [] },
     avatarUrl: { type: String },
+    tokenVersion: { type: Number, default: 0 },
     createdAt: { type: Date, default: Date.now },
   },
   { versionKey: false }

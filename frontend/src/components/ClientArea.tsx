@@ -21,6 +21,7 @@ interface ClientAreaProps {
   avatarError: string | null;
   onUploadAvatar: (file: File) => void;
   onRemoveAvatar: () => void;
+  onLogoutEverywhere: () => void;
 }
 
 type ClientTab = 'historial' | 'favoritos' | 'perfil';
@@ -39,6 +40,7 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
   avatarError,
   onUploadAvatar,
   onRemoveAvatar,
+  onLogoutEverywhere,
 }) => {
   const [tab, setTab] = useState<ClientTab>('historial');
   const enoughFavorites = favoriteExercises.length >= MIN_FAVORITES_FOR_ROUTINE;
@@ -118,6 +120,17 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
           <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '1rem' }}>
             La imagen se recorta a un cuadrado de 256 px antes de subirse. PNG, JPG o WebP.
           </p>
+
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.05rem', margin: '1.75rem 0 0.5rem' }}>
+            Seguridad
+          </h3>
+          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginBottom: '0.75rem' }}>
+            Si has perdido un dispositivo o iniciaste sesión en uno que no es tuyo, cierra la sesión
+            en todos a la vez. Tendrás que volver a entrar también en este.
+          </p>
+          <button className="btn btn-danger" onClick={onLogoutEverywhere} style={{ fontSize: '0.85rem' }}>
+            Cerrar sesión en todos los dispositivos
+          </button>
         </div>
       )}
 

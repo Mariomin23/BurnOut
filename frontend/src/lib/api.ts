@@ -20,3 +20,15 @@ export function wakeServer(): Promise<boolean> {
     .catch(() => false);
   return wakePromise;
 }
+
+export const UNAUTHORIZED_EVENT = 'burnout:unauthorized';
+
+/**
+ * fetch para peticiones con sesión: si el servidor responde 401 (token caducado
+ * o revocado) avisa a useAuth para cerrar la sesión local en vez de fallar en silencio.
+ */
+export async function authFetch(input: string, init?: RequestInit): Promise<Response> {
+  const response = await fetch(input, init);
+  if (response.status === 401) window.dispatchEvent(new Event(UNAUTHORIZED_EVENT));
+  return response;
+}

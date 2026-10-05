@@ -21,7 +21,12 @@ export class AuthController {
         email: email.toLowerCase(),
         passwordHash: await hashPassword(password),
       });
-      const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
+      const token = signToken({
+        userId: user._id.toString(),
+        email: user.email,
+        role: user.role,
+        tokenVersion: user.tokenVersion ?? 0,
+      });
       res.status(201).json({ token, email: user.email, role: user.role, avatarUrl: null });
     } catch (error) {
       console.error('Error en registro:', error);
@@ -42,11 +47,27 @@ export class AuthController {
         res.status(401).json({ error: 'Credenciales incorrectas' });
         return;
       }
-      const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
+      const token = signToken({
+        userId: user._id.toString(),
+        email: user.email,
+        role: user.role,
+        tokenVersion: user.tokenVersion ?? 0,
+      });
       res.json({ token, email: user.email, role: user.role, avatarUrl: user.avatarUrl ?? null });
     } catch (error) {
       console.error('Error en login:', error);
       res.status(500).json({ error: 'Error interno al iniciar sesión' });
+    }
+  };
+
+  /** POST /api/auth/logout-all — invalida todos los tokens del usuario, en todos sus dispositivos */
+  public logoutAll = async (req: Request, res: Response): Promise<void> => {
+    try {
+      await UserModel.updateOne({ _id: req.userId }, { $inc: { tokenVersion: 1 } });
+      res.json({ ok: true });
+    } catch (error) {
+      console.error('Error al cerrar todas las sesiones:', error);
+      res.status(500).json({ error: 'Error interno al cerrar las sesiones' });
     }
   };
 }

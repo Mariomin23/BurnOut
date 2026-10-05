@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import type { UserProfile, WorkoutRoutine, WorkoutExercise, RoutineSet } from '../types';
 import { useHistory } from './useHistory';
-import { ROUTINES_API_URL } from '../lib/api';
+import { ROUTINES_API_URL, authFetch } from '../lib/api';
 
 const API_BASE_URL = ROUTINES_API_URL;
 const ROUTINE_KEY = 'fit_poke_active_routine';
@@ -157,7 +157,7 @@ export function useWorkout(token: string | null = null) {
     setLoading(true);
     setWorkoutSummary(null);
     try {
-      const response = await fetch(`${API_BASE_URL}/from-favorites`, {
+      const response = await authFetch(`${API_BASE_URL}/from-favorites`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ ...userProfile, history: buildSummary() }),
