@@ -80,7 +80,7 @@ export const ExerciseSearch: React.FC<ExerciseSearchProps> = ({ favoriteIds, onT
         return (
           <div key={ex.id} className="glass search-result">
             {ex.gif_url && (
-              <img src={ex.gif_url} loading="lazy" alt="" aria-hidden="true" className="search-result__gif" />
+              <img src={ex.gif_url} loading="lazy" decoding="async" crossOrigin="anonymous" alt="" aria-hidden="true" className="search-result__gif" />
             )}
             <div className="search-result__info">
               <h4 className="search-result__name">{ex.name}</h4>

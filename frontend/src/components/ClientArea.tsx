@@ -185,6 +185,8 @@ export const ClientArea: React.FC<ClientAreaProps> = ({
                       <img
                         src={ex.gif_url}
                         loading="lazy"
+                        decoding="async"
+                        crossOrigin="anonymous"
                         alt=""
                         aria-hidden="true"
                         className="exercise-card__gif"

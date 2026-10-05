@@ -8,6 +8,7 @@ import historyRoutes from './routes/historyRoutes';
 import favoritesRoutes from './routes/favoritesRoutes';
 import exerciseRoutes from './routes/exerciseRoutes';
 import profileRoutes from './routes/profileRoutes';
+import { isDbConnected } from './db/connection';
 
 const app = express();
 
@@ -46,7 +47,9 @@ const authLimiter = rateLimit({
 // Va antes del parser global porque body-parser no vuelve a parsear un body ya leído.
 app.use('/api/profile', express.json({ limit: '600kb' }), profileRoutes);
 
-app.use(express.json({ limit: '10kb' }));
+// generate/reroll envían el resumen de historial y PUT /history el historial
+// completo: con 10kb Express respondía 413 y la app caía al modo offline.
+app.use(express.json({ limit: '200kb' }));
 
 app.use('/api/routines', routineRoutes);
 app.use('/api/auth', authLimiter, authRoutes);
@@ -55,7 +58,11 @@ app.use('/api/favorites', favoritesRoutes);
 app.use('/api/exercises', exerciseRoutes);
 
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'ok',
+    db: isDbConnected() ? 'mongo' : 'json',
+    timestamp: new Date().toISOString(),
+  });
 });
 
 export default app;

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import Swal from 'sweetalert2';
 import { API_ROOT } from '../lib/api';
+import { fireAlert } from '../lib/alert';
 
 const AUTH_KEY = 'fit_poke_auth_v1';
 const ACTIVITY_KEY = 'fit_poke_last_activity';
@@ -23,8 +23,18 @@ function loadAuth(): AuthState | null {
   }
 }
 
+// El timeout es de 30 min: basta con anotar la actividad cada pocos segundos.
+// Escribir en localStorage en cada evento de scroll bloqueaba el hilo principal.
+const STAMP_THROTTLE_MS = 15_000;
+let lastStamp = 0;
+
+function stampActivityNow() {
+  lastStamp = Date.now();
+  localStorage.setItem(ACTIVITY_KEY, lastStamp.toString());
+}
+
 function stampActivity() {
-  localStorage.setItem(ACTIVITY_KEY, Date.now().toString());
+  if (Date.now() - lastStamp >= STAMP_THROTTLE_MS) stampActivityNow();
 }
 
 export function useAuth() {
@@ -47,7 +57,7 @@ export function useAuth() {
       return;
     }
 
-    stampActivity();
+    stampActivityNow();
 
     const events = ['click', 'keydown', 'touchstart', 'scroll'] as const;
     events.forEach(e => window.addEventListener(e, stampActivity, { passive: true }));
@@ -56,14 +66,11 @@ export function useAuth() {
       const last = parseInt(localStorage.getItem(ACTIVITY_KEY) ?? '0', 10);
       if (Date.now() - last > IDLE_TIMEOUT_MS) {
         logout();
-        Swal.fire({
+        fireAlert({
           title: 'Sesión cerrada',
           text: 'Llevas 30 minutos sin actividad. Vuelve a iniciar sesión.',
           icon: 'info',
           confirmButtonText: 'Entendido',
-          confirmButtonColor: '#7c3aed',
-          background: '#1a1a2e',
-          color: '#e2e8f0',
         });
       }
     }, 60_000);
@@ -95,7 +102,7 @@ export function useAuth() {
       };
       setAuth(next);
       localStorage.setItem(AUTH_KEY, JSON.stringify(next));
-      stampActivity();
+      stampActivityNow();
       return true;
     } catch {
       setAuthError('No se pudo conectar con el servidor');

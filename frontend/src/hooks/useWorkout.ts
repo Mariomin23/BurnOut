@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import type { UserProfile, WorkoutRoutine, WorkoutExercise, RoutineSet } from '../types';
 import { useHistory } from './useHistory';
 import { ROUTINES_API_URL } from '../lib/api';
@@ -99,14 +99,27 @@ export function useWorkout(token: string | null = null) {
   const [showAbandonModal, setShowAbandonModal] = useState(false);
   const [isOfflineMode, setIsOfflineMode] = useState(false);
 
-  const persistRoutine = useCallback((routine: WorkoutRoutine | null) => {
-    setActiveRoutine(routine);
-    if (routine) {
-      localStorage.setItem(ROUTINE_KEY, JSON.stringify(routine));
-    } else {
-      localStorage.removeItem(ROUTINE_KEY);
+  // La rutina activa se refleja en localStorage tras cada cambio
+  useEffect(() => {
+    try {
+      if (activeRoutine) {
+        localStorage.setItem(ROUTINE_KEY, JSON.stringify(activeRoutine));
+      } else {
+        localStorage.removeItem(ROUTINE_KEY);
+      }
+    } catch {
+      // quota / modo privado: la rutina vive solo en memoria esta sesión
     }
-  }, []);
+  }, [activeRoutine]);
+
+  // Refs para que los handlers que reciben las tarjetas no cambien de identidad
+  // en cada tecla (si cambian, React.memo de ExerciseCard no sirve de nada)
+  const activeRoutineRef = useRef(activeRoutine);
+  const profileRef = useRef(profile);
+  useEffect(() => {
+    activeRoutineRef.current = activeRoutine;
+    profileRef.current = profile;
+  }, [activeRoutine, profile]);
 
   const handleGenerateRoutine = useCallback(async (userProfile: UserProfile) => {
     setLoading(true);
@@ -121,16 +134,16 @@ export function useWorkout(token: string | null = null) {
       const routineData: WorkoutRoutine = await response.json();
       setProfile(userProfile);
       localStorage.setItem(PROFILE_KEY, JSON.stringify(userProfile));
-      persistRoutine(routineData);
+      setActiveRoutine(routineData);
     } catch {
       setProfile(userProfile);
       localStorage.setItem(PROFILE_KEY, JSON.stringify(userProfile));
-      persistRoutine(buildOfflineRoutine(userProfile));
+      setActiveRoutine(buildOfflineRoutine(userProfile));
       setIsOfflineMode(true);
     } finally {
       setLoading(false);
     }
-  }, [persistRoutine, buildSummary]);
+  }, [buildSummary]);
 
   /**
    * Rutina construida con los favoritos guardados en la cuenta. Sin sesión o sin
@@ -156,19 +169,21 @@ export function useWorkout(token: string | null = null) {
       setProfile(userProfile);
       localStorage.setItem(PROFILE_KEY, JSON.stringify(userProfile));
       setIsOfflineMode(false);
-      persistRoutine(data as WorkoutRoutine);
+      setActiveRoutine(data as WorkoutRoutine);
       return { ok: true };
     } catch {
       return { ok: false, error: 'No se pudo conectar con el servidor' };
     } finally {
       setLoading(false);
     }
-  }, [token, persistRoutine, buildSummary]);
+  }, [token, buildSummary]);
 
   const handleRerollExercise = useCallback(async (exerciseId: string, targetMuscle: string) => {
-    if (!activeRoutine || !profile) return;
+    const routine = activeRoutineRef.current;
+    const profile = profileRef.current;
+    if (!routine || !profile) return;
     setRerollingId(exerciseId);
-    const excludedIds = activeRoutine.exercises.map(e => e.exercise.id);
+    const excludedIds = routine.exercises.map(e => e.exercise.id);
     try {
       const response = await fetch(`${API_BASE_URL}/reroll`, {
         method: 'POST',
@@ -177,9 +192,10 @@ export function useWorkout(token: string | null = null) {
       });
       if (!response.ok) throw new Error('Error al hacer re-roll');
       const newExercise: WorkoutExercise = await response.json();
-      persistRoutine({
-        ...activeRoutine,
-        exercises: activeRoutine.exercises.map(item =>
+      // Sobre el estado más reciente: no pisa las series anotadas durante la petición
+      setActiveRoutine(prev => prev && {
+        ...prev,
+        exercises: prev.exercises.map(item =>
           item.exercise.id === exerciseId ? newExercise : item
         ),
       });
@@ -188,13 +204,12 @@ export function useWorkout(token: string | null = null) {
     } finally {
       setRerollingId(null);
     }
-  }, [activeRoutine, profile, persistRoutine, buildSummary]);
+  }, [buildSummary]);
 
   const handleUpdateSet = useCallback((exerciseId: string, setIndex: number, updatedFields: Partial<RoutineSet>) => {
-    if (!activeRoutine) return;
-    persistRoutine({
-      ...activeRoutine,
-      exercises: activeRoutine.exercises.map(item => {
+    setActiveRoutine(prev => prev && {
+      ...prev,
+      exercises: prev.exercises.map(item => {
         if (item.exercise.id !== exerciseId) return item;
         return {
           ...item,
@@ -204,7 +219,7 @@ export function useWorkout(token: string | null = null) {
         };
       }),
     });
-  }, [activeRoutine, persistRoutine]);
+  }, []);
 
   const handleCompleteWorkout = useCallback((): WorkoutSummary => {
     if (!activeRoutine) return { totalVolumeKg: 0, completedSets: 0, avgRpe: 0 };
@@ -231,16 +246,16 @@ export function useWorkout(token: string | null = null) {
     };
     appendWorkout(activeRoutine);
     setWorkoutSummary(summary);
-    persistRoutine(null);
+    setActiveRoutine(null);
     return summary;
-  }, [activeRoutine, persistRoutine, appendWorkout]);
+  }, [activeRoutine, appendWorkout]);
 
   const handleAbandonWorkout = useCallback(() => {
-    persistRoutine(null);
+    setActiveRoutine(null);
     setWorkoutSummary(null);
     setShowAbandonModal(false);
     setIsOfflineMode(false);
-  }, [persistRoutine]);
+  }, []);
 
   const handleGoHome = useCallback(() => {
     setWorkoutSummary(null);

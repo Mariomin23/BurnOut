@@ -11,7 +11,7 @@
   --bg-secondary: #12151c;
   --bg-elevated: #161a22;
   --bg-input: #171b24;
-  --bg-card: rgba(22, 26, 34, 0.72);
+  --bg-card: rgba(22, 26, 34, 0.9);
 
   /* --- Borders --- */
   --border-color: rgba(255, 255, 255, 0.07);
@@ -135,8 +135,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: var(--bg-card);
   background-image: var(--grad-surface);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  /* Sin backdrop-filter: desenfocar el fondo en cada tarjeta (y en las anidadas)
+     hundía el scroll en móviles. La opacidad de --bg-card lo compensa. */
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -206,6 +206,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .pulse-neon {
   animation: pulse-neon 2.4s ease-in-out infinite;
+}
+
+/* El temporizador flota sobre los ejercicios: fondo opaco para que se lea */
+.glass.pulse-neon {
+  background-color: var(--bg-elevated);
 }
 
 /* ============================================================
@@ -279,7 +284,6 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-main);
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
 }
 .btn-secondary:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.08);

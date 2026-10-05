@@ -44,6 +44,18 @@ export default defineConfig({
               expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 },
             },
           },
+          {
+            // GIFs de ejercicios: GitHub raw solo los cachea 5 min; aquí se quedan
+            // en el dispositivo. Los <img> llevan crossOrigin para que la respuesta
+            // no sea opaca (las opacas inflan la cuota de almacenamiento).
+            urlPattern: /^https:\/\/raw\.githubusercontent\.com\/hasaneyldrm\/exercises-dataset\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'exercise-media',
+              cacheableResponse: { statuses: [200] },
+              expiration: { maxEntries: 150, maxAgeSeconds: 60 * 60 * 24 * 30 },
+            },
+          },
         ],
       },
     }),

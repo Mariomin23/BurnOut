@@ -1,14 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
-import Swal from 'sweetalert2';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { UserProfileForm } from './components/UserProfileForm';
 import { ExerciseCard } from './components/ExerciseCard';
 import { ExerciseCardSkeleton } from './components/ExerciseCardSkeleton';
 import { RestTimer } from './components/RestTimer';
 import { ConfirmModal } from './components/ConfirmModal';
-import { HistoryView } from './components/HistoryView';
 import { AuthPanel } from './components/AuthPanel';
-import { ClientArea } from './components/ClientArea';
-import { AdminPanel } from './components/AdminPanel';
 import { Footer } from './components/Footer';
 import { useWorkout } from './hooks/useWorkout';
 import { useAuth } from './hooks/useAuth';
@@ -18,7 +14,14 @@ import { useFavorites } from './hooks/useFavorites';
 import { useProfile } from './hooks/useProfile';
 import { computeGamification } from './lib/gamification';
 import { summarizeHistory } from './lib/history';
+import { fireAlert, showServerWaking, hideServerWaking } from './lib/alert';
+import { wakeServer } from './lib/api';
 import type { UserProfile } from './types';
+
+// Vistas secundarias: fuera del bundle inicial, se descargan al entrar
+const HistoryView = lazy(() => import('./components/HistoryView').then(m => ({ default: m.HistoryView })));
+const ClientArea = lazy(() => import('./components/ClientArea').then(m => ({ default: m.ClientArea })));
+const AdminPanel = lazy(() => import('./components/AdminPanel').then(m => ({ default: m.AdminPanel })));
 
 function App() {
   const [view, setView] = useState<'home' | 'history' | 'client' | 'admin'>('home');
@@ -60,14 +63,11 @@ function App() {
       setView('home');
       return;
     }
-    Swal.fire({
+    fireAlert({
       title: 'No se pudo crear la rutina',
       text: result.error,
       icon: 'info',
       confirmButtonText: 'Entendido',
-      confirmButtonColor: '#7c3aed',
-      background: '#1a1a2e',
-      color: '#e2e8f0',
     });
   };
 
@@ -75,14 +75,11 @@ function App() {
   const onGenerateFromFavoritesWithSavedProfile = () => {
     if (!profile) {
       setView('home');
-      Swal.fire({
+      fireAlert({
         title: 'Configura tu perfil',
         text: 'Rellena tus datos en la pantalla de inicio y pulsa "Rutina con mis favoritos".',
         icon: 'info',
         confirmButtonText: 'Vale',
-        confirmButtonColor: '#7c3aed',
-        background: '#1a1a2e',
-        color: '#e2e8f0',
       });
       return;
     }
@@ -90,8 +87,25 @@ function App() {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem('burnout_disclaimer_v1')) {
-      Swal.fire({
+    // El servidor se despierta al abrir la app. Si tarda (arranque en frío) se
+    // avisa con un toast, pero nunca encima del disclaimer de la primera visita.
+    let cancelled = false;
+    let awake = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    wakeServer().then(() => {
+      awake = true;
+      hideServerWaking();
+    });
+    const warnIfStillWaking = () => {
+      timer = setTimeout(() => {
+        if (!cancelled && !awake) showServerWaking();
+      }, 2500);
+    };
+
+    if (localStorage.getItem('burnout_disclaimer_v1')) {
+      warnIfStillWaking();
+    } else {
+      fireAlert({
         title: '⚠️ Aviso importante',
         html: `
         <p style="text-align:left;line-height:1.6">
@@ -111,13 +125,16 @@ function App() {
         confirmButtonText: 'Lo entiendo y lo acepto',
         allowOutsideClick: false,
         allowEscapeKey: false,
-        confirmButtonColor: '#7c3aed',
-        background: '#1a1a2e',
-        color: '#e2e8f0',
       }).then(() => {
         localStorage.setItem('burnout_disclaimer_v1', 'true');
+        if (!cancelled) warnIfStillWaking();
       });
     }
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
   }, []);
 
   // Metadatos dinámicos: título del documento según la vista activa
@@ -296,6 +313,7 @@ function App() {
         </div>
       )}
 
+      <Suspense fallback={null}>
       {/* History & progress */}
       {!loading && !activeRoutine && !workoutSummary && view === 'history' && (
         <HistoryView history={history} gamification={gamification} onBack={() => setView('home')} />
@@ -324,6 +342,7 @@ function App() {
       {!loading && !activeRoutine && !workoutSummary && view === 'admin' && role === 'admin' && email && (
         <AdminPanel email={email} onBack={() => setView('home')} />
       )}
+      </Suspense>
 
       {/* Active workout */}
       {!loading && activeRoutine && !workoutSummary && (
